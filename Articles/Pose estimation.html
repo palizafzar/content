@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="alternate" href="https://www.palizafzar.com/en" hreflang="en" />
+    <link rel="icon" href="https://static.palizafzar.com/static/images/favicon.844934f80647.png" type="image/x-icon" />
+    <link rel="stylesheet"
+        href="https://static.palizafzar.com/static/lib/bootstrap/dist/css/bootstrap.min.5c7070ef655a.css"
+        type="text/css" />
+    <link rel="stylesheet"
+        href="https://static.palizafzar.com/static/lib/bootstrap-rtl/dist/css/bootstrap-rtl.min.8e59c9a11c4d.css"
+        type="text/css" />
+    <link rel="stylesheet"
+        href="https://static.palizafzar.com/static/lib/kendo/styles/kendo.common.min.13fe8101431d.css"
+        type="text/css" />
+    <link rel="stylesheet"
+        href="https://static.palizafzar.com/static/lib/kendo/styles/kendo.blueopal.min.c1c225d03058.css"
+        type="text/css" />
+    <link rel="stylesheet" href="https://static.palizafzar.com/static/lib/kendo/styles/kendo.rtl.min.e8b04e84750d.css"
+        type="text/css" />
+    <link rel="stylesheet"
+        href="https://static.palizafzar.com/static/lib/font-awesome/css/font-awesome.min.bf0c425cdb73.css"
+        type="text/css" />
+    <link rel="stylesheet" href="https://static.palizafzar.com/static/css/style.min.2a6db880f4d6.css" type="text/css" />
+
+</head>
+
+<body>
+
+    <strong></strong>
+
+    <u><a href="" title="" target="_blank"></a></u>
+    <u><a href="" title="" target="_blank"></a></u>
+    <u><a href="" title="" target="_blank"></a></u>
+    <u><a href="" title="" target="_blank"></a></u>
+
+    <!-- put title tag for images in next update -->
+
+    <p class="mar-btm-30"><strong>تخمین ژست بدن</strong> یکی از مسائل اساسی در بینایی کامپیوتر است که بیش از 15 سال است
+        مورد مطالعه قرار گرفته است. دلیل اهمیت آن فراوانی برنامه هایی است که می توانند از چنین فناوری بهره مند شوند. به
+        عنوان مثال، تخمین <strong>ژست بدن</strong> امکان استدلال سطح بالاتری را در زمینه تعامل با کامپیوتر و تشخیص
+        فعالیت انسان فراهم می آورد. تخمین ژست بدن کاربردهای بسیار جالبی دارد و به وفور در شناخت اکشن، انیمیشن، شخصیت های
+        بازی و غیره مورد استفاده قرار می گیرد. همچنین یکی از پایه های اصلی ساخت و ساز برای فناوری <u><a
+                href="https://fa.wikipedia.org/wiki/%D8%B6%D8%A8%D8%B7_%D8%AD%D8%B1%DA%A9%D8%AA" target="_blank"
+                title="ردیابی حرکت">ردیابی حرکت</a></u> (MoCap) است. فناوری MoCap برای برنامه های مختلف از شخصیت های
+        انیمیشنی تا آنالیز بالینی آسیب شناسی راه رفتن کاربردهای فراوانی دارد.</p>
+    <p>آنچه در ادامه می آموزید:</p>
+    <ul>
+        <li><a scroll-to="Vision" title="بینایی کامپیوتر Computer Vision">بینایی کامپیوتر Computer Vision</a></li>
+        <li><a scroll-to="Estimation" title="تخمین ژست بدن">تخمین ژست بدن</a></li>
+        <li><a scroll-to="Models" title="انواع مدل های شناسایی و تخمین ژست ها">انواع مدل های شناسایی و تخمین ژست ها</a>
+        </li>
+        <li><a scroll-to="Applications" title="کاربرد های تخمین ژست بدن">کاربرد های تخمین ژست بدن</a></li>
+        <li><a scroll-to="Challenges" title="چالش های تخمیمن ژست بدن">چالش های تخمیمن ژست بدن</a></li>
+    </ul>
+    <h2 id="Vision" class="mar-top-30">بینایی کامپیوتر (Computer Vision)</h2>
+
+    <p>آیا می دانید چشم انسان چگونه اجسام را می بیند؟ فرض کنید توپی به سمت شما پرتاب می شود ابتدا تصویر توپ از عدسی چشم
+        گذشته و روی شبکیه شکل می گیرد. سپس مقداری تجزیه و تحلیل ابتدایی صورت گرفته و نتیجه به سمت مغز ارسال می گردد،
+        جایی که قشر بصری به آنالیز دقیق و عمیق آن خواهد پرداخت. در مرحله بعدی، نتیجه آنالیز قشر بصری به دیگر بخش های
+        کورتکس مغز ارسال شده و با تمام دانسته های کنونی فرد مقایسه می گردد، تا شی مشاهده شده از نظر ابعاد دسته بندی شود.
+        در نهایت مغز تصمیم می گیرد که عکس العملی مناسب انجام دهد مثلا شخص دست را بالا آورده و توپ را بگیرد. تمامی مراحل
+        فوق در کسری از ثانیه و تقریباً بدون هیچ تلاش آگاهانه از سوی انسان انجام می شود.</p>
+
+    <p class="mar-btm-30">بینایی کامپیوتر یا <u><a href="https://en.wikipedia.org/wiki/Computer_vision" target="_blank"
+                title="Computer Vision">Computer Vision</a></u> حوزه ای از علوم کامپیوتر است که همانند بینایی انسان سعی
+        دارد تا هر آنچه که چشم انسان قادر به دیدن، شناسایی و تجزیه و تحلیل اشیا می باشد همین استنباط نیز با مشاهده
+        تصاویر و فیلم ها از طریق کامپیوتر حاصل شود.</p>
+
+    <h2 id="Estimation" class="mar-top-30">تخمین ژست بدن</h2>
+
+    <p class="mar-btm-30">تخمین ژست بدن، روند برآورد و ارزیابی پیکربندی بدن از یک تصویر یا فیلم واحد می باشد. تصور کنید
+        که بتوانید هر حرکت کوچک شخص را ردیابی و بدون معطلی آن را تجزیه و تحلیل نموده و عکس العملی نسبت به آن حرکت انجام
+        دهید. این کار پیش شرط اساسی برای بسیاری از وظایف بینایی کامپیوتر مانند شناخت عملکرد انسان، ردیابی، تعامل انسان
+        با کامپیوتر و نظارت تصویری است. این فناوری دستاوردهای عظیمی خواهد داشت برنامه های کاربردی ممکن است شامل نظارت
+        ویدئویی، کمک به زندگی، سیستم های پیشرفته کمک به راننده و آنالیز ورزشی باشد.</p>
+
+    <figure><img alt="تخمین ژست بدن" class="img-responsive image-center"
+            src="https://static.palizafzar.com/media/editor_uploads/2019/08/13/pose-estimation-550.jpg" />
+        <figcaption class="text-center"><em>تخمین ژست بدن</em></figcaption>
+    </figure>
+
+    <h2 id="Models" class="mar-top-30">انواع مدل های شناسایی و تخمین ژست ها</h2>
+
+    <p>اسکلت <strong>ژست بدن</strong> نشانگر جهت گیری شخص در قالب گرافیکی است. در حقیقت، مجموعه ای از مختصات است که می
+        تواند برای توصیف ژست فرد به یکدیگر متصل شود. هر مختصات موجود در اسکلت به عنوان یک قسمت یا یک مفصل یا به عنوان
+        نقطه کلیدی شناخته می شود. یک ارتباط صحیح بین دو نقطه مختصات به عنوان یک جفت شناخته می شود. توجه داشته باشید که
+        همه ترکیبات قسمت جفت معتبر ایجاد نمی کنند.</p>
+
+    <p>در طی این سالها رویکردهای مختلفی برای <strong>تخمین ژست بدن</strong> ارائه شده است. ابتدایی ترین روش ها معمولاً
+        تخمین تنها یک ژست مجزا در تصویر بود. این روش ابتدا قسمت های جداگانه بدن را مشخص می کند و به دنبال آن پیوندهایی
+        جهت ژست ایجاد می شود. به طور طبیعی این روش در بسیاری از سناریوهای زندگی واقعی کمتر به کار می آیند چراکه امروزه
+        تصاویر شامل چندین نفر هستند. از طرفی تخمین تعداد چند نفر از وضعیت یک نفر دشوار است زیرا مکان و تعداد افراد موجود
+        در یک تصویر ناشناخته است.</p>
+
+    <p>به طور معمول می توانیم با استفاده رویکردهای زیر اقدام به شناسایی ژست ها نماییم که عبارتند از:</p>
+
+    <ul>
+        <li>رویکرد ساده این است که ابتدا یک فرد ردیابی شود، سپس تخمین قسمت های بدن و اندازه آن مشخص گردد. این روش به
+            عنوان رویکرد بالا به پایین شناخته شده است.</li>
+        <li>رویکرد دوم تشخیص همه قسمت های بدن هر شخص در تصویر است و پس از آن گروهبندی قطعات متعلق به افراد به طور مجزا
+            انجام می شود. این روش به عنوان روش پایین به بالا شناخته شده است.</li>
+    </ul>
+
+    <p class="mar-btm-30">در چند دهه گذشته، تلاش های بسیاری برای ساختن الگوهایی استوار جهت <strong>تخمین ژست
+            بدن</strong> انسان در شرایط کنترل شده و کنترل نشده انجام شده است. روش های معمول شامل مدل های سازه های
+        تصویری، مدل های سلسله مراتبی و مدل های غیردرختی است.</p>
+
+    <div class="mar-right-30">
+        <h3 class="header-text">مدل سازه های تصویری:</h3>
+
+        <p>با بررسی همبستگی های مکانی بین قسمت هایی از بدن و درج سینماتیک از زوج اندام متصل به یکدیگر، یک چارچوب گرافیکی
+            با ساختار درختی را ایجاد می کند.</p>
+
+        <figure class="mar-btm-30"><img alt="مدل تصویری تخمین ژست" class="img-responsive image-center"
+                src="https://static.palizafzar.com/media/editor_uploads/2019/08/13/pictorical-model-pose-estimation.JPG" />
+            <figcaption class="text-center"><em>مدل تصویری تخمین ژست</em></figcaption>
+        </figure>
+
+        <h3 class="mar-btm-30">مدل سلسله مراتبی:</h3>
+
+        <p>بیانگر روابط بین قسمت ها در مقیاسهای مختلف در یک ساختار سلسله مراتبی است و منجر به ردیابی روابط مرتبه بالا در
+            بین قطعات و توصیف تعداد نمایی از نقاط قابل قبول می شود.</p>
+
+        <figure class="mar-btm-30"><img alt="مدل سلسله مراتبی تخمین ژست" class="img-responsive image-center"
+                src="https://static.palizafzar.com/media/editor_uploads/2019/08/13/hierarchical-models-2.JPG" />
+            <figcaption class="text-center"><em>مدل سلسله مراتبی تخمین ژست</em></figcaption>
+        </figure>
+
+        <h3 class="mar-btm-30">مدل غیر درختی:</h3>
+
+        <p>این مدل از حلقه هایی برای تقویت ساختار درخت با لبه های اضافی استفاده می کنند که به خوبی می تواند تقارن،
+            انسداد و روابط را ردیابی کند.</p>
+
+        <figure class="mar-btm-30"><img alt="مدل غیردرختی تخمین ژست" class="img-responsive image-center"
+                src="https://static.palizafzar.com/media/editor_uploads/2019/08/13/none-tree-pose-estimation-model.JPG" />
+            <figcaption class="text-center"><em>مدل غیردرختی تخمین ژست</em></figcaption>
+        </figure>
+    </div>
+
+    <h2 id="Applications" class="mar-top-30">کاربرد های تخمین ژست بدن</h2>
+
+    <p><strong>تخمین ژست بدن</strong> در زمینه های بی شماری کاربرد دارد که برخی از آنها عبارتند از:</p>
+
+    <div class="mar-right-30">
+        <h3 class="header-text">1. شناخت فعالیت</h3>
+
+        <ul class="mar-btm-30">
+            <li>پیگیری تغییرات در وضعیت فرد در طی یک دوره زمانی می تواند برای فعالیت، ژست و راه رفتن مورد استفاده قرار
+                گیرد.</li>
+            <li>جهت برنامه هایی برای تشخیص اینکه فرد سقوط کرده است یا بیمار است.</li>
+            <li>برنامه هایی که به طور مستقل می توانند رژیم های تمرینی و تکنیک های ورزشی را آموزش دهند.</li>
+            <li>برنامه هایی که می توانند سبب افزایش امنیت و نظارت شوند.</li>
+            <li>ایجاد برنامه هایی که می توانند تمام نشانه های زبان بدن را درک کنند و به عنوان سیگنال هایی برای باند
+                فرودگاه، پلیس راهنمایی و رانندگی و غیره به کار گرفته شوند.</li>
+        </ul>
+
+        <h3 class="header-text">2. ردیابی حرکت و واقعیت افزوده</h3>
+
+        <p>یک برنامه محبوب جهت <strong>تخمین ژست بدن</strong> برنامه های CGI است. گرافیک، استایل، توسعه حرکات فانتزی،
+            تجهیزات و آثار هنری می توانند در صورت <strong>تخمین ژست بدن</strong> بر روی سایر افراد اعمال شوند. با پیگیری
+            و ردیابی از انواع مختلف ژست انسان، گرافیک های بدست آمده می توانند به طور طبیعی بر روی شخص دیگری اعمال گردند.
+        </p>
+
+        <p class="mar-btm-30">نمونه بصری خوب از آنچه قابل مشاهده است، ایموجی ها می باشند. اگرچه موارد فوق فقط ساختار یک
+            چهره را دنبال می کند، اما این ایده می تواند به عنوان نکات کلیدی یک فرد استخراج شود. همین مفاهیم را می توان
+            برای ارائه عناصر واقعیت افزوده (AR) استفاده کرد که می توانند حرکات شخص را تقلید کنند.</p>
+
+        <h3 class="header-text">3. آموزش ربات ها</h3>
+
+        <p class="mar-btm-30">به جای برنامه ریزی دستی ربات ها برای دنبال کردن مسیرها، می توان ربات ها را طوری تنظیم نمود
+            تا حرکت <strong>ژست بدن</strong> انسان ها را شناسایی و دقیقا همان عمل را انجام دهند. یک مربی انسانی می تواند
+            تنها با نشان دادن حرکات، برخی از اقدامات خاص را به ربات ها آموزش دهد. سپس روبات می تواند نحوه حرکت مفصل های
+            خود را برای انجام همان عمل محاسبه و به کار بندد.</p>
+
+        <h3 class="header-text">4. ردیابی حرکات ژست برای کنسول های بازی</h3>
+
+        <p>یکی از کاربردهای محبوب <strong>تخمین ژست بدن</strong> جهت ردیابی حرکت افراد و به کار بردن آن در بازی های
+            تعاملی است. به طور رایج، Kinect از برآورد سه بعدی ژست با استفاده از داده های حسگر IR برای ردیابی حرکت
+            بازیکنان انسانی و استفاده از آن برای ارائه عملکرد شخصیت های مجازی استفاده می کند.</p>
+    </div>
+
+    <figure><img alt="کاربردهای تخمین ژست" class="img-responsive image-center"
+            src="https://static.palizafzar.com/media/editor_uploads/2019/08/13/pose-estimation-applications.png" />
+        <figcaption class="text-center"><em>کاربرد های تخمین ژست</em></figcaption>
+    </figure>
+
+    <h2 id="Challenges" class="mar-top-30">چالش های تخمیمن ژست بدن</h2>
+
+    <p class="mar-btm-30">با وجود سالها تحقیق در مورد <strong>تخمین ژست بدن</strong> هنوز هم مسائلی وجود دارند که تا حدی
+        حل نشده باقی مانده اند. از مهمترین چالش ها می توان به تغییر شکل ظاهری انسان در تصاویر، تغییر در جسم انسان ،
+        انسداد جزئی به دلیل خود مفصل سازی و لایه بندی اشیا در صحنه ، پیچیدگی ساختار اسکلتی انسان و بزرگ بودن ابعاد ژست
+        اشاره نمود.</p>
+
+    <p>گام های بزرگی در زمینه <strong>تخمین ژست بدن</strong> برداشته شده است که این امکان را می دهد تا در برنامه های
+        بیشماری که با آن سازگار است، خدمت رسانی بهتری انجام شود. علاوه بر این، تحقیقات در زمینه های مرتبط مانند ردیابی
+        ژست ها می تواند بهره وری تولیدی آن را در چندین زمینه افزایش دهد.</p>
+    <h4 class="mar-top-20">مطالب پربازدید</h4>
+    <div class="row mar-right-20">
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/fa/articles/zkteco-time-attendance-machine/"
+                    title="دستگاه حضور و غیاب ZKTeco" target="_blank"><i class="fa fa-external-link"
+                        aria-hidden="true"></i> دستگاه حضور و غیاب ZKTeco</a></h5>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/fa/articles/how-to-install-access-control-system/"
+                    title="نحوه نصب و راه اندازی دستگاه کنترل تردد" target="_blank"><i class="fa fa-external-link"
+                        aria-hidden="true"></i> نحوه نصب و راه اندازی دستگاه کنترل
+                    تردد</a></h5>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/fa/articles/best-time-attendance-systems/"
+                    title="بهترین دستگاه حضور و غیاب" target="_blank"><i class="fa fa-external-link"
+                        aria-hidden="true"></i> بهترین دستگاه حضور و غیاب</a></h5>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/fa/news/lottery-winners-14-jan/"
+                    title="نحوه کار با دستگاه حضور و غیاب انگشتی" target="_blank"><i class="fa fa-external-link"
+                        aria-hidden="true"></i> نحوه کار با دستگاه حضور و غیاب انگشتی</a>
+            </h5>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/fa/articles/time-and-attendance-system-buying-guide/"
+                    title="بهترین دستگاه حضور و غیاب ایرانی چیست؟" target="_blank"><i class="fa fa-external-link"
+                        aria-hidden="true"></i> بهترین دستگاه حضور و غیاب ایرانی
+                    چیست؟</a></h5>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/fa/articles/time-attendance-systems-in-tehran/"
+                    title="فروش دستگاه حضور و غیاب در تهران" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> فروش دستگاه حضور و غیاب در تهران</a></h5>
+        </div>
+    </div>
+    <h4 class="mar-top-20">مطالب پیشنهادی</h4>
+    <div class="row mar-right-20">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/fa/articles/access-control-devices/" target="_blank"
+                    title="دستگاه کنترل تردد اکسس کنترل"><i class="fa fa-external-link" aria-hidden="true"></i> دستگاه
+                    کنترل تردد اکسس کنترل</a></h5>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/fa/articles/time-and-attendance-device-types/" target="_blank"
+                    title="انواع دستگاه حضور و غیاب"><i class="fa fa-external-link" aria-hidden="true"></i> انواع دستگاه
+                    حضور و غیاب</a></h5>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/fa/product-categories/absence-automation/"
+                    title="خرید دستگاه حضور و غیاب" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> خرید دستگاه حضور و غیاب</a></h5>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/fa/products/ubio-x-iris/" title="دستگاه حضور و غیاب تشخیص عنبیه"
+                    target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> دستگاه حضور و غیاب تشخیص عنبیه</a></h5>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/fa/articles/facial-recognition-attendance-machin/" target="_blank"
+                    title="دستگاه حضور و غیاب تشخیص چهره"><i class="fa fa-external-link" aria-hidden="true"></i> دستگاه
+                    حضور و غیاب تشخیص چهره</a></h5>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/fa/articles/fingerprint-attendance-device/" target="_blank"
+                    title="دستگاه حضور و غیاب اثر انگشتی"><i class="fa fa-external-link" aria-hidden="true"></i> دستگاه
+                    حضور و غیاب اثر انگشتی</a></h5>
+        </div>
+    </div>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Article",
+            "name": "تخمین ژست",
+            "image": "https://static.palizafzar.com/media/article_images/e8e23c43f7ec4c22bed8890142eb763e.jpg",
+            "articleSection": "تخمین ژست بدن یکی از مسائل اساسی در بینایی کامپیوتر است که بیش از 15 سال است مورد مطالعه قرار گرفته است. دلیل اهمیت آن فراوانی برنامه هایی است که می توانند از چنین فناوری بهره مند شوند. به عنوان مثال، تخمین ژست بدن امکان استدلال سطح بالاتری را در زمینه تعامل با کامپیوتر و تشخیص فعالیت انسان فراهم می آورد. ",
+            "url": "https://www.palizafzar.com/fa/articles/pose-estimation/"
+        }
+    </script>
+    </div>
+
+
+
+</body>
+
+</html>

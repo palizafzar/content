@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title></title>
+    <meta charset="utf-8" />
+
+    <link rel="icon" href="https://static.palizafzar.com/static/images/favicon.844934f80647.png" type="image/x-icon" />
+    <link rel="stylesheet"
+        href="https://static.palizafzar.com/static/lib/bootstrap/dist/css/bootstrap.min.5c7070ef655a.css"
+        type="text/css" />
+    <link rel="stylesheet"
+        href="https://static.palizafzar.com/static/lib/kendo/styles/kendo.common.min.13fe8101431d.css"
+        type="text/css" />
+    <link rel="stylesheet"
+        href="https://static.palizafzar.com/static/lib/kendo/styles/kendo.blueopal.min.c1c225d03058.css"
+        type="text/css" />
+    <link rel="stylesheet" href="https://static.palizafzar.com/static/lib/kendo/styles/kendo.rtl.min.e8b04e84750d.css"
+        type="text/css" />
+    <link rel="stylesheet"
+        href="https://static.palizafzar.com/static/lib/font-awesome/css/font-awesome.min.bf0c425cdb73.css"
+        type="text/css" />
+    <link rel="stylesheet" href="https://static.palizafzar.com/static/css/style.min.2a6db880f4d6.css" type="text/css" />
+    <link rel="stylesheet" href="https://static.palizafzar.com/static/css/ltr.min.3a9964a2af91.css" type="text/css" />
+
+
+</head>
+
+<body>
+<!-- put title tag for images in next update -->
+
+    <p class="mar-btm-30">Human pose estimation is one of the key problems in computer vision that has been studied for
+        well over 15 years. The reason for its importance is the abundance of applications that can benefit from such a
+        technology. For example, human pose estimation allows for higher level reasoning in the context of human
+        computer interaction and activity recognition. Human Pose Estimation has some pretty cool applications and is
+        heavily used in action recognition, animation, gaming, etc. It is also one of the basic building blocks for
+        marker-less <a href="https://fa.wikipedia.org/wiki/%D8%B6%D8%A8%D8%B7_%D8%AD%D8%B1%DA%A9%D8%AA" target="_blank"
+            title="motion capture"><strong>motion capture</strong></a> technology. MoCap technology is useful for
+        applications ranging from character animation to clinical analysis of gait pathologies.</p>
+    <h2><strong>Computer vision:</strong></h2>
+    <p class="mar-btm-30">Computer vision is the field of computer science that focuses on replicating parts of the
+        complexity of the human vision system and enabling computers to identify and process objects in images and
+        videos in the same way that humans do.</p>
+    <h2><strong>Pose estimation:</strong></h2>
+    <p>Human pose estimation is an important problem in the field of Computer Vision. Imagine being able to track a
+        person’s every small movement and do a bio-mechanical analysis in real time. The technology will have huge
+        implications. Applications may including video surveillance, assisted living, advanced driver assistance systems
+        and sport analysis. Formally speaking, Pose Estimation is predicting the body part or joint positions of a
+        person from an image or a video.</p>
+    <p class="mar-btm-30">Human pose estimation plays an important role in many computer vision tasks and has been
+        studied for many decades. Human pose estimation refers to the task of recognizing postures by localizing body
+        key points from images. It is vital prerequisite step for many computer vision tasks such as human action
+        recognition, tracking, human-computer interaction and video surveillance.</p>
+    <figure>
+        <img class="img-responsive image-center"
+            src="https://static.palizafzar.com/media/editor_uploads/2019/08/13/pose-estimation-550.jpg"
+            alt="Pose Estimation" />
+        <figcaption class="text-center"><em>Pose Estimation</em></figcaption>
+    </figure>
+    <h2><strong>Types of pose recognition:</strong></h2>
+    <p>Several approaches to human pose estimation were introduced over the years. The earliest and slowest methods
+        typically estimating the pose of a single person in an image which only had one person to begin with. These
+        methods often identify the individual parts first, followed by forming connections between them to create the
+        pose.</p>
+    <p>Naturally, these methods are not particularly useful in many real-life scenarios where images contain multiple
+        people. Multi-Person pose estimation is more difficult than the single person case as the location and the
+        number of people in an image are unknown. Typically, we can tackle the above issue using one of two approaches:
+    </p>
+    <p>The simple approach is to incorporate a person detector first, followed by estimating the parts and then
+        calculating the pose for each person. This method is known as the top-down approach. Another approach is to
+        detect all parts in the image (i.e. parts of every person), followed by associating/grouping parts belonging to
+        distinct persons. This method is known as the bottom-up approach.</p>
+    <p>In the past few decades, many efforts are devoted to build robust human pose estimation models under the
+        controlled and uncontrolled setting. The typical methods include pictorial structures models, hierarchical
+        models and non-tree models.</p>
+    <div class="mar-left-30">
+        <h3>Pictorial structures model:</h3>
+        <p>The pictorial structures model constructs a classical tree-structured graphical framework by exploring
+            spatial correlations between parts of the body and cinematic priors that couple connected limbs.</p>
+        <figure>
+            <img class="img-responsive image-center"
+                src="https://static.palizafzar.com/media/editor_uploads/2019/08/13/pictorical-model-pose-estimation.JPG"
+                alt="Pictorial pose estimation model" />
+            <figcaption class="text-center"><em>Pictorial pose estimation model</em></figcaption>
+        </figure>
+        <h3>Hierarchical models:</h3>
+        <p>The hierarchical models represent the relationships between parts at different scales in a hierarchical tree
+            structure, leading to capture high-order relationships among parts and characterize an exponential number of
+            plausible poses.</p>
+        <figure>
+            <img class="img-responsive image-center"
+                src="https://static.palizafzar.com/media/editor_uploads/2019/08/13/hierarchical-models-2.JPG"
+                alt="Hierarchical pose estimation model" />
+            <figcaption class="text-center"><em>Hierarchical pose estimation model</em></figcaption>
+        </figure>
+        <h3>Non-tree models:</h3>
+        <p>Non-tree models use loops to augment the tree structure with additional edges, which can well capture
+            symmetry, occlusion and long-range relationships.</p>
+        <figure>
+            <img class="img-responsive image-center"
+                src="https://static.palizafzar.com/media/editor_uploads/2019/08/13/none-tree-pose-estimation-model.JPG"
+                alt="None-tree pose estimation model" />
+            <figcaption class="text-center"><em>None-tree pose estimation model</em></figcaption>
+        </figure>
+    </div>
+    <p class="mar-btm-30">A human pose skeleton represents the orientation of a person in a graphical format.
+        Essentially, it is a set of coordinates that can be connected to describe the pose of the person. Each
+        coordinate in the skeleton is known as a part (or a joint, or a keypoint). A valid connection between two parts
+        is known as a pair. Note that, not all part combinations give rise to valid pairs.</p>
+    <h2><strong>Applications:</strong></h2>
+    <p class="mar-btm-30">Pose Estimation has applications in myriad fields, some of which are listed below.</p>
+    <div class="mar-left-30">
+        <h3>Activity Recognition</h3>
+        <p>Tracking the variations in the pose of a person over a period of time can also be used for activity, gesture
+            and gait recognition. There are several use cases for the same, including:</p>
+        <ul class="mar-btm-30">
+            <li>Applications to detect if a person has fallen down or is sick.</li>
+            <li>Applications that can autonomously teach proper workout regimes, sport techniques.</li>
+            <li>Applications that can understand full-body sign language. (Ex: Airport runway signals, traffic policemen
+                signals, etc.).</li>
+            <li>Applications that can enhance security and surveillance.</li>
+        </ul>
+        <h3>Motion Capture and Augmented Reality:</h3>
+        <p>An interesting application of human pose estimation is for CGI applications. Graphics, styles, fancy
+            enhancements, equipment and artwork can be superimposed on the person if their human pose can be estimated.
+            By tracking the variations of this human pose, the rendered graphics can “naturally fit” the person as they
+            move.</p>
+        <p class="mar-btm-30">A good visual example of what is possible can be seen through emoji. Even though the above
+            only tracks the structure of a face, the idea can be extrapolated for the key points of a person. The same
+            concepts can be leveraged to render Augmented Reality (AR) elements that can mimic the movements of a
+            person.</p>
+        <h3>Training Robots:</h3>
+        <p>Instead of manually programming robots to follow trajectories, robots can be made to follow the trajectories
+            of a human pose skeleton that is performing an action. A human instructor can effectively teach the robot
+            certain actions by just demonstrating the same. The robot can then calculate how to move its articulators to
+            perform the same action.</p>
+        <h3>Motion Tracking for Consoles:</h3>
+        <p>An interesting application of pose estimation is for tracking the motion of human subjects for interactive
+            gaming. Popularly, Kinect used 3D pose estimation (using IR sensor data) to track the motion of the human
+            players and to use it to render the actions of the virtual characters.</p>
+    </div>
+    <figure class="mar-btm-30">
+        <img class="img-responsive image-center"
+            src="https://static.palizafzar.com/media/editor_uploads/2019/08/13/pose-estimation-applications.png"
+            alt="Pose estimation applications" />
+        <figcaption class="text-center"><em>Pose estimation applications</em></figcaption>
+    </figure>
+    <h2><strong>Pose Estimation Challenges:</strong></h2>
+    <p class="mar-btm-30 mar-left-30">Despite many years of research, however, pose estimation remains a very difficult
+        and still largely unsolved problem. Among the most significant challenges are: variability of human visual
+        appearance in images, variability in lighting conditions, variability in human physique, partial occlusions due
+        to self-articulation and layering of objects in the scene, complexity of human skeletal structure, high
+        dimensionality of the pose.</p>
+    <p>Great strides have been made in the field of human pose estimation, which enables us to better serve the myriad
+        applications that are possible with it. Moreover, research in related fields such as pose tracking can greatly
+        enhance its productive utilization in several fields.</p>
+    <p class="mar-bm-10">Related posts::</p>
+    <div class="row mar-left-20">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/en/articles/buying-time-attendance-system/"
+                    title="RFID Technology"" target=" _blank"><i class="fa fa-external-link" aria-hidden="true"></i>
+                    RFID Technology</a></h5>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/en/articles/bitcoin-the-internet-of-money/"
+                    title="What is bitcoin mining?" target="_blank"><i class="fa fa-external-link"
+                        aria-hidden="true"></i> What is bitcoin mining?</a></h5>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/en/articles/fingerprint-attendance-device/"
+                    title="Time and attendance ADP" target="_blank"><i class="fa fa-external-link"
+                        aria-hidden="true"></i> Time and attendance ADP
+                </a></h5>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/en/articles/time-and-attendance-system-buying-guide/"
+                    title="Where to buy time attendance systems ?" target="_blank"><i class="fa fa-external-link"
+                        aria-hidden="true"></i> Where to buy time attendance systems ?</a></h5>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/en/articles/time-and-attendance-device-types/"
+                    title="Trends on time and attendance devices" target="_blank"><i class="fa fa-external-link"
+                        aria-hidden="true"></i> Trends on time and attendance devices</a></h5>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/en/articles/access-control-devices/"
+                    title="Door access control system" target="_blank"><i class="fa fa-external-link"
+                        aria-hidden="true"></i> Door access control system</a></h5>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
