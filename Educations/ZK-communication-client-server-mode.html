@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZK communication</title>
+    <link rel="alternate" href="https://www.palizafzar.com/en" hreflang="en" />
+    <link rel="icon" href="https://static.palizafzar.com/static/images/favicon.844934f80647.png" type="image/x-icon" />
+    <link rel="stylesheet"
+        href="https://static.palizafzar.com/static/lib/bootstrap/dist/css/bootstrap.min.5c7070ef655a.css"
+        type="text/css" />
+    <link rel="stylesheet"
+        href="https://static.palizafzar.com/static/lib/bootstrap-rtl/dist/css/bootstrap-rtl.min.8e59c9a11c4d.css"
+        type="text/css" />
+    <link rel="stylesheet"
+        href="https://static.palizafzar.com/static/lib/kendo/styles/kendo.common.min.13fe8101431d.css"
+        type="text/css" />
+    <link rel="stylesheet"
+        href="https://static.palizafzar.com/static/lib/kendo/styles/kendo.blueopal.min.c1c225d03058.css"
+        type="text/css" />
+    <link rel="stylesheet" href="https://static.palizafzar.com/static/lib/kendo/styles/kendo.rtl.min.e8b04e84750d.css"
+        type="text/css" />
+    <link rel="stylesheet"
+        href="https://static.palizafzar.com/static/lib/font-awesome/css/font-awesome.min.bf0c425cdb73.css"
+        type="text/css" />
+    <link rel="stylesheet" href="https://static.palizafzar.com/static/css/style.min.2a6db880f4d6.css" type="text/css" />
+
+</head>
+
+<body>
+
+    <p><strong>ارتباط با دستگاه های حضور و غیاب ZKTeco</strong> به دو حالت کلاینت مود Client Mode و سرور مود Server Mode
+        انجام می شود. در حالت Client Mode کامپیوتر و یا سرور به دستگاه ZK متصل می شود و عملیات موردنظر را انجام می دهیم
+        و در حالت Server Mode دستگاه حضور و غیاب، کامپیوتر و یا سرور را شناسایی نموده و ارتباط برقرار می کند، بدین صورت
+        که IP سرور را دستگاه تعریف می کنیم و ارتباط برقرار می شود.</p>
+        <div class="col-xs-12 text-center mar-btm-30">
+            <div class="btn-group">
+                <a href="http://ftp.palizafzar.com/Help/Comiunication%20with%20Terminals.pdf" class="btn btn-md btn-primary" title="دانلود فایل نحوه ارتباط دستگاه با کامپیوتر از طریق شبکه" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> دانلود فایل نحوه ارتباط دستگاه با کامپیوتر از طریق شبکه</a>
+            </div>
+        </div>
+    <p class="mar-btm-20">آنچه در ادامه می خوانید:</p>
+
+    <ul>
+        <li>نحوه ارتباط بصورت Client Mode
+            <ul>
+                <li><a scroll-to="ClientModeVideo"
+                        title="ویدیو ارتباط با دستگاه حضور و غیاب ZKTeco حالت Client Mode">ویدیو ارتباط با دستگاه حضور و
+                        غیاب ZKTeco در حالت Client Mode</a></li>
+                <li><a scroll-to="ClientMode"
+                        title="آموزش تصویری ارتباط با دستگاه حضور و غیاب ZKTeco حالت Client Mode">آموزش تصویری ارتباط با
+                        دستگاه حضور و غیاب ZKTeco در حالت Client Mode</a></li>
+            </ul>
+        </li>
+        <li>نحوه ارتباط بصورت Server Mode
+            <ul>
+                <li><a scroll-to="ServerModeVideo"
+                        title="ویدیو ارتباط با دستگاه حضور و غیاب ZKTeco حالت Server Mode">ویدیو ارتباط با دستگاه حضور و
+                        غیاب ZKTeco در حالت Server Mode</a></li>
+                <li><a scroll-to="ServerMode"
+                        title="آموزش تصویری ارتباط با دستگاه حضور و غیاب ZKTeco حالت Server Mode">آموزش تصویری ارتباط با
+                        دستگاه حضور و غیاب ZKTeco در حالت Server Mode</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2 class="mar-top-30" id="ClientModeVideo">ویدیو ارتباط با دستگاه حضور و غیاب ZKTeco حالت Client Mode</h2>
+
+    <p>
+        <video class="full-block" controls="" src="https://dl12.mp4.ir/video/2021/9/33585-549994206/33585-549994206.mp4"
+            title="ارتباط با دستگاه حضور و غیاب ZKTeco حالت کلاینت" type="video/mp4">&nbsp;</video>
+    </p>
+
+    <h2 class="mar-top-30" id="ClientMode">آموزش تصویری ارتباط با دستگاه حضور و غیاب ZKTeco حالت Client Mode</h2>
+
+    <p>جهت <strong>ارتباط و تخلیه اطلاعات دستگاه حضور و غیاب</strong> مدل های <u><a
+                href="https://www.palizafzar.com/fa/products/zk-vf600-face-recognition/" target="_blank"
+                title="ZK-VF600">ZK-VF600</a></u>, ZK-iFace102, ZK-uFace102, ZK-uFace202, <u><a
+                href="https://www.palizafzar.com/fa/products/zk-uface-302/" target="_blank"
+                title="ZK-uFace302">ZK-uFace302</a></u>, ZK-uFace402, ZK-uFace602, ZK-uFace800 ابتدا برنامه ارتباطی آن
+        را از طریق لینک زیر دانلود نموده و فایل اجرایی آن را نصب نمایید.</p>
+
+    <div class="row mar-btm-30">
+        <figure><a href="http://ftp.palizafzar.com/Installs/Paliz%20ZK%20DeviceManager%20Client.zip" target="_blank"
+                title="دانلود برنامه ارتباطی دستگاه های حضور و غیاب ZK"><img
+                    alt="دانلود برنامه ارتباطی دستگاه های حضور و غیاب ZK" class="img-responsive image-center"
+                    src="https://static.palizafzar.com/media/editor_uploads/2021/09/30/zk-client-mode-communication.jpg"
+                    title="دانلود برنامه ارتباطی دستگاه های حضور و غیاب ZK" /> </a>
+
+            <figcaption class="text-center"><a
+                    href="http://ftp.palizafzar.com/Installs/Paliz%20ZK%20DeviceManager%20Client.zip" target="_blank"
+                    title="دانلود برنامه ارتباطی دستگاه های حضور و غیاب ZK">دانلود برنامه ارتباطی دستگاه های حضور و غیاب
+                    ZK</a></figcaption>
+            <a href="http://ftp.palizafzar.com/Installs/Paliz%20ZK%20DeviceManager%20Client.zip" target="_blank"
+                title="دانلود برنامه ارتباطی دستگاه های حضور و غیاب ZK"> </a>
+        </figure>
+    </div>
+
+    <p>با نصب Setup برنامه Paliz ZK Device Manager Client روی صفحه دسکتاپ آیکن برنامه ارتباطی به شکل زیر خواهد بود.</p>
+
+    <figure class="mar-btm-30"><img alt="آیکن نرم افزار ارتباطی دستگاه های حضور و غیاب ZK"
+            class="img-rounded img-responsive image-center"
+            src="https://static.palizafzar.com/media/editor_uploads/2021/09/30/zk-communication-software.jpg"
+            title="آیکن نرم افزار ارتباطی دستگاه های حضور و غیاب ZK" /></figure>
+
+    <p>با اجرای برنامه، ابتدا یک رمز ورود برای نرم افزار ارتباطی تعیین می کنیم. پس از تایید رمزعبور وارد محیط اصلی نرم
+        افزار ارتباطی ZK می شوید که همانند شکل زیر خواهد بود. در پنجره اصلی برای هر دستگاه تعریف شده، گزینه عملیات نتیجه
+        دستور داده شده را نمایش می دهد، همچنین در پایین صفحه ورژن نسخه نرم افزار و وضعیت سرویس را مشاهده می کنیم.</p>
+
+    <figure class="mar-btm-30"><img alt="محیط اصلی نرم افزار ارتباط با دستگاه های  حضور و غیاب ZK"
+            class="img-rounded img-responsive image-center"
+            src="https://static.palizafzar.com/media/editor_uploads/2021/10/01/zkteco-communication-software-dashboard.jpg"
+            title="محیط اصلی نرم افزار ارتباط با دستگاه های  حضور و غیاب ZK" />
+        <figcaption class="text-center">محیط اصلی نرم افزار ارتباط با دستگاه های حضور و غیاب ZKTeco</figcaption>
+    </figure>
+
+    <p>منوهای ارتباطی برنامه ZK Client Mode عبارتند از:</p>
+
+    <ol>
+        <li><a scroll-to="DeviceMenu" title="دستگاه">دستگاه</a></li>
+        <li><a scroll-to="GetLogs" title="دریافت تردد">دریافت تردد</a></li>
+        <li><a scroll-to="Service" title="سرویس">سرویس</a></li>
+        <li><a scroll-to="Convert" title="تبدیل">تبدیل</a></li>
+    </ol>
+
+    <h3 class="header-text mar-top-30" id="DeviceMenu">1. تعریف دستگاه در نرم افزار ارتباطی ZK</h3>
+
+    <div class="row mar-right-20 mar-btm-30">
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+            <p>منوی دستگاه شامل زیرمنوهای زیر می باشد:</p>
+
+            <ul>
+                <li>افزودن: تعریف مشخصات دستگاه جهت برقراری ارتباط</li>
+                <li>ویرایش: تغییر مشخصات دستگاه</li>
+                <li>حذف: حذف دستگاه تعریف شده</li>
+                <li>پیکربندی یا تنظیمات دستگاه: تنظیم ساعت و تاریخ دستگاه</li>
+                <li>پیکربندی یا تنظیمات نرم افزار: تنظیمات پایگاه داده و زمانبندی دریافت تردد از دستگاه</li>
+            </ul>
+
+            <p>جهت تعریف دستگاه جدید گزینه افزودن را انتخاب نموده و به ترتیب مشخخصات دستگاه شامل نام دستگاه، آدرس آی پی
+                دستگاه، شماره پورت دستگاه و رمز ارتباطی را تعریف می کنیم. توجه داشته باشید که شماره پورت دستگاه های حضور
+                و غیاب ZK بصورت پیش فرض عدد 4370 می باشد، تنها در صورت نیاز آن را تغییر دهید.</p>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <figure><img alt="افزودن دستگاه جدید در برنامه ارتباطی ZK" class="img-responsive image-center"
+                    src="https://static.palizafzar.com/media/editor_uploads/2021/09/30/add-device.jpg"
+                    title="افزودن دستگاه جدید در برنامه ارتباطی ZK" /></figure>
+        </div>
+    </div>
+
+    <div class="row mar-right-20 mar-btm-30">
+        <h4>پیکربندی یا تنظیمات دستگاه حضور و غیاب</h4>
+
+        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+            <p>جهت پیکربندی <strong>دستگاه حضور و غیاب</strong> از لیست دستگاه های تعریف شده یک دستگاه را انتخاب نمایید
+                و سپس آیکن تنظیمات دستگاه را کلیک نمایید. در پنجره باز شده می توانید تاریخ و ساعت جاری کامپیوتر را به
+                دستگاه ارسال نموده و یا بصورت دستی ساعت و تاریخ را در فیلد های سمت چپ وارد نمایید.</p>
+        </div>
+
+        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+            <figure><img alt="تنظیمات دستگاه حضور و غیاب ZKTeco" class="img-responsive image-center"
+                    src="https://static.palizafzar.com/media/editor_uploads/2021/10/01/zkteco-date-and-time-settings.jpg"
+                    title="تنظیمات دستگاه حضور و غیاب ZKTeco" /></figure>
+        </div>
+    </div>
+
+    <h3 class="header-text mar-top-30" id="GetLogs">2. نحوه دریافت تردد و تخلیه اطلاعات دستگاه های ZK</h3>
+
+    <div class="row">
+        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+            <p>جهت تخلیه اطلاعات و انتقال ترددهای ثبت شده در دستگاه، به پایگاه داده و یا فایل می توان از این گزینه های
+                زیر استفاده نمود.</p>
+
+            <ul>
+                <li>از دستگاه به پایگاه داده: با استفاده از این گزینه اطلاعات از دستگاه در پایگاه داده تعیین شده کپی
+                    خواهد شد.</li>
+                <li>از دستگاه به فایل: برای تخلیه اطلاعات تردد دستگاه به صورت یک فایل متنی TXT از این گزینه استفاده می
+                    شود.</li>
+            </ul>
+
+            <p>جهت دریافت ترددهای دستگاه ZKTeco و تهیه خروجی بصورت فایل متنی TXT زیرمنوی &quot;به فایل&quot; را انتخاب
+                نمایید. در پنجره باز شده همانند شکل روبرو، ابتدا دستگاه را انتخاب نمایید، سپس محدوده زمانی و بعد شکل
+                خروجی را مشخص نمایید و روی دریافت تردد کلیک نمایید. پس از نمایش ترددها بصورت لیست می توانید آن را بصورت
+                فایل متنی بر روی سیستم خود ذخیره نمایید.</p>
+        </div>
+
+        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+            <figure><img alt="نحوه تخلیه اطلاعات دستگاه حضور و غیاب و ذخیره بصورت فایل TXT"
+                    class="img-responsive image-center"
+                    src="https://static.palizafzar.com/media/editor_uploads/2021/10/01/recive-logs.jpg"
+                    title="نحوه تخلیه اطلاعات دستگاه حضور و غیاب و ذخیره بصورت فایل متنی" /></figure>
+        </div>
+    </div>
+
+    <h3 class="header-text mar-top-30" id="Service">3. کار با منوی سرویس در برنامه ارتباطی ZK</h3>
+
+    <p>سرویس نرم افزار در هنگام اجرای نرم افزار ارتباطی متوقف است که با کلیک بر روی آیکن های زیر و یا از طریق منوی سرویس
+        می توان آن را اجرا و یا متوقف نمود.</p>
+
+    <figure><img alt="آیکن های اجرا و متوقف نمودن سرویس" class="img-rounded img-responsive image-center"
+            src="https://static.palizafzar.com/media/editor_uploads/2021/10/01/stop-start-service.jpg"
+            title="آیکن های اجرا و متوقف نمودن سرویس" /></figure>
+
+    <h3 class="header-text mar-top-30" id="Convert">4. نحوه تبدیل اطلاعات در نرم افزار ارتباطی ZK</h3>
+
+    <p>جهت تبدیل فایلهای متنی از فرمت های استاندارد ZK به پالیز و یا بلعکس از این گزینه استفاده می شود.</p>
+
+    <div class="col-xs-12 text-center mar-btm-30">
+        <div class="btn-group"><a class="btn btn-md btn-default"
+                href="https://www.palizafzar.com/fa/articles/zkteco-time-attendance-machine/" target="_blank"
+                title="دستگاه حضور و غیاب ZKTeco">دستگاه حضور و غیاب ZKTeco</a></div>
+    </div>
+
+    <h2 class="mar-top-30" id="ServerModeVideo">ویدیو ارتباط با دستگاه حضور و غیاب ZKTeco حالت Server Mode</h2>
+
+    <p>
+        <video class="full-block" controls="" src="https://dl12.mp4.ir/video/2021/9/33585-581769843/33585-581769843.mp4"
+            title="تخلیه اطلاعات دستگاه حضور و غیاب ZKTeco حالت سرور مود " type="video/mp4">&nbsp;</video>
+    </p>
+
+    <h2 class="mar-top-30" id="ServerMode">آموزش تصویری ارتباط با دستگاه حضور و غیاب ZKTeco حالت Server Mode</h2>
+
+    <p>با نصب Setup برنامه Paliz ZK Device Manager Server روی دسکتاپ آیکن برنامه را همانند شکل زیر خواهید داشت.</p>
+
+    <figure class="mar-btm-30"><img alt="آیکن نرم افزار ارتباطی ZKTeco Server Mode"
+            class="img-rounded img-responsive image-center"
+            src="https://static.palizafzar.com/media/editor_uploads/2021/10/10/zkteco-server-mode-icon.jpg"
+            title="آیکن نرم افزار ارتباطی ZKTeco Server Mode" /></figure>
+
+    <p>با اجرای برنامه، ابتدا یک رمز ورود برای نرم افزار ارتباطی تعیین می کنیم. پس از تایید رمزعبور وارد محیط اصلی نرم
+        افزار ارتباطی ZK Server می شوید که همانند شکل زیر خواهد بود. در پنجره اصلی نرم افزار ارتباطی ZKTeco در حالت
+        Server Mode برای هر دستگاه تعریف شده، گزینه عملیات نتیجه دستور داده شده را نمایش می دهد، همچنین در پایین صفحه
+        ورژن نسخه نرم افزار و وضعیت سرویس را مشاهده می کنیم.</p>
+
+    <figure class="mar-btm-30"><img alt="نرم افزار ارتباطی ZKTeco حالت Server Mode"
+            class="img-rounded img-responsive image-center"
+            src="https://static.palizafzar.com/media/editor_uploads/2021/10/10/zkteco-server-mode.jpg"
+            title="نرم افزار ارتباطی ZKTeco حالت Server Mode" /></figure>
+
+    <p>نرم افزار ارتباطی شامل دو منوی فعال دستگاه و سرویس می باشد.</p>
+
+    <p>گزینه های زیر در دستگاه قابل تعریف هستند:</p>
+
+    <div class="row">
+        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+            <ul>
+                <li>جدید: تعریف مشخصات دستگاه جهت برقراری ارتباط که این مشخصات شامل نام دستگاه، شماره سریال دستگاه و
+                    شماره دستگاه می باشد.</li>
+                <li>اصلاح اطلاعات دستگاه</li>
+                <li>حذف اطلاعات دستگاه</li>
+            </ul>
+        </div>
+
+        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+            <figure class="mar-btm-30"><img alt="منوی تعریف دستگاه در نرم افزار ارتباطی ZK Server Mode"
+                    class="img-rounded img-responsive image-center"
+                    src="https://static.palizafzar.com/media/editor_uploads/2021/10/10/device-definition.jpg"
+                    title="منوی تعریف دستگاه در نرم افزار ارتباطی ZK Server Mode" /></figure>
+        </div>
+    </div>
+
+    <h3 class="header-text">تنظیمات نرم افزار ارتباطی ZKTeco Server Mode</h3>
+
+    <div class="row">
+        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+            <p>در این بخش چهار گزینه سرویس دستگاه، پایگاه داده اختصاصی، حضور غیاب و دیتاسنتر در اختیار داریم.</p>
+
+            <ul>
+                <li>در بخش سرویس دستگاه، آدرس آی پی و پورت دستگاه را می توانیم تنظیم نماییم.</li>
+                <li>پایگاه داده، دیتا سنتر و حضور و غیاب : در این بخش ها می توان نام پایگاه داده، نوع احراز هویت ویندوز
+                    یا پایگاه داده و همچنین نام پایگاه داده را انتخاب نمود.</li>
+            </ul>
+
+            <p>با استفاده از دو گزینه، جستجوی تمامی پایگاه داده های در دسترس و تست ارتباط با پایگاه داده، اطمینان از
+                اتصال به پایگاه داده خواهیم داشت.</p>
+        </div>
+
+        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+            <figure class="mar-btm-30"><img alt="تنظیمات سرویس دستگاه در نرم افزار ارتباطی ZKTeco"
+                    class="img-rounded img-responsive image-center"
+                    src="https://static.palizafzar.com/media/editor_uploads/2021/10/10/device-service.jpg"
+                    title="تنظیمات سرویس دستگاه در نرم افزار ارتباطی ZKTeco" /></figure>
+
+            <figure class="mar-btm-30"><img alt="تنظیمات پایگاه داده نرم افزار ارتباطی ZKTeco"
+                    class="img-rounded img-responsive image-center"
+                    src="https://static.palizafzar.com/media/editor_uploads/2021/10/10/database-settings.jpg"
+                    title="تنظیمات پایگاه داده نرم افزار ارتباطی ZKTeco" /></figure>
+        </div>
+    </div>
+
+    <h2 class="mar-top-30">مطالب پیشنهادی از پالیزافزار</h2>
+
+    <div class="row mar-right-10">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/fa/articles/connection-with-time-attendance-system/" target="_blank"
+                    title="ارتباط با دستگاه حضور و غیاب">ارتباط با دستگاه حضور و غیاب</a></h5>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/fa/educations/timax-attendance-communication/" target="_blank"
+                    title="ارتباط با دستگاه حضور و غیاب تایمکس">ارتباط با دستگاه حضور و غیاب تایمکس</a></h5>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/fa/educations/communications-software-commander/" target="_blank"
+                    title="آموزش نرم افزار ارتباطی کامندر">آموزش نرم افزار ارتباطی کامندر</a></h5>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/fa/educations/timax-plus-communication/" target="_blank"
+                    title="ارتباط با دستگاه حضور و غباب تایمکس پلاس">ارتباط با دستگاه حضور و غیاب تایمکس پلاس</a></h5>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/fa/educations/tface-tfinger-communication/" target="_blank"
+                    title="ارتباط با دستگاه حضور و غیاب tFace و tFinger">ارتباط با دستگاه حضور و غیاب tFace و
+                    tFinger</a></h5>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/fa/educations/uface-302-user-guide/" target="_blank"
+                    title="آموزش دستگاه حضور و غیاب تشخیص چهره uFace302">آموزش دستگاه حضور و غیاب تشخیص چهره
+                    uFace302</a></h5>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
