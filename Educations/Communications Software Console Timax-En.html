@@ -17,34 +17,24 @@
 
 <p>The console communication software is used to set all the parts of the <u><a href="https://www.palizafzar.com/en/products/tx/" target="_blank" title="Timax attendance device">Timax attendance device</a></u>, send or receive information to the computer. Note that this software will be connected to attendance devices by the relevant software and service.</p>
 
-<h2>Table of Contents:</h2>
-
-<table class="table table-bordered table-hover table-striped">
-<tbody>
-<tr>
-<td><a scroll-to="GeneralSettings" title="General Settings">>> General Settings</a></td>
-<td><a scroll-to="ExternalCardReaders" title="External Card Readers">>> External Card Readers</a></td>
-</tr>
-<tr>
-<td><a scroll-to="TimeSettings" title="Time Settings">>> Time Settings</a></td>
-<td><a scroll-to="SecuritySettingsofAttendanceDevice" title="Security Settings of Attendance Device ">>> Security Settings of Attendance Device </a></td>
-</tr>
-<tr>
-<td><a scroll-to="MainSettingsofSoftware" title="Main Settings of Software">>> Main Settings of Software</a></td>
-<td><a scroll-to="ReceiveCardInformation" title="Receive Card Information">>> Receive Card Information</a></td>
-</tr>
-<tr>
-<td><a scroll-to="InternalCardReaders" title="Internal Card Readers">>> Internal Card Readers</a></td>
-<td><a scroll-to="SendCardInformation" title="Send Card Information">>> Send Card Information</a></td>
-</tr>
-</tbody>
-</table>
-
+<p class="mar-btm-20">Table of Contents:</p>
+<ul class="mar-btm-40">
+<li><a scroll-to="GeneralSettings" title="General settings in the console communication software">General settings in the console communication software</a></li>
+<li><a scroll-to="TimeSettings" title="Time Settings">Time Settings</a></li>
+<li><a scroll-to="MainSettings" title="Main Settings of Software">Main Settings of Software</a></li>
+<li><a scroll-to="InternalCardReaders" title="Internal Card Readers">Internal Card Readers</a></li>
+<li><a scroll-to="ExternalCardReaders" title="External Card Readers">External Card Readers</a></li>
+<li><a scroll-to="SecuritySettings" title="Security Settings of Attendance Device">Security Settings of Attendance Device</a></li>
+</ul>
 <div id="GeneralSettings">
 <h2><strong>General settings in the console communication software</strong></h2>
+
 <p>In this section, the writing of the Timax, the time attendance device, and the function of the speaker can be seen and adjusted.</p>
+
 <p>Device writing: It is inserted into the system when programming the hardware.</p>
+
 <p>Speaker: There are four types of sound settings in the system.</p>
+
 <ul class="mar-btm-40">
 <li>Full mute: In all options, the speaker is muted.</li>
 <li>Mute alarms: Alarms are muted.</li>
@@ -52,30 +42,43 @@
 <li>Stopping the card ID recognition sound: Card registration confirmation is done without sound.</li>
 </ul>
 </div>
+
 <div id="TimeSettings">
 <h2><strong>Time Settings</strong></h2>
+
 <p>Setting, receiving and sending (time, date, digital or hour display format, and type of solar or Gregorian date) is available to us.</p>
+
 <p>If you select the current date or time when sending information, the date and time of the computer will be sent to the device.</p>
 </div>
-<div id="MainSettingsofSoftware">
+
+<div id="MainSettings">
 <h2><strong>Main Settings of Software</strong></h2>
+
 <p>In this section, we have the following settings:</p>
+
 <div class="mar-left-30">
 <p>Language: Determine the language of the attendance terminal in Persian or English</p>
+
 <p>Datacenter: Input data to the attendance device can be transferred and used in two ways.</p>
+
 <ul class="mar-btm-40">
 <li>Automatically: automatically transferred to the data center.</li>
 <li>Displayed as monitoring: simultaneous display of information in the monitoring software during clocking.</li>
 </ul>
+
 <p>Fixed ID: Each Timax attendance device has a unique fixed number that can be set. This number, id, specifies the source and destination of the information for the system. For example, the information received by this device with the specified identifier is transferred to the data center with a defined fixed identifier.</p>
+
 <p>Relay 1 and Relay 2: The duration of the activation of relays 1 and 2 can be programmed from 0 seconds to 255 seconds, in other words, every time the relay is activated for the time set here, the relays remain active.</p>
+
 <p>Input 1 and 2: In this system, we have two TTL inputs to receive digital information, here the time of zero or one of these inputs can be programmed.</p>
 </div>
 </div>
 
 <div id="InternalCardReaders">
 <h2><strong>Internal Card Readers</strong></h2>
+
 <ul>
+<li>
 <ul class="mar-btm-40">
 <li>Activating or deactivating barcode, magnetic and contactless card readers and viewing the status of card readers</li>
 <li>Enable or disable the fingerprint sensor</li>
@@ -83,11 +86,13 @@
 <li>Schedule specifications: not defined</li>
 <li>Timetable intervals: not defined</li>
 </ul>
+</li>
 </ul>
 </div>
 
 <div id="ExternalCardReaders">
 <h2><strong>External Card Readers</strong></h2>
+
 <ul class="mar-btm-40">
 <li>Activity: Active or inactive external card reader</li>
 <li>Type of external card reader: Determine a type of external barcode, magnetic or contactless card reader.</li>
@@ -96,23 +101,46 @@
 </ul>
 </div>
 
-<div id="SecuritySettingsofAttendanceDevice">
-<h2><strong>Security Settings of Attendance Device </strong></h2>
+<div id="SecuritySettings">
+<h2><strong>Security Settings of Attendance Device</strong></h2>
+
 <p>Settings: setting the passwords of the attendance device to factory default passwords</p>
+
 <p>Entering the password of the zero or MENU key or without encrypting the MENU key</p>
-<p>Menu password error detection: By activating this option, by entering the wrong password three times, the device will lock the password and we will no longer be able to enter the menus through the device, and the password can only be changed through the software and the new password will be loaded into the menus. </p>
-<p>Security password: entering the password of the device's security sections or without encrypting this section</p>
+
+<p>Menu password error detection: By activating this option, by entering the wrong password three times, the device will lock the password and we will no longer be able to enter the menus through the device, and the password can only be changed through the software and the new password will be loaded into the menus.</p>
+
+<p>Security password: entering the password of the device&#39;s security sections or without encrypting this section</p>
+
 <p>Security password error detection: This option is similar to option 3 regarding the security password.</p>
 </div>
-
-<div id="ReceiveCardInformation">
-<h2><strong>Receive Card Information</strong></h2>
-<h3><strong>Operation</strong></h3>
-
-<div id="SendCardInformation">
-<h2><strong>Send Card Information</strong></h2>
-</div>
-
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Article",
+"mainEntityOfPage": {
+"@type": "WebPage",
+"@id": "https://www.palizafzar.com/en/educations/communications-software-console/"
+},
+"headline": "A Tutorial on Timax Console Communication Software",
+"description": "The console communication software is used to set all the parts of the Timax attendance device, send or receive information to the computer. Note that this software will be connected to attendance devices by the relevant software and service.",
+"image": "",
+"author": {
+"@type": "",
+"name": "palizafzar",
+"url": "https://www.palizafzar.com/"
+},
+"publisher": {
+"@type": "Organization",
+"name": "palizafzar",
+"logo": {
+"@type": "ImageObject",
+"url": "https://static.palizafzar.com/static/images/paliz_logo.27831a942350.png"
+}
+},
+"datePublished": ""
+}
+</script>
 
 
 
