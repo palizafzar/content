@@ -20,7 +20,209 @@
 <!--پایان کار تبدیل ورد به pdf و مقایسه با فایل اصلی-->
 
 
-<!-- part 2 -->
+<h2>نصب نرم افزار</h2>
+<p>نصب مرحله به مرحله نرم افزارهای لازم به صورت زير مي باشد:</p>
+<p>1.	نصب نرم افزار SQL Server2008R2 (لینک نصب SQL)</p>
+<p>2.	 نصب نرم افزار حضور و غیاب: با اجرای ستاپ برنامه  InOutControlManagement_Setup.exe در حالت Run As Administrator  نصب را تا انتها ادامه دهید.</p>
+<p>با نصب ستاپ برنامه، برنامه پالیز استودیو، نرم افزار حضور و غیاب و همچنین برنامه جانبی   Database Installation Wizard(جهت اتصال بانكهاي اطلاعاتي نرم افزارها به SQL سرور وبه روز رساني بانكها SQL) نيز نصب خواهد شد.</p>
+<p>3.	برای برنامه جامع، قفل دانگل USB را به یکی از پورتهای کامپیوتر متصل نمایید</p>
+<p>4.	اکنون لايسنس نرم افزار InOutControlManagement.LS.lic  را در مسير نصب برنامه در شاخه System  کپی نمایید. در نسخه لایت (رایگان) از لایسنس موجود در شاخه </p>
+<p>tools\standard LIC </p>
+<p> استفاده نمایید. و در نسخه جامع از لایسنس موجود در CD کوچک همراه قفل دانگل USB خود استفاده نمایید. مسير پيش فرض نصب برنامه به صورت زير مي باشد:</p>
+<p>C:/Program Files/ Paliz Afzar Company/ Paliz Afzar Studio</p>
+<p>نصب در اینجا تمام است و باید تنظیمات اولیه برنامه را انجام دهید.</p>
+<p>5.	در صورت داشتن بک آپ از برنامه، پس از نصب برنامه باید دیتابیس مورد نظر را به برنامه متصل نمایید تا بتوانید از اطلاعات قبل استفاده نمایید و نیاز به تعریف مجدد نداشته باشید. برای این منظور از برنامه دیتابیس اینستالیشن ویزارد استفاده می کنیم.</p>
+<p>Database Installation Wizard</p>
+<p>با استفاده از این برنامه می توانید دیتابیس های موجود را به برنامه متصل نمایید و در صورت نیاز به بروزرسانی آنها را بروزرسانی نمایید. همچنین برای گرفتن بک آپ و بازگرداندن اطلاعات بک آپ گرفته شده به برنامه از این برنامه استفاده می گردد.</p>
+<p>1. از گزينه Start ویندوز و شاخه PalizAfzarproducts، گزينه DatabaseInstallationWizard  را انتخاب مي نماییم. کلید Next را بزنید.</p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="database installation wizard" alt="database installation wizard" src="https://static.palizafzar.com/media/editor_uploads/2023/11/19/database-installation-wizard.jpg" />
+</figure>
+<p>2. در صفحه اخیر به دو گزينه توجه داريم نام سرور (Server Name) و اتصال ديتابيس:</p>
+<p>3. اگر نام سرور SQL  نامشخص باشد كلمه Not Specified در کادر Server Name  قابل مشاهده است.</p>
+<p>4. در صورت عدم اتصال پايگاه داده به سرور مورد نظر، در كادرDatabase Connection Statue عبارت Connection Failed درج شده است. بنابراين براي انتخاب نام SQL Server مورد نظر و برقراري ارتباط با آن  كليد Property را مي‌زنيم.</p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="database installation wizard connection" alt="database installation wizard connection" src="https://static.palizafzar.com/media/editor_uploads/2023/11/19/database-installation-wizard-connection.jpg" />
+</figure>
+<p>5. در پنجره Property بايد نام سروري را كه مي‌خواهيم با آن ارتباط برقرار كنيم وارد نماييم. همچنين مي‌توان از طريق دکمه سه نقطه لیست سرورهای SQL (پايگاه داده) در دسترس را مشاهده نموده و سرور مورد نظر را انتخاب (Select) نمود</p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="Data Source" alt="Data Source" src="https://static.palizafzar.com/media/editor_uploads/2023/11/19/database-data-source.jpg" />
+</figure>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="Server List" alt="Server List" src="https://static.palizafzar.com/media/editor_uploads/2023/11/19/server-list_fg8ig5o.jpg" />
+</figure>
+<p>سپس كليد Connection test  را جهت تست ارتباط می زنیم. پیغامی با عنوان (ارتباط برقرار شد) Connection Ok را مشاهده خواهيم نمود و بعد دکمه  Apply  مي‌زنيم.. پس از آن كليد Close را مي‌زنيم. </p>
+<p>6. اکنون نام سرورSQL انتخابي ما قابل مشاهد خواهد بود و كادرDatabase Connection Statue عبارت Done  را نمايش مي‌دهد. اكنون دکمه Next را مي‌زنيم.</p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="Database Connection Wizard" alt="Database Connection Wizard" src="https://static.palizafzar.com/media/editor_uploads/2023/11/19/database-connection-wizard.jpg" />
+</figure>
+<p>7. در این مرحله بايد ديتابيسهاي مورد نياز را به پايگاه داده SQL متصل نمود. به اين عمل Attach گفته مي‌شود. براي اتصال همه ديتابيسهاي مورد نظر مي‌توان آنها را انتخاب نمود و دريك مرحله Attach نمود. ابتدا گزينه  Attach Databases و سپس ديتابيسهاي In Out Control Databases و Paliz Afzar Studio Databases را انتخاب نموده و كليد Next را مي‌زنيم. </p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="Database task list" alt="Database task list" src="https://static.palizafzar.com/media/editor_uploads/2023/11/19/database-task-list.jpg" />
+</figure>
+<p>8. در صفحه كنوني دکمه Next را می‌زنیم. درصورتي كه آدرس ديتابيس مشخص نباشد ويا بخواهيم ديتابيس مورد نظر خود را از شاخه اي ديگر فراخواني كنيم. </p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="Attach Database" alt="Attach Database" src="https://static.palizafzar.com/media/editor_uploads/2023/11/19/attach-database.jpg" />
+</figure>
+<p>از كليد Browse استفاده مي‌كنيم. و مسير و فايل Data Base را انتخاب مي‌كنيم و در پنجره بعد كليد Finish را مي‌زنيم.</p>
+<p>9. پس ازAttach نمودن ديتابيسها، آنها را بروزرساني (update) می کنیم. برای این منظور از طريق برنامه  Database Installation Wizard  گزينه‌ Update Databases وديتابيس  Paliz Afzar Studio را انتخاب نموده كليد Next را مي‌زنيم. </p>
+<!--    checked up to here 22 > 68 -->
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="Update Database" alt="Update Database" src="https://static.palizafzar.com/media/editor_uploads/2023/11/19/update-database.jpg" />
+</figure>
+
+<p>10. حال جهت فراخواني فايل Update، كليد Browse را مي‌زنيم. از شاخه Databases Update فايل Palizafzar Studio-hf.pak را انتخاب نموده كليد Open را مي‌زنيم. Update نمودن In Out Control Management نيز همين روش را انجام مي‌دهيم. فقط فايل Update، InOutControlManagement-HFxx.pak را بايد انتخاب نمود. </p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="Open Window" alt="Open Window" src="https://static.palizafzar.com/media/editor_uploads/2023/11/19/open-window.png" />
+</figure>
+<p>پس از نصب برنامه برای فارسی شدن زبان برنامه عملیات زیر را انجام دهید.</p>
+<p>به کنترل پنل ویندوز رفته و تنظیمات زیر را انجام داده ذخیره نمایید</p>
+<ul>
+    <li>Control panel -> Region -> Format = persian</li>
+    <li>Control panel -> Region -> Administrative ->Change System Locale= persian(Iran)</li>
+    <li>Control panel -> Region ->additional Setting -> Number -> Decimal symbol = " . "</li>
+    <li>Control panel -> Region ->additional Setting -> Date -> Short date = MM/DD/YYYY</li>
+    <li>Control panel -> Region ->additional Setting -> Date -> Calendar type =( میلادی(انگلیسی)</li>
+</ul>
+<p>اجرای برنامه</p>
+<p>روی گزینه Paliz Afzar Studio در صفحه دسکتاپ كلیك نمایید. استودیوی كنترل محصولات پالیزافزار شامل دو پنجره گشوده می شود.</p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="Palizafzar Studio" alt="Palizafzar Studio" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/palizafzar-studio.jpg" />
+</figure>
+<p>مدیر اجازه دسترسی: در اینجا نمایش نام محصول، ویرایش، نگارش و وضعیت دسترسی نرم افزار را داریم.</p>
+<ul>
+    <li>نام محصول: نام نرم افزار قابل اجرا تحت استودیو را نمایش می‌دهد.</li>
+    <li>ویرایش محصول: سطح كاربرد و یا امكانات مورد استفاده از نرم افزار را مشخص می‌نماید.</li>
+    <li>شماره نگارش: هر محصول مورد استفاده دارای شماره  نگارش می‌باشد. </li>
+    <ul>
+        <li>علت نمایش پیام "فایل اجازه دسترسی پیدا نشد" و یا " اجازه دسترسی وجود ندارد" در وضعیت دسترسی</li>
+    </ul>
+    <li>وضعیت دسترسی: دسترسی به نرم افزار توسط استودیوی پالیزافزار كنترل می‌گردد دراینجا نسبت به عدم دسترسی و یا دسترسی محدود و یا دسترسی كامل پیغام مناسب در قسمت وضعیت دسترسی درج می‌گردد.</li>
+    <li>درصورتیكه وضعیت دسترسی جمله  "فایل اجازه دسترسی پیدا نشد"  را نمایش دهد، باید فایل لایسنس نرم افزار درشاخه System، محل نصب برنامه كپی شود. مسیرپیش فرض نصب  برنامه:</li>
+    <li>C:\Program Files\Paliz Afzar Company\Paliz Afzar Studio\System  </li>
+    <li>اشكال در عدم تطابق فایل لایسنس با قفل نرم افزار و یا عدم خواندن قفل توسط Windows می‌باشد.</li>
+    <ul>
+        <li>با كلیك راست ماوس روی "مدیریت حضور و غیاب پالیز" منویی شامل دو گزینه بازخوانی و مشخصات ظاهر می‌گردد. </li>
+    </ul>
+    <li>بازخوانی: برای بازخوانی و كنترل مجدد لایسنس توسط استودیوی پالیزافزار می‌توان این گزینه را انتخاب نمود.</li>
+    <ul>
+        <li>مشاهده مشخصات و تعداد نفرات لایسنس</li>
+    </ul>
+    <li>مشخصات: این گزینه اطلاعات كامل لایسنس موجود شامل شماره سریال قفل، ویرایش محصول، تعداد پرسنل قابل تعریف، سقف زمان استفاده از قفل و... را نمایش می دهد. </li>
+    <li>تنظیمات پایگاه داده و اتصال (اتچ) آن به SQL</li>
+</ul>
+<p>مدیر پایگاه داده: هنگام نصب برنامه، دیتابیس نرم افزارحضور و غیاب و استودیوی پالیزافزار به پایگاه داده SQL متصل (Attach) شده است. این امكان وجود دارد كه كه دیتابیسهای نرم افزاربه پایگاه داده های مختلف متصل شوند. دراینجا می‌خواهیم مشخص كنیم نرم افزار حضور و غیاب با كدام پایگاه داده SQL ارتباط داشته باشد. می‌توانیم ارتباط برنامه را با SQL یك كامپیوتردیگر برقرار نماییم. یعنی از دیتابیس كامپیوتر دیگر استفاده نماییم.  </p>
+<p>برای این منظوردر قسمت مدیر پایگاه داده  بر روی مدیریت حضور و غیاب پالیزافزار، كلید راست ماوس را زده گزینه مشخصات را انتخاب می‌كنیم. پنجره مشخصات Property گشوده می‌شود. </p>
+
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="Connection Status" alt="Connection Status" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/connection-status.jpg" />
+</figure>
+<p>نام سرور SQL مورد نظر را در كادر نام سرور (Serv erName) وارد می نماییم. و یا از كلید   برای جستجو و انتخاب سرور، استفاده و كلید اعمال را  می زنیم. اگر پایگاه داده انتخاب شده جهت اتصال، در كامپیوتر دیگری باشد طبق مجوزهای داده شده در هنگام نصب SQL  می توان از مجوز ویندوز یا پایگاه داده استفاده کرد شكل(11)</p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="Database connection" alt="Database connection" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/database-connection.jpg" />
+</figure>
+<p>با زدن دكمه تست ارتباط، در صورت برقراری ارتباط پیام ارتباط برقرار است روی صفحه ظاهر می‌شود. شكل(12)</p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="ارتباط برقرار است" alt="ارتباط برقرار است" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/connection-is-ture.jpg" />
+</figure>
+<p> پس از اطمینان از برقراری ارتباط میان نرم افزار و پایگاه داده انتخاب شده (SQL) كلید اعمال را می زنیم تا تغییرات ذخیره شود </p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="Confirmation" alt="Confirmation" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/confirmation.jpg" />
+</figure>
+<p>سپس کلید بستن را می‌زنیم شكل (11).</p>
+<p>به صفحه اصلی مدیریت كنترل استودیوی پالیز باز می گردیم. وضعیت ارتباط در مدیر پایگاه داده عبارت ارتباط برقرار است را نمایش می‌دهد. شكل (10).  </p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="منوهای پالیزافزار استدیو" alt="منوهای پالیزافزار استدیو" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/palizafzar-studio-menus.jpg" />
+</figure>
+<p>اكنون می‌توانیم وارد برنامه شویم.</p>
+<p>در بالای پنجره استودیوی كنترل محصولات پالیزافزار چهار گزینه وجود دارد</p>
+<p>شروع: برای ورود به برنامه ازاین گزینه مدیریت حضور و غیاب پالیز را انتخاب می‌كنیم.شكل(13)</p>
+<ol>
+    <li>نمایش: با انتخاب گزینه هدایتگر لیست گزینه های نرم افزار قابل مشاهده می‌باشد.</li>
+    <li>كمک: نگارش استودیوی كنترل محصولات پالیزافزار را نمایش می‌دهد.شكل(14).</li>
+</ol>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="درباره پالبزافزار استدیو" alt="درباره پالبزافزار استدیو" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/about-palizafzar-studio.jpg" />
+</figure>
+<p>نام کاربر و رمز پیش فرض برنامه لایت و یا جامع </p>
+<p>با انتخاب مدیریت حضور و غیاب پالیز از گزینه شروع وارد برنامه می‌شویم. نام  كاربر پیش فرض عدد یک و كلمه عبور پیش فرض نیز عدد یک می‌باشد شكل(15)</p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="ورود کاربر" alt="ورود کاربر" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/user-definition.jpg" />
+</figure>
+<h2 id="UserDefinition">تعریف کاربر با سطح دسترسی دلخواه (لینک تعریف کاربر)</h2>
+<p>امكان تعریف كاربران مختلف با سطوح دسترسی متفاوت از منوی مدیریت کاربران وجود دارد. برای تعریف کاربران و تعیین سطح دسترسی آنها، به برنامه وارد شده و از منو مدیریت حضور و غیاب، مدیریت کاربران را انتخاب کنید شكل(16)</p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="مدیریت کاربران" alt="مدیریت کاربران" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/user-management.png" />
+</figure>
+<p> در پایین صفحه اخیر دو گزینه كاربران و سطوح دسترسی وجود دارد. (شکل 17)</p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="سطوح دسترسی کاربران" alt="سطوح دسترسی کاربران" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/users-access-levels.jpg" />
+</figure>
+<p>سطوح دسترسی: در اینجا امكان تعریف سطوح دسترسی مختلف با نام وكد وجود دارد. </p>
+<ul>
+    <li>ابتدا كد و نام مورد نظر خود جهت دسترسی به بخشهای دلخواه را تعریف کنید. سپس از پنجره سمت چپ گزینه‌های مورد نظر خود را علامت زده و در انتها كلید ذخیره را می‌زنیم.</li>
+</ul>
+<p>ابتدا كد و نام مورد نظر خود جهت دسترسی به بخشهای دلخواه را تعریف کنید. سپس از پنجره سمت چپ گزینه‌های مورد نظر خود را علامت زده و در انتها كلید ذخیره را می‌زنیم.</p>
+<ul>
+    <li>كاربران: در این گزینه امكان تعریف كاربر جدید وجود دارد. می توان كاربر مورد نظر را به یك آدرس آی پی خاص محدود نمود تا فقط از آی پی تعریف شده اجازه دسترسی داشته باشد. در پنجره سمت چپ سطوح دسترسی تعریف شده قابل انتخاب برای كاربر تعریف شده می باشد.</li>
+</ul>
+<p> در سطوح دسترسی امكان تعریف دسترسی یا عدم دسترسی كاربر به صورت مشاهده، ویرایش، حذف، اضافه، ذخیره، به روزرسانی، بازخوانی، اجرا كردن، نمایش، ایجاد، جدید، دریافت از، بازكردن، ارسال به، چاپ و گزارش وجود دارد. تمام آیتم‌های استفاده شده در نرم افزار قابل كنترل در سطح دسترسی می‌باشند. علامت تیك سبز رنگ در كنار هر آیتم نشان دهنده اجازه دسترسی به آن و علامت تیك سبز كمرنگ در كنار هرآیتم نشان دهنده عدم دسترسی به آن می‌باشد. با كلیك روی علامت بعلاوه (+) دسترسی هر آیتم در اختیار ما قرار می‌گیرد كه با دو بار كلیك ماوس روی هر آیتم، انتخاب یا عدم انتخاب آیتم انجام می‌گیرد. همچنین با زدن كلید راست ماوس روی پنجره آیتم‌های دسترسی موجود، گزینه های انتخابی آیتم‌ها در اختیار ما قرار می‌گیرد. در زیر برای مثال در مدیریت كاربران دو گزینه انتخاب شده است. </p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="آیتم های قسمت مدیریت کاربران" alt="آیتم های قسمت مدیریت کاربران" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/user-management-root.jpg" />
+</figure>
+<p>پس از ذخیره یا اصلاح سطح دسترسی، یکبار از سیستم خارج شده و دوباره وارد نرم افزار می شویم تا سطح دسترسی جدید اعمال شود</p>
+<p>در اولین بار ورود به برنامه، پیغام پیكر بندی اولیه روی صفحه ظاهر خواهد شد. منظور از پیكر بندی تعیین تعداد ارقام شماره كارت و شماره پرسنلی و تاریخ شروع سال می‌باشد. </p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="پیکربندی اولیه" alt="پیکربندی اولیه" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/initial-configuration.jpg" />
+</figure>
+<h2></h2>
+<p> برای پیكربندی اولیه به گزینه تنظیمات - تنظیمات اولیه می‌رویم. </p>
+<h2>تنظیمات</h2>
+<p>پیش از استفاده از برنامه لازم است تنظیمات مورد نیاز انجام گیرد.</p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="" alt="گزینه های تنظیمات" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/setting-options.jpg" />
+</figure>
+<h2>تنظیمات اولیه: (شكل22) (لینک تنظیمات اولیه)</h2>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="گزینه های تنظیمات اولیه" alt="گزینه های تنظیمات اولیه" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/initial-settings-options.jpg" />
+</figure>
+<ul>
+    <li>طول شماره كارت ورود / خروج (شناسه فرد): تعداد ارقام شماره كارت در برنامه لایت تا 4 رقم و برنامه جامع 10 رقم  قابل تعیین است.</li>
+    <li>طول شماره پرسنلی: تعداد ارقام شماره پرسنلی در برنامه لایت تا 8 رقم و در برنامه جامع تا 16 رقم قابل تعیین می باشد. </li>
+    <li>تاریخ شروع سال: تاریخ شروع سال مالی یا کاری مجموعه با این گزینه تعیین می شود. به عبارت دیگر محاسبات اطلاعات از این تاریخ به بعد به عنوان سال جدید در نظر گرفته خواهد شد.</li>
+    <li>نکته مهم: این تاریخ مبنای محاسبه شروع سال جدید برای محاسبه مرخصی ها می باشد.</li>
+    <li>شیفتها در گروههای كاری برای همپوشانی چك شوند (لینک همپوشانی): گاهی نیاز است در یك گروه كاری بیش از یك شیفت استفاده شود. مثلا سه روز صبح كار، سه روز عصر كار و سه روز بعدی را شب كار باشند، در این حالت ممكن است مقداری ازمحدوده شیفتهای تعریف شده با قرار گرفتن در كنار هم با یكدیگر تلاقی پیدا كنند. برای آگاهی از تلاقی شیفتهای استفاده شده با یكدیگردرتعریف گروه كاری، این گزینه انتخاب می شود.</li>
+</ul>
+<h2 id="OnlineTransfer">انتقال آنلاین تردد از دستگاه به برنامه و پردازش خودکار (لینک انتقال آنلاین)</h2>
+<p>آنلاین: برای ارتباط همزمان نرم افزار با یک یا چند دستگاه حضور و غیاب و پردازش اطلاعات تردد به صورت خودكار از این گزینه استفاده می‌شود.</p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="منبع داده کارتزنی" alt="منبع داده کارتزنی" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/data-source.jpg" />
+</figure>
+<p>منبع داده کارتزنی: برای تعیین محل برداشتن اطلاعات تردد به صورت آنلاین توسط برنامه حضور و غیاب باید این منابع را مشخص کنیم</p>
+<p>این گزینه دارای سه نوع دیتابیس می باشد:</p>
+<p>با انتخاب هر گزینه و کلید تنظیم ارتباط، پنجره مربوط به دیتابیس مورد نظر جهت تنظیمات باز می شود.</p>
+<p>Unis: برای دریافت اطلاعات از بانک نرم افزار Unis، پارامترهای آدرس فایل و رمز دیتابیس و... را تنظیم کنید </p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="دریافت اطلاعات از نرم افزار UNIS" alt="دریافت اطلاعات از نرم افزار UNIS" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/input-from-virdi-database.jpg" />
+</figure>
+<p>DataCenter: اطلاعات دستگاه كارتزنی توسط نرم افزارهای ارتباطی مربوط به هر مدل دستگاه به بانك اطلاعات نرم افزار دیتا سنتر منتقل می‌شود و نرم افزار حضور و غیاب این اطلاعات را از دیتاسنتر فراخوانی می کند.  شكل(23)</p>
+<p>نام سرور، نام کاربری و رمز عبور با توجه به نوع دسترسی (همانگونه که هنگام نصب  SQL تعیین شده) و آدرس پایگاه داده دیتا سنتر را جهت برداشت اطلاعات كارتزنی وارد کنید. </p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="ارتباط بانک اطلاعاتی" alt="ارتباط بانک اطلاعاتی" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/data-source-and-sql-server.jpg" />
+</figure>
+<p>None: حالت بدون ارتباط با بانک اطلاعات مربوط به تردد (در این حالت سیستم آنلاین نخواهد بود)</p>
+<ul>
+    <li>دوره های سركشی برای بازیابی: با تعیین زمان سركشی برحسب دقیقه، سیستم در زمانهای تعیین شده ازنرم افزاردیتا سنتر، آخرین اطلاعات تردد دریافت نشده را فراخوانی می‌نماید.</li>
+    <li>وارد كردن ترددها بصورت آنلاین: درصورتی كه بخواهیم ترددهای ثبت شده درنرم افزاردیتا سنتر بصورت خودكار به نرم افزارحضور و غیاب منتقل شود این گزینه را انتخاب می كنیم.</li>
+    <li>پردازش آنلاین: درصورت انتخاب گزینه وارد کردن ترددها بصورت آنلاین این گزینه فعال میشود و با انتخاب این گزینه می‌توان اطلاعات تردد دریافت شده را بصورت خودكار پردازش نمود. و نیاز به پردازش اطلاعات توسط كاربر نیست.</li>
+    <li>مقادیر تصویبی انتخابی: در برخی از شركتها و یا سازمانها به پارامتهایی غیراز موارد محاسباتی سیستم حضور و غیاب نیاز دارند. (مثل اضافه كارتصویبی ویا...) برای تعریف این پارامترها از این گزینه استفاده می‌شود. جنس این پارامترها می‌تواند متن، عدد و یا تاریخ باشد.</li>
+</ul>
+<p>امكان تعریف چهار مقدار تصویبی وجود دارد. شكل(25)</p>
+<p>در انتها تمام تغییرات و تنظیمات باید ذخیره شوند.</p>
+<figure class="mar-btm-20">
+    <img class="img-rounded img-responsive image-center" title="مقادیر تصویبی انتخابی" alt="مقادیر تصویبی انتخابی" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/selective-approval-values.jpg" />
+</figure>
+
 <p>چگونه شیفت پرسنل را تعریف کنیم. تعریف شیفتهای دو نوبته. شیفت نگهبان. شیفت چرخشی </p>
 <p>تعریف شیفت (لینک تعریف شیفت)</p>
 <p>به هرالگوی رفت وآمد پرسنل یك شیفت گفته می‌شود. یا به عبارت دیگر هر شیفت، معرف ساعات موظفی  كاركرد شخص در یك روز كاری می‌باشد. هر شیفت می‌تواند به دو نوبت تقسیم شود. مثلا شروع نوبت اول، ساعت 8 پایان نوبت اول 13 و شروع  نوبت دوم 16 و پایان نوبت دوم  19 باشد.</p>
@@ -463,9 +665,6 @@
     <img class="img-rounded img-responsive image-center" title="پارامترهای گروه کاری 2" alt="پارامترهای گروه کاری 2" src="https://static.palizafzar.com/media/editor_uploads/2023/12/04/working-group-parameters-2.jpg" />
 </figure>
 <p>در انتها برای ذخیره تغییرات کلید ذخیره را بزنید</p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
-</figure>
 <p>تعریف پارامترهای شیفتها و پارامترها ی گروه کاری ها به همین صورت انجام می شود. برای مثالهای بعدی فقط تنظیم صفحه اصلی تعریف شیفت و تعریف گروه کاری را انجام می دهیم</p>
 <p>مثال شماره 2: (لینک روز غیرکاری)</p>
 <p>موظفی گروهی از افراد از شنبه تا چهارشنبه 8 الی 18 و پنج شنبه ها تعطیل هستند</p>
@@ -587,30 +786,31 @@
         <td>24 ساعت کار</td>
     </tr>
 </table>
-<p>برای تعریف،  طبق تصاویر زیر مقدار دهی میکنیم:</p>
+<p>برای تعریف، طبق تصاویر زیر مقدار دهی میکنیم:</p>
 <p> شیفت اول: 24 ساعت کاری</p>
 <figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+    <img class="img-rounded img-responsive image-center" title="شیفت اول" alt="شیفت اول" src="https://static.palizafzar.com/media/editor_uploads/2023/12/05/shift-work-7-31.jpg" />
 </figure>
 <p>شیفت دوم: استراحت روز اول</p>
 <figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+    <img class="img-rounded img-responsive image-center" title="شیفت دوم" alt="شیفت دوم" src="https://static.palizafzar.com/media/editor_uploads/2023/12/05/shift-work-24-48.jpg" />
 </figure>
 <p>شیفت سوم: استراحت روز دوم</p>
 <figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+    <img class="img-rounded img-responsive image-center" title="شیفت استراحت روز دوم" alt="شیفت استراحت روز دوم" src="https://static.palizafzar.com/media/editor_uploads/2023/12/05/shift-work-24-48-second-day.jpg" />
 </figure>
 <p>تعریف گروه کاری اول: از آنجا که معمولا این نوع تعریف شیفت به گروه های نگهبانی اختصاص داده  می شود،این گروه را حراست A  نام گذاری کردیم. هنگام تعریف این گروه به قسمتهای رنگی توجه کنید.</p>
+<p>تعریف گروه کاری اول </p>
 <figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+    <img class="img-rounded img-responsive image-center" title="گروه کاری اول" alt="گروه کاری اول" src="https://static.palizafzar.com/media/editor_uploads/2023/12/05/working-group-first.jpg" />
 </figure>
 <p>تعریف گروه کاری دوم: حراست B </p>
 <figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+    <img class="img-rounded img-responsive image-center" title="گروه کاری دوم" alt="گروه کاری دوم" src="https://static.palizafzar.com/media/editor_uploads/2023/12/05/working-group-b.jpg" />
 </figure>
 <p>تعریف گروه کاری سوم: حراست  C </p>
 <figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+    <img class="img-rounded img-responsive image-center" title="گروه کاری سوم" alt="گروه کاری سوم" src="https://static.palizafzar.com/media/editor_uploads/2023/12/05/working-group-c.jpg" />
 </figure>
 <p>اگر به گروه کاری های تعریف شده و جدول عملکرد گروه ها توجه کنید درست بودن تعاریف کاملا مشخص خواهد بود</p>
 <ul>
@@ -618,7 +818,7 @@
     <li>مرخصیها: مرخصی به معنای عدم حضور در محل كار در زمان كاری شركت، با مجوز می‌باشد. بنا به استفاده مختلف شركتها، امكان تعریف انواع مرخصی در این سیستم وجود دارد. همچنین امكان تعریف مرخصی ساعتی از جنس مرخصی روزانه، وجود دارد. جهت تعریف مرخصی و یا ماموریت جدید، كلید اضافه را زده و پس از تعریف ماموریت و یا مرخصی، كلید ذخیره را می‌زنیم.</li>
 </ul>
 <figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+    <img class="img-rounded img-responsive image-center" title="مرخصیها" alt="مرخصیها" src="https://static.palizafzar.com/media/editor_uploads/2023/12/05/vacations.jpg" />
 </figure>
 <ul>
     <li>نام مرخصی: نام انواع مرخصی هایی که در مجموعه استفاده می شود را تعریف  می کنیم.</li>
@@ -629,7 +829,7 @@
 </ul>
 <p>ماموریتها: ماموریت به معنای انجام فعالیت برای شركت در محلی غیر از محیط شركت می‌باشد. بنا به استفاده مختلف شركتها، امكان تعریف انواع ماموریتها ی روزانه و ساعتی  در این سیستم وجود دارد. همچنین امكان تعریف ماموریت ساعتی از جنس ماموریت روزانه وجود دارد.</p>
 <figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+    <img class="img-rounded img-responsive image-center" title="ماموریت ها" alt="ماموریت ها" src="https://static.palizafzar.com/media/editor_uploads/2023/12/05/missions.jpg" />
 </figure>
 <ul>
     <li>نام ماموریت: نام انواع ماموریتهایی که در مجموعه استفاده میشود. نام مورد نظر را وارد تعریف می‌نماییم.</li>
@@ -638,11 +838,11 @@
 <p>چارت سازمانی (لینک چارت سازمانی)</p>
 <p>درهمه شركتها و موسسات و ادارات  بخشها و زیر بخشهای مختلفی وجود دارد. هر بخش ممكن است زیر نظر بخش دیگری باشد. به این نوع  تقسیم  بندی چارت سازمانی گفته می‌شود. برای درك بهتر مثال ساده‌ای از یك شركت می‌زنیم.</p>
 <figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+    <img class="img-rounded img-responsive image-center" title="چارت سازمانی" alt="چارت سازمانی" src="https://static.palizafzar.com/media/editor_uploads/2023/12/05/organizational-chart.jpg" />
 </figure>
 <p>در فلوچارت زیر تعدادی از بخشهای یك شركت به عنوان مثال نمایش داده شده است.</p>
 <figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+    <img class="img-rounded img-responsive image-center" title="فلوچارت شرکتی" alt="فلوچارت شرکتی" src="https://static.palizafzar.com/media/editor_uploads/2023/12/05/corporate-flowchart.jpg" />
 </figure>
 <p>در چارت سازمانی هر مدیر می‌تواند در قسمت دسترسی خود فعالیت نماید مثلا گزارشهای زیر بخشهای خود را مشاهده نماید و مدیر زیر دست وی امكان مشاهده گزارشهای پرسنل بخشهای دیگر را ندارد. مثلا بخش امور مالی گزارشهای پرسنل حسابداری را مشاهده نموده ولی نمی‌تواند گزارشهای بخش آموزش را مشاهده نماید.</p>
 <p>همانطور كه در بالا بیان شد هر سازمان دارای بخشها و زیربخشهای مختلف می‌باشد. هربخش اصلی را ریشه و زیربخش هركدام را فرزند می نامیم. برای تعریف چارت سازمانی ابتدا ریشه (مدیریت) وسپس فرزندها(زیربخشها) را تعریف می‌كنیم. </p>
@@ -651,18 +851,18 @@
 <p>برای توضیح بیشتر فرض می‌كنیم مسئول واحد خدمات پس از فروش فقط نیازبه گزارش گیری از پرسنل خود دارد و به قسمتهای دیگر نرم افزار كاری ندارد و گزارش گیری از پرسنل خارج از این بخش مقدور نمی‌باشد. برای تعریف چارت سازمانی این فرد عملیات زیر را انجام می‌دهیم:</p>
 <p>یک سطح دسترسی به نام گزارش تعریف می کنیم. برای این کار به بخش مدیریت كاربران و سطح دسترسی می رویم.</p>
 <figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+    <img class="img-rounded img-responsive image-center" title="سطوح دسترسی" alt="سطوح دسترسی" src="https://static.palizafzar.com/media/editor_uploads/2023/12/05/access-levels_flrhw7y.jpg" />
 </figure>
 <p>سپس کاربر مورد نظر را از منوی کاربران تعریف می کنیم</p>
 <figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+    <img class="img-rounded img-responsive image-center" title="تعریف کاربر" alt="تعریف کاربر" src="https://static.palizafzar.com/media/editor_uploads/2023/12/05/user-management.jpg" />
 </figure>
 <figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+    <img class="img-rounded img-responsive image-center" title="مدیریت کاربران" alt="مدیریت کاربران" src="https://static.palizafzar.com/media/editor_uploads/2023/12/05/user-management-2.jpg" />
 </figure>
 <p>بعد از تعریف چارت سازمانی، جایگاه این شخص را در چارت مشخص می کنیم و كاربر تعریف شده در لیست مدیریت كاربران را به آن اختصاص داده و پرسنل قابل دسترس را نیز مشخص می نماییم.</p>
 <figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+    <img class="img-rounded img-responsive image-center" title="" alt="" src="https://static.palizafzar.com/media/editor_uploads/2023/12/05/user-role-1.jpg" />
 </figure>
 <figure class="mar-btm-20">
     <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
@@ -692,11 +892,11 @@
 <figure class="mar-btm-20">
     <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
 </figure>
-<u>
+<ul>
     <li>عادی: در كارتزنی عادی محاسبات براساس شیفت ها انجام شده و اولین كارت ورود و كارت دوم خروج در نظر گرفته می‌شود و تعداد كارتها باید زوج باشد. درغیر این صورت با عنوان تردد ناقص نمایش داده میشود</li>
     <li>ساعتی: كاركرد ساعتی به معنای كاركرد برحسب ساعت می‌باشد. وپرسنل این گروه به ازاء هرساعت كاركرد حقوق دریافت خواهند كرد. كارتزنی در این حالت مانند كارتزنی عادی می‌باشد و محاسبات طبق ساعت كاركرد فرد انجام می‌پذیرد. درصورت تعریف مقدارحضورموظفی درطول یك روز و یا در طول دوره، در گزینه پارامترهای گروه كاری، كاركرد بیش از سقف می‌تواند اضافه كار محسوب گردد. درمحاسبات كاركرد ساعتی به شروع نوبت و پایان نوبت تعریف شده درشیفت  توجه نمی‌شود ولی باید تردد بین شروع و محدوده كارتزنی صورت پذیرد.</li>
     <li>نامحدود: درصورتیکه ورود و خروج پرسنل نامشخص باشد و از شیفت تعریف شده فراتر رود، از گزینه نامحدود استفاده می کنیم. برای ثبت تردد حتما باید قبل از آن كلید ورود یا كارت ورود را زده سپس  تردد خود را ثبت نمود و همچنین هنگام خروج ابتدا كلید خروج را زده سپس تردد خود را ثبت نماییم. در این نوع كارتزنی اگر خروج شخص از محدوده كارتزنی شیفت عبور كند بطور خودكار برای این شماره كارت قبل از اتمام محدوده كارتزنی آن روز یك خروج و بعد ازشروع كارتزنی روز بعد یك ورود ثبت می‌نماید كه در گزارش قابل مشاهده است. لازم به ذكر است اگر تردد بدون زدن كلید ورود و خروج صورت پذیرد سیستم خطا نمایش خواهد داد.</li>
-</u>
+</ul>
 <p>گروه كاری (لینک 30): هر فرد باید طبق الگوی تعریف شده تردد نماید. این الگو را توسط گروه كاری به پرسنل اختصاص می‌دهیم. بنابراین در انتخاب گروه كاری پرسنل دقت نمایید.</p>
 <figure class="mar-btm-20">
     <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
@@ -1382,207 +1582,3 @@
 
 
 
-
-<!--part 1-->
-<h2>نصب نرم افزار</h2>
-<p>نصب مرحله به مرحله نرم افزارهای لازم به صورت زير مي باشد:</p>
-<p>1.	نصب نرم افزار SQL Server2008R2 (لینک نصب SQL)</p>
-<p>2.	 نصب نرم افزار حضور و غیاب: با اجرای ستاپ برنامه  InOutControlManagement_Setup.exe در حالت Run As Administrator  نصب را تا انتها ادامه دهید.</p>
-<p>با نصب ستاپ برنامه، برنامه پالیز استودیو، نرم افزار حضور و غیاب و همچنین برنامه جانبی   Database Installation Wizard(جهت اتصال بانكهاي اطلاعاتي نرم افزارها به SQL سرور وبه روز رساني بانكها SQL) نيز نصب خواهد شد.</p>
-<p>3.	برای برنامه جامع، قفل دانگل USB را به یکی از پورتهای کامپیوتر متصل نمایید</p>
-<p>4.	اکنون لايسنس نرم افزار InOutControlManagement.LS.lic  را در مسير نصب برنامه در شاخه System  کپی نمایید. در نسخه لایت (رایگان) از لایسنس موجود در شاخه </p>
-<p>tools\standard LIC </p>
-<p> استفاده نمایید. و در نسخه جامع از لایسنس موجود در CD کوچک همراه قفل دانگل USB خود استفاده نمایید. مسير پيش فرض نصب برنامه به صورت زير مي باشد:</p>
-<p>C:/Program Files/ Paliz Afzar Company/ Paliz Afzar Studio</p>
-<p>نصب در اینجا تمام است و باید تنظیمات اولیه برنامه را انجام دهید.</p>
-<p>5.	در صورت داشتن بک آپ از برنامه، پس از نصب برنامه باید دیتابیس مورد نظر را به برنامه متصل نمایید تا بتوانید از اطلاعات قبل استفاده نمایید و نیاز به تعریف مجدد نداشته باشید. برای این منظور از برنامه دیتابیس اینستالیشن ویزارد استفاده می کنیم.</p>
-<p>Database Installation Wizard</p>
-<p>با استفاده از این برنامه می توانید دیتابیس های موجود را به برنامه متصل نمایید و در صورت نیاز به بروزرسانی آنها را بروزرسانی نمایید. همچنین برای گرفتن بک آپ و بازگرداندن اطلاعات بک آپ گرفته شده به برنامه از این برنامه استفاده می گردد.</p>
-<p>1. از گزينه Start ویندوز و شاخه PalizAfzarproducts، گزينه DatabaseInstallationWizard  را انتخاب مي نماییم. کلید Next را بزنید.</p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="database installation wizard" alt="database installation wizard" src="https://static.palizafzar.com/media/editor_uploads/2023/11/19/database-installation-wizard.jpg" />
-</figure>
-<p>2. در صفحه اخیر به دو گزينه توجه داريم نام سرور (Server Name) و اتصال ديتابيس:</p>
-<p>3. اگر نام سرور SQL  نامشخص باشد كلمه Not Specified در کادر Server Name  قابل مشاهده است.</p>
-<p>4. در صورت عدم اتصال پايگاه داده به سرور مورد نظر، در كادرDatabase Connection Statue عبارت Connection Failed درج شده است. بنابراين براي انتخاب نام SQL Server مورد نظر و برقراري ارتباط با آن  كليد Property را مي‌زنيم.</p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="database installation wizard connection" alt="database installation wizard connection" src="https://static.palizafzar.com/media/editor_uploads/2023/11/19/database-installation-wizard-connection.jpg" />
-</figure>
-<p>5. در پنجره Property بايد نام سروري را كه مي‌خواهيم با آن ارتباط برقرار كنيم وارد نماييم. همچنين مي‌توان از طريق دکمه سه نقطه لیست سرورهای SQL (پايگاه داده) در دسترس را مشاهده نموده و سرور مورد نظر را انتخاب (Select) نمود</p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="Data Source" alt="Data Source" src="https://static.palizafzar.com/media/editor_uploads/2023/11/19/database-data-source.jpg" />
-</figure>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="Server List" alt="Server List" src="https://static.palizafzar.com/media/editor_uploads/2023/11/19/server-list_fg8ig5o.jpg" />
-</figure>
-<p>سپس كليد Connection test  را جهت تست ارتباط می زنیم. پیغامی با عنوان (ارتباط برقرار شد) Connection Ok را مشاهده خواهيم نمود و بعد دکمه  Apply  مي‌زنيم.. پس از آن كليد Close را مي‌زنيم. </p>
-<p>6. اکنون نام سرورSQL انتخابي ما قابل مشاهد خواهد بود و كادرDatabase Connection Statue عبارت Done  را نمايش مي‌دهد. اكنون دکمه Next را مي‌زنيم.</p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="Database Connection Wizard" alt="Database Connection Wizard" src="https://static.palizafzar.com/media/editor_uploads/2023/11/19/database-connection-wizard.jpg" />
-</figure>
-<p>7. در این مرحله بايد ديتابيسهاي مورد نياز را به پايگاه داده SQL متصل نمود. به اين عمل Attach گفته مي‌شود. براي اتصال همه ديتابيسهاي مورد نظر مي‌توان آنها را انتخاب نمود و دريك مرحله Attach نمود. ابتدا گزينه  Attach Databases و سپس ديتابيسهاي In Out Control Databases و Paliz Afzar Studio Databases را انتخاب نموده و كليد Next را مي‌زنيم. </p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="Database task list" alt="Database task list" src="https://static.palizafzar.com/media/editor_uploads/2023/11/19/database-task-list.jpg" />
-</figure>
-<p>8. در صفحه كنوني دکمه Next را می‌زنیم. درصورتي كه آدرس ديتابيس مشخص نباشد ويا بخواهيم ديتابيس مورد نظر خود را از شاخه اي ديگر فراخواني كنيم. </p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="Attach Database" alt="Attach Database" src="https://static.palizafzar.com/media/editor_uploads/2023/11/19/attach-database.jpg" />
-</figure>
-<p>از كليد Browse استفاده مي‌كنيم. و مسير و فايل Data Base را انتخاب مي‌كنيم و در پنجره بعد كليد Finish را مي‌زنيم.</p>
-<p>9. پس ازAttach نمودن ديتابيسها، آنها را بروزرساني (update) می کنیم. برای این منظور از طريق برنامه  Database Installation Wizard  گزينه‌ Update Databases وديتابيس  Paliz Afzar Studio را انتخاب نموده كليد Next را مي‌زنيم. </p>
-<!--    checked up to here 22 > 68 -->
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="Update Database" alt="Update Database" src="https://static.palizafzar.com/media/editor_uploads/2023/11/19/update-database.jpg" />
-</figure>
-
-<p>10. حال جهت فراخواني فايل Update، كليد Browse را مي‌زنيم. از شاخه Databases Update فايل Palizafzar Studio-hf.pak را انتخاب نموده كليد Open را مي‌زنيم. Update نمودن In Out Control Management نيز همين روش را انجام مي‌دهيم. فقط فايل Update، InOutControlManagement-HFxx.pak را بايد انتخاب نمود. </p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="Open Window" alt="Open Window" src="https://static.palizafzar.com/media/editor_uploads/2023/11/19/open-window.png" />
-</figure>
-<p>پس از نصب برنامه برای فارسی شدن زبان برنامه عملیات زیر را انجام دهید.</p>
-<p>به کنترل پنل ویندوز رفته و تنظیمات زیر را انجام داده ذخیره نمایید</p>
-<ul>
-    <li>Control panel -> Region -> Format = persian</li>
-    <li>Control panel -> Region -> Administrative ->Change System Locale= persian(Iran)</li>
-    <li>Control panel -> Region ->additional Setting -> Number -> Decimal symbol = " . "</li>
-    <li>Control panel -> Region ->additional Setting -> Date -> Short date = MM/DD/YYYY</li>
-    <li>Control panel -> Region ->additional Setting -> Date -> Calendar type =( میلادی(انگلیسی)</li>
-</ul>
-<p>اجرای برنامه</p>
-<p>روی گزینه Paliz Afzar Studio در صفحه دسکتاپ كلیك نمایید. استودیوی كنترل محصولات پالیزافزار شامل دو پنجره گشوده می شود.</p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="Palizafzar Studio" alt="Palizafzar Studio" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/palizafzar-studio.jpg" />
-</figure>
-<p>مدیر اجازه دسترسی: در اینجا نمایش نام محصول، ویرایش، نگارش و وضعیت دسترسی نرم افزار را داریم.</p>
-<ul>
-    <li>نام محصول: نام نرم افزار قابل اجرا تحت استودیو را نمایش می‌دهد.</li>
-    <li>ویرایش محصول: سطح كاربرد و یا امكانات مورد استفاده از نرم افزار را مشخص می‌نماید.</li>
-    <li>شماره نگارش: هر محصول مورد استفاده دارای شماره  نگارش می‌باشد. </li>
-    <ul>
-        <li>علت نمایش پیام "فایل اجازه دسترسی پیدا نشد" و یا " اجازه دسترسی وجود ندارد" در وضعیت دسترسی</li>
-    </ul>
-    <li>وضعیت دسترسی: دسترسی به نرم افزار توسط استودیوی پالیزافزار كنترل می‌گردد دراینجا نسبت به عدم دسترسی و یا دسترسی محدود و یا دسترسی كامل پیغام مناسب در قسمت وضعیت دسترسی درج می‌گردد.</li>
-    <li>درصورتیكه وضعیت دسترسی جمله  "فایل اجازه دسترسی پیدا نشد"  را نمایش دهد، باید فایل لایسنس نرم افزار درشاخه System، محل نصب برنامه كپی شود. مسیرپیش فرض نصب  برنامه:</li>
-    <li>C:\Program Files\Paliz Afzar Company\Paliz Afzar Studio\System  </li>
-    <li>اشكال در عدم تطابق فایل لایسنس با قفل نرم افزار و یا عدم خواندن قفل توسط Windows می‌باشد.</li>
-    <ul>
-        <li>با كلیك راست ماوس روی "مدیریت حضور و غیاب پالیز" منویی شامل دو گزینه بازخوانی و مشخصات ظاهر می‌گردد. </li>
-    </ul>
-    <li>بازخوانی: برای بازخوانی و كنترل مجدد لایسنس توسط استودیوی پالیزافزار می‌توان این گزینه را انتخاب نمود.</li>
-    <ul>
-        <li>مشاهده مشخصات و تعداد نفرات لایسنس</li>
-    </ul>
-    <li>مشخصات: این گزینه اطلاعات كامل لایسنس موجود شامل شماره سریال قفل، ویرایش محصول، تعداد پرسنل قابل تعریف، سقف زمان استفاده از قفل و... را نمایش می دهد. </li>
-    <li>تنظیمات پایگاه داده و اتصال (اتچ) آن به SQL</li>
-</ul>
-<p>مدیر پایگاه داده: هنگام نصب برنامه، دیتابیس نرم افزارحضور و غیاب و استودیوی پالیزافزار به پایگاه داده SQL متصل (Attach) شده است. این امكان وجود دارد كه كه دیتابیسهای نرم افزاربه پایگاه داده های مختلف متصل شوند. دراینجا می‌خواهیم مشخص كنیم نرم افزار حضور و غیاب با كدام پایگاه داده SQL ارتباط داشته باشد. می‌توانیم ارتباط برنامه را با SQL یك كامپیوتردیگر برقرار نماییم. یعنی از دیتابیس كامپیوتر دیگر استفاده نماییم.  </p>
-<p>برای این منظوردر قسمت مدیر پایگاه داده  بر روی مدیریت حضور و غیاب پالیزافزار، كلید راست ماوس را زده گزینه مشخصات را انتخاب می‌كنیم. پنجره مشخصات Property گشوده می‌شود. </p>
-
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="Connection Status" alt="Connection Status" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/connection-status.jpg" />
-</figure>
-<p>نام سرور SQL مورد نظر را در كادر نام سرور (Serv erName) وارد می نماییم. و یا از كلید   برای جستجو و انتخاب سرور، استفاده و كلید اعمال را  می زنیم. اگر پایگاه داده انتخاب شده جهت اتصال، در كامپیوتر دیگری باشد طبق مجوزهای داده شده در هنگام نصب SQL  می توان از مجوز ویندوز یا پایگاه داده استفاده کرد شكل(11)</p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="Database connection" alt="Database connection" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/database-connection.jpg" />
-</figure>
-<p>با زدن دكمه تست ارتباط، در صورت برقراری ارتباط پیام ارتباط برقرار است روی صفحه ظاهر می‌شود. شكل(12)</p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="ارتباط برقرار است" alt="ارتباط برقرار است" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/connection-is-ture.jpg" />
-</figure>
-<p> پس از اطمینان از برقراری ارتباط میان نرم افزار و پایگاه داده انتخاب شده (SQL) كلید اعمال را می زنیم تا تغییرات ذخیره شود </p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="Confirmation" alt="Confirmation" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/confirmation.jpg" />
-</figure>
-<p>سپس کلید بستن را می‌زنیم شكل (11).</p>
-<p>به صفحه اصلی مدیریت كنترل استودیوی پالیز باز می گردیم. وضعیت ارتباط در مدیر پایگاه داده عبارت ارتباط برقرار است را نمایش می‌دهد. شكل (10).  </p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="منوهای پالیزافزار استدیو" alt="منوهای پالیزافزار استدیو" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/palizafzar-studio-menus.jpg" />
-</figure>
-<p>اكنون می‌توانیم وارد برنامه شویم.</p>
-<p>در بالای پنجره استودیوی كنترل محصولات پالیزافزار چهار گزینه وجود دارد</p>
-<p>شروع: برای ورود به برنامه ازاین گزینه مدیریت حضور و غیاب پالیز را انتخاب می‌كنیم.شكل(13)</p>
-<ol>
-    <li>نمایش: با انتخاب گزینه هدایتگر لیست گزینه های نرم افزار قابل مشاهده می‌باشد.</li>
-    <li>كمک: نگارش استودیوی كنترل محصولات پالیزافزار را نمایش می‌دهد.شكل(14).</li>
-</ol>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="درباره پالبزافزار استدیو" alt="درباره پالبزافزار استدیو" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/about-palizafzar-studio.jpg" />
-</figure>
-<p>نام کاربر و رمز پیش فرض برنامه لایت و یا جامع </p>
-<p>با انتخاب مدیریت حضور و غیاب پالیز از گزینه شروع وارد برنامه می‌شویم. نام  كاربر پیش فرض عدد یک و كلمه عبور پیش فرض نیز عدد یک می‌باشد شكل(15)</p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="ورود کاربر" alt="ورود کاربر" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/user-definition.jpg" />
-</figure>
-<h2 id="UserDefinition">تعریف کاربر با سطح دسترسی دلخواه (لینک تعریف کاربر)</h2>
-<p>امكان تعریف كاربران مختلف با سطوح دسترسی متفاوت از منوی مدیریت کاربران وجود دارد. برای تعریف کاربران و تعیین سطح دسترسی آنها، به برنامه وارد شده و از منو مدیریت حضور و غیاب، مدیریت کاربران را انتخاب کنید شكل(16)</p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="مدیریت کاربران" alt="مدیریت کاربران" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/user-management.png" />
-</figure>
-<p> در پایین صفحه اخیر دو گزینه كاربران و سطوح دسترسی وجود دارد. (شکل 17)</p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="سطوح دسترسی کاربران" alt="سطوح دسترسی کاربران" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/users-access-levels.jpg" />
-</figure>
-<p>سطوح دسترسی: در اینجا امكان تعریف سطوح دسترسی مختلف با نام وكد وجود دارد. </p>
-<ul>
-    <li>ابتدا كد و نام مورد نظر خود جهت دسترسی به بخشهای دلخواه را تعریف کنید. سپس از پنجره سمت چپ گزینه‌های مورد نظر خود را علامت زده و در انتها كلید ذخیره را می‌زنیم.</li>
-</ul>
-<p>ابتدا كد و نام مورد نظر خود جهت دسترسی به بخشهای دلخواه را تعریف کنید. سپس از پنجره سمت چپ گزینه‌های مورد نظر خود را علامت زده و در انتها كلید ذخیره را می‌زنیم.</p>
-<ul>
-    <li>كاربران: در این گزینه امكان تعریف كاربر جدید وجود دارد. می توان كاربر مورد نظر را به یك آدرس آی پی خاص محدود نمود تا فقط از آی پی تعریف شده اجازه دسترسی داشته باشد. در پنجره سمت چپ سطوح دسترسی تعریف شده قابل انتخاب برای كاربر تعریف شده می باشد.</li>
-</ul>
-<p> در سطوح دسترسی امكان تعریف دسترسی یا عدم دسترسی كاربر به صورت مشاهده، ویرایش، حذف، اضافه، ذخیره، به روزرسانی، بازخوانی، اجرا كردن، نمایش، ایجاد، جدید، دریافت از، بازكردن، ارسال به، چاپ و گزارش وجود دارد. تمام آیتم‌های استفاده شده در نرم افزار قابل كنترل در سطح دسترسی می‌باشند. علامت تیك سبز رنگ در كنار هر آیتم نشان دهنده اجازه دسترسی به آن و علامت تیك سبز كمرنگ در كنار هرآیتم نشان دهنده عدم دسترسی به آن می‌باشد. با كلیك روی علامت بعلاوه (+) دسترسی هر آیتم در اختیار ما قرار می‌گیرد كه با دو بار كلیك ماوس روی هر آیتم، انتخاب یا عدم انتخاب آیتم انجام می‌گیرد. همچنین با زدن كلید راست ماوس روی پنجره آیتم‌های دسترسی موجود، گزینه های انتخابی آیتم‌ها در اختیار ما قرار می‌گیرد. در زیر برای مثال در مدیریت كاربران دو گزینه انتخاب شده است. </p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="آیتم های قسمت مدیریت کاربران" alt="آیتم های قسمت مدیریت کاربران" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/user-management-root.jpg" />
-</figure>
-<p>پس از ذخیره یا اصلاح سطح دسترسی، یکبار از سیستم خارج شده و دوباره وارد نرم افزار می شویم تا سطح دسترسی جدید اعمال شود</p>
-<p>در اولین بار ورود به برنامه، پیغام پیكر بندی اولیه روی صفحه ظاهر خواهد شد. منظور از پیكر بندی تعیین تعداد ارقام شماره كارت و شماره پرسنلی و تاریخ شروع سال می‌باشد. </p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="پیکربندی اولیه" alt="پیکربندی اولیه" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/initial-configuration.jpg" />
-</figure>
-<h2></h2>
-<p> برای پیكربندی اولیه به گزینه تنظیمات - تنظیمات اولیه می‌رویم. </p>
-<h2>تنظیمات</h2>
-<p>پیش از استفاده از برنامه لازم است تنظیمات مورد نیاز انجام گیرد.</p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="" alt="گزینه های تنظیمات" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/setting-options.jpg" />
-</figure>
-<h2>تنظیمات اولیه: (شكل22) (لینک تنظیمات اولیه)</h2>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="گزینه های تنظیمات اولیه" alt="گزینه های تنظیمات اولیه" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/initial-settings-options.jpg" />
-</figure>
-<ul>
-    <li>طول شماره كارت ورود / خروج (شناسه فرد): تعداد ارقام شماره كارت در برنامه لایت تا 4 رقم و برنامه جامع 10 رقم  قابل تعیین است.</li>
-    <li>طول شماره پرسنلی: تعداد ارقام شماره پرسنلی در برنامه لایت تا 8 رقم و در برنامه جامع تا 16 رقم قابل تعیین می باشد. </li>
-    <li>تاریخ شروع سال: تاریخ شروع سال مالی یا کاری مجموعه با این گزینه تعیین می شود. به عبارت دیگر محاسبات اطلاعات از این تاریخ به بعد به عنوان سال جدید در نظر گرفته خواهد شد.</li>
-    <li>نکته مهم: این تاریخ مبنای محاسبه شروع سال جدید برای محاسبه مرخصی ها می باشد.</li>
-    <li>شیفتها در گروههای كاری برای همپوشانی چك شوند (لینک همپوشانی): گاهی نیاز است در یك گروه كاری بیش از یك شیفت استفاده شود. مثلا سه روز صبح كار، سه روز عصر كار و سه روز بعدی را شب كار باشند، در این حالت ممكن است مقداری ازمحدوده شیفتهای تعریف شده با قرار گرفتن در كنار هم با یكدیگر تلاقی پیدا كنند. برای آگاهی از تلاقی شیفتهای استفاده شده با یكدیگردرتعریف گروه كاری، این گزینه انتخاب می شود.</li>
-</ul>
-<h2 id="OnlineTransfer">انتقال آنلاین تردد از دستگاه به برنامه و پردازش خودکار (لینک انتقال آنلاین)</h2>
-<p>آنلاین: برای ارتباط همزمان نرم افزار با یک یا چند دستگاه حضور و غیاب و پردازش اطلاعات تردد به صورت خودكار از این گزینه استفاده می‌شود.</p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="منبع داده کارتزنی" alt="منبع داده کارتزنی" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/data-source.jpg" />
-</figure>
-<p>منبع داده کارتزنی: برای تعیین محل برداشتن اطلاعات تردد به صورت آنلاین توسط برنامه حضور و غیاب باید این منابع را مشخص کنیم</p>
-<p>این گزینه دارای سه نوع دیتابیس می باشد:</p>
-<p>با انتخاب هر گزینه و کلید تنظیم ارتباط، پنجره مربوط به دیتابیس مورد نظر جهت تنظیمات باز می شود.</p>
-<p>Unis: برای دریافت اطلاعات از بانک نرم افزار Unis، پارامترهای آدرس فایل و رمز دیتابیس و... را تنظیم کنید </p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="دریافت اطلاعات از نرم افزار UNIS" alt="دریافت اطلاعات از نرم افزار UNIS" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/input-from-virdi-database.jpg" />
-</figure>
-<p>DataCenter: اطلاعات دستگاه كارتزنی توسط نرم افزارهای ارتباطی مربوط به هر مدل دستگاه به بانك اطلاعات نرم افزار دیتا سنتر منتقل می‌شود و نرم افزار حضور و غیاب این اطلاعات را از دیتاسنتر فراخوانی می کند.  شكل(23)</p>
-<p>نام سرور، نام کاربری و رمز عبور با توجه به نوع دسترسی (همانگونه که هنگام نصب  SQL تعیین شده) و آدرس پایگاه داده دیتا سنتر را جهت برداشت اطلاعات كارتزنی وارد کنید. </p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="ارتباط بانک اطلاعاتی" alt="ارتباط بانک اطلاعاتی" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/data-source-and-sql-server.jpg" />
-</figure>
-<p>None: حالت بدون ارتباط با بانک اطلاعات مربوط به تردد (در این حالت سیستم آنلاین نخواهد بود)</p>
-<ul>
-    <li>دوره های سركشی برای بازیابی: با تعیین زمان سركشی برحسب دقیقه، سیستم در زمانهای تعیین شده ازنرم افزاردیتا سنتر، آخرین اطلاعات تردد دریافت نشده را فراخوانی می‌نماید.</li>
-    <li>وارد كردن ترددها بصورت آنلاین: درصورتی كه بخواهیم ترددهای ثبت شده درنرم افزاردیتا سنتر بصورت خودكار به نرم افزارحضور و غیاب منتقل شود این گزینه را انتخاب می كنیم.</li>
-    <li>پردازش آنلاین: درصورت انتخاب گزینه وارد کردن ترددها بصورت آنلاین این گزینه فعال میشود و با انتخاب این گزینه می‌توان اطلاعات تردد دریافت شده را بصورت خودكار پردازش نمود. و نیاز به پردازش اطلاعات توسط كاربر نیست.</li>
-    <li>مقادیر تصویبی انتخابی: در برخی از شركتها و یا سازمانها به پارامتهایی غیراز موارد محاسباتی سیستم حضور و غیاب نیاز دارند. (مثل اضافه كارتصویبی ویا...) برای تعریف این پارامترها از این گزینه استفاده می‌شود. جنس این پارامترها می‌تواند متن، عدد و یا تاریخ باشد.</li>
-</ul>
-<p>امكان تعریف چهار مقدار تصویبی وجود دارد. شكل(25)</p>
-<p>در انتها تمام تغییرات و تنظیمات باید ذخیره شوند.</p>
-<figure class="mar-btm-20">
-    <img class="img-rounded img-responsive image-center" title="مقادیر تصویبی انتخابی" alt="مقادیر تصویبی انتخابی" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/selective-approval-values.jpg" />
-</figure>
