@@ -16,8 +16,6 @@
 </head>
 <body>
 
-<!--جستجوی لینک ها و تگ زدن-->
-<!--پایان کار تبدیل ورد به pdf و مقایسه با فایل اصلی-->
 
 <div id="SQLInstallation">
 <h2>نصب نرم افزار</h2>
@@ -117,6 +115,7 @@
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="Connection Status" alt="Connection Status" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/connection-status.jpg" />
 </figure>
+<div id="DatabaseSettings">
 <p>نام سرور SQL مورد نظر را در كادر نام سرور (Serv erName) وارد می نماییم. و یا از كلید   برای جستجو و انتخاب سرور، استفاده و كلید اعمال را  می زنیم. اگر پایگاه داده انتخاب شده جهت اتصال، در كامپیوتر دیگری باشد طبق مجوزهای داده شده در هنگام نصب SQL  می توان از مجوز ویندوز یا پایگاه داده استفاده کرد شكل</p>
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="Database connection" alt="Database connection" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/database-connection.jpg" />
@@ -130,13 +129,14 @@
 <img class="img-rounded img-responsive image-center" title="Confirmation" alt="Confirmation" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/confirmation.jpg" />
 </figure>
 <p>سپس کلید بستن را می‌زنیم.</p>
+</div>
 <p>به صفحه اصلی مدیریت كنترل استودیوی پالیز باز می گردیم. وضعیت ارتباط در مدیر پایگاه داده عبارت ارتباط برقرار است را نمایش می‌دهد.  </p>
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="منوهای پالیزافزار استدیو" alt="منوهای پالیزافزار استدیو" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/palizafzar-studio-menus.jpg" />
 </figure>
 <p>اكنون می‌توانیم وارد برنامه شویم.</p>
 <p>در بالای پنجره استودیوی كنترل محصولات پالیزافزار چهار گزینه وجود دارد</p>
-<p>شروع: برای ورود به برنامه ازاین گزینه مدیریت حضور و غیاب پالیز را انتخاب می‌كنیم.</p>
+<p>شروع: برای ورود به برنامه از این گزینه مدیریت حضور و غیاب پالیز را انتخاب می‌كنیم.</p>
 <ol>
 <li>نمایش: با انتخاب گزینه هدایتگر لیست گزینه های نرم افزار قابل مشاهده می‌باشد.</li>
 <li>كمک: نگارش استودیوی كنترل محصولات پالیزافزار را نمایش می‌دهد.</li>
@@ -259,7 +259,7 @@
 </figure>
 <p>ساعت پایان نوبت اول: ساعت و دقیقه تعریف شده در این گزینه زمان پایان كار پرسنل در نوبت اول را نشان می‌دهد و كارتزنی پس از این زمان تا انتهای محدوده كارتزنی درصورت داشتن مجوز و رعایت محدودیت اضافه کاری، می‌تواند اضافه كارمحسوب شود. درصورتیكه  شیفت در دو نوبت باشد حضور بین دو نوبت اول ودوم اضافه كار در نظر گرفته می‌شود. ثبت تردد عادی قبل از اتمام نوبت تعجیل و كسر كار منظور می‌گردد.</p>
 <p>ساعت آغاز نوبت دوم: در برخی از شركتها كار روزانه به دو بخش تقسیم می‌گردد و بین این دو بخش زمانی را به استراحت می‌پردازند. به این روش تردد شیفت دو نوبته گفته می‌شود. ساعت و دقیقه تعریف شده در این گزینه ساعت شروع نوبت  دوم فعالیت می‌باشد. این زمان شروع اجباری كار در نوبت دوم می‌باشد و كارتزنی پس از آن می‌تواند كسر كار درنظر گرفته  شود.</p>
-<p>ساعت پایان نوبت دوم: این زمان ساعت اتمام كار در نوبت دوم می‌باشد. و برای كارتزنی قبل ازاین ساعت تعجیل در خروج و كسر كار منظور می‌گردد.</p>
+<p>ساعت پایان نوبت دوم: این زمان ساعت اتمام كار در نوبت دوم می‌باشد. و برای كارتزنی قبل از این ساعت تعجیل در خروج و كسر كار منظور می‌گردد.</p>
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="شروع و پایان شیفت نوبت دوم" alt="شروع و پایان شیفت نوبت دوم" src="https://static.palizafzar.com/media/editor_uploads/2023/11/26/start-end-shift-2.jpg" />
 </figure>
@@ -322,7 +322,7 @@
 </figure>
 </div>
 <div id="ShiftParameters">
-<p>پارامترهای شیفت: برای هر شیفت امكان تعریف تعدادی پارامتر وجود دارد. این پارامترها شامل تبدیل ساعات، مشخص کردن حداقل و حداکثر اضافه کار در شیفت، کسرکار قابل اغماض، تبدیل كسركار بیش از حد مجاز به غیبت، معادل ساعتی مرخصی روزانه، تعیین اضافه کار اجباری، تعیین زمان غیر مجاز خروج و میزان افزایش حضور پرسنل می باشد. در پایین هر کدام ازاین پارامترها شرح داده می شوند. </p>
+<p>پارامترهای شیفت: برای هر شیفت امكان تعریف تعدادی پارامتر وجود دارد. این پارامترها شامل تبدیل ساعات، مشخص کردن حداقل و حداکثر اضافه کار در شیفت، کسرکار قابل اغماض، تبدیل كسركار بیش از حد مجاز به غیبت، معادل ساعتی مرخصی روزانه، تعیین اضافه کار اجباری، تعیین زمان غیر مجاز خروج و میزان افزایش حضور پرسنل می باشد. در پایین هر کدام از این پارامترها شرح داده می شوند. </p>
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="پارامترهای شیفت" alt="پارامترهای شیفت" src="https://static.palizafzar.com/media/editor_uploads/2023/11/26/shift-parameters.jpg" />
 </figure>
@@ -621,7 +621,7 @@
 <p>نحوه محاسبه مقدار كاركرد موظفی برای كارتزنی ساعتی: دراینجا نوع محاسبه حضور پرسنل كارتزنی ساعتی مشخص می‌شود. </p>
 <ul>
 <li>روزانه: با انتخاب این گزینه، اگر حضور پرسنل كارتزنی ساعتی از سقف تعیین شده در هر روز بیشتر باشد برای آن روز اضافه كار در نظر گرفته خواهد شد. و درصورت حضور كمتر ازسقف تعیین شده كسركار محاسبه نمی‌گردد.</li>
-<li>دوره پردازش: با انتخاب این گزینه حضور موظفی پرسنل كارتزنی ساعتی دریك دوره پردازش (مثلا ماهیانه) با مقدار تعیین شده درگزینه بعدی مقایسه می‌گردد. درصورت وجود حضور بیش ازاین میزان اضافه كار ثبت خواهد شد.</li>
+<li>دوره پردازش: با انتخاب این گزینه حضور موظفی پرسنل كارتزنی ساعتی دریك دوره پردازش (مثلا ماهیانه) با مقدار تعیین شده درگزینه بعدی مقایسه می‌گردد. درصورت وجود حضور بیش از این میزان اضافه كار ثبت خواهد شد.</li>
 <li>مقدار كاركرد موظفی برای كارتزنی ساعتی: پرسنل ساعتی به ازاء هر روز باید به میزان تعیین شده این گزینه در شیفت فعالیت داشته باشند. در صورت كاركرد بیش از این میزان اضافه كار خواهد گرفت.</li>
 </ul>
 </div>
@@ -895,10 +895,9 @@
 <img class="img-rounded img-responsive image-center" title="گروه کاری سوم" alt="گروه کاری سوم" src="https://static.palizafzar.com/media/editor_uploads/2023/12/05/working-group-c.jpg" />
 </figure>
 <p>اگر به گروه کاری های تعریف شده و جدول عملکرد گروه ها توجه کنید درست بودن تعاریف کاملا مشخص خواهد بود</p>
-<ul>
-<li>تعریف مرخصی / ماموریت</li>
-<li>مرخصیها: مرخصی به معنای عدم حضور در محل كار در زمان كاری شركت، با مجوز می‌باشد. بنا به استفاده مختلف شركتها، امكان تعریف انواع مرخصی در این سیستم وجود دارد. همچنین امكان تعریف مرخصی ساعتی از جنس مرخصی روزانه، وجود دارد. جهت تعریف مرخصی و یا ماموریت جدید، كلید اضافه را زده و پس از تعریف ماموریت و یا مرخصی، كلید ذخیره را می‌زنیم.</li>
-</ul>
+<div id="">
+<h2>تعریف مرخصی / ماموریت</h2>
+<p>مرخصیها: مرخصی به معنای عدم حضور در محل كار در زمان كاری شركت، با مجوز می‌باشد. بنا به استفاده مختلف شركتها، امكان تعریف انواع مرخصی در این سیستم وجود دارد. همچنین امكان تعریف مرخصی ساعتی از جنس مرخصی روزانه، وجود دارد. جهت تعریف مرخصی و یا ماموریت جدید، كلید اضافه را زده و پس از تعریف ماموریت و یا مرخصی، كلید ذخیره را می‌زنیم.</p>
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="مرخصیها" alt="مرخصیها" src="https://static.palizafzar.com/media/editor_uploads/2023/12/05/vacations.jpg" />
 </figure>
@@ -909,6 +908,7 @@
 <li>مرخصی در روز تعطیل درنظر گرفته شود: اگر مرخصی ثبت شده در روز تعطیل قرار گیرد با انتخاب این گزینه مرخصی محاسبه خواهد شد و در غیر اینصورت مرخصی درنظر گرفته نمی‌شود.</li>
 <li>معادل مرخصی در دستگاه كارتزنی: در دستگاه حضور و غیاب مدل Timax هشت نوع مرخصی ساعتی قابل تعریف می‌باشد. در این گزینه  امكان اختصاص هر نوع مرخصی ساعتی به نوع روزانه  وجود دارد.</li>
 </ul>
+</div>
 <p>ماموریتها: ماموریت به معنای انجام فعالیت برای شركت در محلی غیر از محیط شركت می‌باشد. بنا به استفاده مختلف شركتها، امكان تعریف انواع ماموریتها ی روزانه و ساعتی  در این سیستم وجود دارد. همچنین امكان تعریف ماموریت ساعتی از جنس ماموریت روزانه وجود دارد.</p>
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="ماموریت ها" alt="ماموریت ها" src="https://static.palizafzar.com/media/editor_uploads/2023/12/05/missions.jpg" />
@@ -949,20 +949,20 @@
 <img class="img-rounded img-responsive image-center" title="تخصیص پرسنل در چارت سازمانی" alt="تخصیص پرسنل در چارت سازمانی" src="https://static.palizafzar.com/media/editor_uploads/2023/12/05/user-role-1.jpg" />
 </figure>
 <figure class="mar-btm-20">
-<img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+<img class="img-rounded img-responsive image-center" title="تعیین جایگاه کاربران" alt="تعیین جایگاه کاربران" src="https://static.palizafzar.com/media/editor_uploads/2024/01/06/user-role-2.jpg" />
 </figure>
 <p>بدین ترتیب مشخص می شود که چه افرادی (معمولا مدیران) میتوانند گزارشهای چه افرادی (معمولا پرسنل تحت فرمان مدیر مربوطه) را مشاهده نمایند. درصورتی که لازم باشد تا همه پرسنل هم گزارش خودشان را مشاهده کنند کافی است برای همه پرسنل نام کاربری مخصوص به همان فرد با دسترسی لازم را تعریف کنیم و فقط خودش را به نام کاربری مربوطه اختصاص دهیم.</p>
-<p>فعال سازی چارت سازمانی: با فعال نمودن این گزینه امكان استفاده ازاین طبقه بندی وجود خواهد داشت. چارت سازمانی  در تفكیك گزارشها بصورتیكه هر مسئول بتواند فقط پرسنل زیر گروه خود را مشاهده نماید مورد استفاده قرار می‌گیرد.</p>
+<p>فعال سازی چارت سازمانی: با فعال نمودن این گزینه امكان استفاده از این طبقه بندی وجود خواهد داشت. چارت سازمانی  در تفكیك گزارشها بصورتیكه هر مسئول بتواند فقط پرسنل زیر گروه خود را مشاهده نماید مورد استفاده قرار می‌گیرد.</p>
 </div>
 <div id="PersonnelInfo">
 <h2>ورود اطلاعات پرسنل</h2>
 <p>اطلاعات پایه پرسنل</p>
 <figure class="mar-btm-20">
-<img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+<img class="img-rounded img-responsive image-center" title="اطلاعات پرسنلی" alt="اطلاعات پرسنلی" src="https://static.palizafzar.com/media/editor_uploads/2024/01/06/personnel-info.jpg" />
 </figure>
 <p>اطلاعات پرسنلی: در این گزینه امكان ورود اطلاعات اصلی پرسنل وجود دارد.</p>
 <figure class="mar-btm-20">
-<img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+<img class="img-rounded img-responsive image-center" title="ورود اطلاعات پرسنلی" alt="ورود اطلاعات پرسنلی" src="https://static.palizafzar.com/media/editor_uploads/2024/01/06/primary-personnel-info.jpg" />
 </figure>
 <p> برخی از این پارامترها اجباری است مثل (شماره كارت، شماره پرسنلی، نوع استخدام، نوع كارتزنی، گروه كاری، تاریخ شروع به كار، تاریخ خاتمه كار و محل خدمت ). شماره كارت پس از ذخیره قابل ویرایش نیست و بقیه پارامترها را می‌توان در صورت نیاز ویرایش نمود. تعدادی از این پارامترها جهت راحتی در تعاریف جهت اختصاص به دیگر پرسنل قابل تعمیم می‌باشند. با انتخاب گزینه تعمیم  پنجره فیلتر با انتخاب های نام، نام خانوادگی، شماره پرسنلی، شماره كارت، تاریخ استخدام، محل خدمت و گروه كاری باشرایط مختلف مساوی، كوچكتر، بزرگتر و... در اختیار ما قرار می‌گیرد. برای حذف پرسنل كافی است از لیست، فرد را انتخاب نموده كلید حذف و سپس ذخیره را بزنیم.</p>
 <ul>
@@ -972,14 +972,14 @@
 <li>نوع استخدام: انتخاب نوع استخدام نوعی دسته بندی بر روی پرسنل می‌باشد. انواع استخدام را در گزینه تنظیمات می‌توان تعریف نمود.</li>
 </ul>
 <figure class="mar-btm-20">
-<img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+<img class="img-rounded img-responsive image-center" title="نوع استخدام" alt="نوع استخدام" src="https://static.palizafzar.com/media/editor_uploads/2024/01/06/employment-type.jpg" />
 </figure>
 </div>
 <div id="TypesOfLogs">
 <h2>نوع کارتزنی</h2>
 <p>نوع كارتزنی: نوع كارتزنی نحوه محاسبه و رفت و آمد هر شخص را مشخص می‌نماید. در اینجا سه نوع كارتزنی داریم.</p>
 <figure class="mar-btm-20">
-<img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+<img class="img-rounded img-responsive image-center" title="نوع كارتزنی" alt="نوع كارتزنی" src="https://static.palizafzar.com/media/editor_uploads/2024/01/06/types-of-traffic-record.jpg" />
 </figure>
 <ul>
 <li>عادی: در كارتزنی عادی محاسبات براساس شیفت ها انجام شده و اولین كارت ورود و كارت دوم خروج در نظر گرفته می‌شود و تعداد كارتها باید زوج باشد. درغیر این صورت با عنوان تردد ناقص نمایش داده میشود</li>
@@ -1092,7 +1092,6 @@
 <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
 </figure>
 </div>
-
 <div id="IssuanceOfOvertimePermits">
 <h2>صدور مجوز اضافه كاری </h2>
 <figure class="mar-btm-20">
@@ -1141,6 +1140,8 @@
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
 </figure>
+</div>
+<div id="BuyVacations">
 <p>بازخرید مرخصی ها: برای افرادی انجام می شود که گزینه " قابل بازخرید است؟" از منوی پرسنل قسمت سقف مرخصیها فعال باشد. با انتخاب این گزینه باقی مانده مرخصی صفر خواهد شد. با انجام باز خرید مرخصی مانده مرخصی باقی نمی ماند تا به سال بعد منتقل شود.  </p>
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
@@ -1437,6 +1438,7 @@
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
 </figure>
+  <div id="ReportFilter">
 <p>در هر گزارش می توان توسط فیلتر فرد یا افراد مورد نظر و محدوده تاریخ را انتخاب نمود.</p>
 <p>همچنین می توانید در صورت نیاز به اعمال تنظیمات مربوط به  تعدیل مقادیر و گرد کردن سر جمع اطلاعات در گزارش، گزینه های مربوطه را انتخاب کنید ( به قسمتهای مشخص شده در تصویر زیر دقت کنید)</p>
 <figure class="mar-btm-20">
@@ -1459,7 +1461,8 @@
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
 </figure>
-    <div id="PeriodicReport">
+  </div>
+<div id="PeriodicReport">
 <p>گزارش دوره‌ای: برای مشاهده کارکرد کلی همه افراد در یک دوره استفاده می شود. ( همه افراد در یک صفحه و هر نفر در یک سطر )  در این گزارش سرجمع یك دوره از گزارش در محدوده زمان تعیین شده در اختیار ما می‌باشد.</p>
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
@@ -1468,34 +1471,31 @@
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
 </figure>
-    </div>
-    <div id="ChangeReport">
-        <p>گزارش تغییرات: گاهی مدیریت نیاز به گزارش تغییرات دستی (گزارش تغییرات ترددها) كاربر سیستم دارد برای این منظور از این گزینه استفاده می‌شود.</p>
-        <figure class="mar-btm-20">
-            <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
-        </figure>
-    </div>
-    <div id="VacationReport">
-        <p>گزارش مرخصی | ماموریت: در این این قسمت گزارش ماموریت و مرخصی ها و سقف مرخصی ها قابل مشاهده است.</p>
-        <figure class="mar-btm-20">
-            <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
-        </figure>
-        <figure class="mar-btm-20">
-            <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
-        </figure>
-        <figure class="mar-btm-20">
-            <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
-        </figure>
-    </div>
-
-
+</div>
+<div id="ChangeReport">
+<p>گزارش تغییرات: گاهی مدیریت نیاز به گزارش تغییرات دستی (گزارش تغییرات ترددها) كاربر سیستم دارد برای این منظور از این گزینه استفاده می‌شود.</p>
+<figure class="mar-btm-20">
+<img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+</figure>
+</div>
+<div id="VacationReport">
+<p>گزارش مرخصی | ماموریت: در این این قسمت گزارش ماموریت و مرخصی ها و سقف مرخصی ها قابل مشاهده است.</p>
+<figure class="mar-btm-20">
+<img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+</figure>
+<figure class="mar-btm-20">
+<img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+</figure>
+<figure class="mar-btm-20">
+<img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+</figure>
+</div>
 <p>گزارش نوبت كاری: این گزارش همان گزارش دوره‌ای به همراه نوبت كاریها می‌باشد.</p>
 <p>گزارشهای مختلف: این قسمت شامل گزارشهای كاردكس ماهانه، ترددها و پرسنلی می‌باشد.</p>
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
 </figure>
-
-    <div id="SelectiveReport">
+<div id="SelectiveReport">
 <p>گزارش انتخابی: این بخش شامل سه نوع گزارش می‌باشد :</p>
 <ul>
 <li>گزارش انفرادی</li>
@@ -1517,7 +1517,7 @@
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="" alt="" src="" />
 </figure>
-    </div>
+</div>
 </div>
 <div id="CreatingOutputFile">
 <h2>تشكیل فایل خروجی</h2>
