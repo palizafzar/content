@@ -64,7 +64,6 @@
 </figure>
 <p>از كليد Browse استفاده مي‌كنيم. و مسير و فايل Data Base را انتخاب مي‌كنيم و در پنجره بعد كليد Finish را مي‌زنيم.</p>
 <p>9. پس ازAttach نمودن ديتابيسها، آنها را بروزرساني (update) می کنیم. برای این منظور از طريق برنامه  Database Installation Wizard  گزينه‌ Update Databases وديتابيس  Paliz Afzar Studio را انتخاب نموده كليد Next را مي‌زنيم. </p>
-<!--checked up to here 22 > 68 -->
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="Update Database" alt="Update Database" src="https://static.palizafzar.com/media/editor_uploads/2023/11/19/update-database.jpg" />
 </figure>
@@ -73,6 +72,7 @@
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="Open Window" alt="Open Window" src="https://static.palizafzar.com/media/editor_uploads/2023/11/19/open-window.png" />
 </figure>
+<p>برای بک آپ گیری از دیتابیس برنامه از برنامه Database Installation Wizard استفاده کنید گزینه Backup Databasees و دیتابیس In Out Control Database و Palizafzar Studio Database را انتخاب نموده و با کلید Next  پیش بروید. و در محل مورد نظر بک آپ را ذخیره نمایید</p>
 <p>پس از نصب برنامه برای فارسی شدن زبان برنامه عملیات زیر را انجام دهید.</p>
 <p>به کنترل پنل ویندوز رفته و تنظیمات زیر را انجام داده ذخیره نمایید</p>
 <ul>
@@ -136,16 +136,20 @@
 </figure>
 <p>اكنون می‌توانیم وارد برنامه شویم.</p>
 <p>در بالای پنجره استودیوی كنترل محصولات پالیزافزار چهار گزینه وجود دارد</p>
-<p>شروع: برای ورود به برنامه از این گزینه مدیریت حضور و غیاب پالیز را انتخاب می‌كنیم.</p>
 <ol>
+<li>شروع: برای ورود به برنامه از این گزینه مدیریت حضور و غیاب پالیز را انتخاب می‌كنیم.</li>
+<ul>
+<li>اگر با ورود به برنامه خطای "هنگام کار روی دیتابیس خطا رخ داده" را  مشاهده کنید از ارتباط دیتابیس با SQL را مطمئن باشید و همچنین حجم دیتابیس را بررسی کنید.</li>
+<li>اگر برای ورود به برنامه در گزینه شروع، مدیریت حضور و غیاب را نداشته باشید باید "دسترسی مجاز می باشد" را در وضعیت دسترسی داشته باشید. اگر ندارید لایسنس برنامه در شاخه System مسیر برنامه کپی نشده است. و  اگر در پنجره مدیر اجازه دسترسی هیچ چیز نیست نصب ناقص است.</li>
+<li>اگر گزینه مدیریت حضور و غیاب جهت ورود به برنامه غیر فعال نمایش داده شود ، به تنظیمات ارتباط پایگاه داده توجه کنید بطور صحیح انجام گرفته باشد و همچنین سرویس اسکیوال را بررسی کنید حتما استارت باشد.</li>
+</ul>
 <li>نمایش: با انتخاب گزینه هدایتگر لیست گزینه های نرم افزار قابل مشاهده می‌باشد.</li>
 <li>كمک: نگارش استودیوی كنترل محصولات پالیزافزار را نمایش می‌دهد.</li>
 </ol>
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="درباره پالبزافزار استدیو" alt="درباره پالبزافزار استدیو" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/about-palizafzar-studio.jpg" />
 </figure>
-<p>نام کاربر و رمز پیش فرض برنامه لایت و یا جامع </p>
-<p>با انتخاب مدیریت حضور و غیاب پالیز از گزینه شروع وارد برنامه می‌شویم. نام  كاربر پیش فرض عدد یک و كلمه عبور پیش فرض نیز عدد یک می‌باشد</p>
+<p>با انتخاب مدیریت حضور و غیاب پالیز از گزینه شروع وارد برنامه می‌شویم. نام  كاربر پیش فرض برنامه لایت و جامع عدد یک و كلمه عبور پیش فرض نیز عدد یک می‌باشد</p>
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="ورود کاربر" alt="ورود کاربر" src="https://static.palizafzar.com/media/editor_uploads/2023/11/20/user-definition.jpg" />
 </figure>
@@ -1273,6 +1277,13 @@
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="نمایش رکوردهای منتقل شده" alt="نمایش رکوردهای منتقل شده" src="https://static.palizafzar.com/media/editor_uploads/2024/01/08/records.jpg" />
 </figure>
+<p>اگر پس از وارد کردن داده تعداد صفر رکورد نشان داده شود به نکات زیر توجه کنید.</p>
+<ul>
+<li>فایل دریافت شده متنی TXT باید حاوی اطلاعات باشد.</li>
+<li>فرمت فایل دریافت شده باید فرمت پالیز افزار باشد.</li>
+<li>در صورت ویروسی بودن فلش ممکن است فایل متنی تغییر کرده باشد.</li>
+<li>گزینه Timax USB باید تیک داشته باشد.</li>
+</ul>
 <p>پردازش اطلاعات وارد شده: اگر این گزینه انتخاب شده باشد با كلیك روی گزینه وارد كردن داده پس از انتقال اطلاعات پنجره پردازش اطلاعات گشوده می‌شود. و با تنظیم تاریخ فرمان اعمال، محاسبه انجام خواهد شد. البته از منوی پرونده قسمت پردازش هم می توان این کار را انجام داد.</p>
 <p>فعال كردن تنظیمات: با این گزینه می‌توان تنظیمات مربوط به ساختار فایلهای دریافتی از دستگاههای غیر از پالیز افزار را انجام داد. برای اینكه بتوانیم اطلاعات خام TXT دستگاههای حضور و غیاب شركتهای دیگر را جهت پردازش اطلاعات در برنامه استفاده نماییم، باید تنظیمات مربوط به فایل خام دریافت شده را انجام دهیم تا سیستم اطلاعات تردد ثبت شده (ورود و خروج و تاریخ و ...) بطور صحیح از این فایل TXT  برداشت نماید. این تنظیمات شامل طول پارامترها، مكان پارامترها، نوع  و قالب یا مدل تاریخ می‌باشد. </p>
 <p>اطلاعات با جداكننده مجزا شده‌اند: در صورتی كه متن داخل فایل، توسط كاراكتر خاصی از هم مجزا شده باشند برای اجازه تعریف كاراكتر مجزا كننده از این گزینه استفاده می‌گردد. برای فعال کردن این گزینه باید گزینه های  Timax USB  و USB Unis غیر فعال شوند.</p>
@@ -1306,6 +1317,7 @@
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="تصحیح اطلاعات روزانه" alt="تصحیح اطلاعات روزانه" src="https://static.palizafzar.com/media/editor_uploads/2024/01/08/correction-daily-information.jpg" />
 </figure>
+<p>اگر هنگام وارد کردن داده ، تعداد رکورد را دارید و لی در برنامه اطلاعات را نداریم مجددا در بازه مورد نظر اطلاعات را از منو پرونده پردازش کنید و همچنین توجه کنید که شماره کارت پرسنل تعریف شده در نرم افزار، را با شناسه افرادی که در دستگاه تعریف شده اند را مطابقت داشته باشد.</p>
 <p>اطلاعات پرسنل: در این پنجره لیست تاریخ، روز، وضعیت، شیفت، اولین و آخرین كارتزنی در طول شیفت، تعداد تردد، حضور، تاخیر، تعجیل، كل كسر كار، كل اضافه كار، شبكاری، تعطیل كاری، اضافه كار تعطیل، مرخصی ساعتی و ماموریت ساعتی در طول دوره انتخاب شده قابل مشاهده است. این پنجره فقط محیط مشاهده است و از اینجا تغییرات اعمال نمی‌شود.</p>
 <figure class="mar-btm-20">
 <img class="img-rounded img-responsive image-center" title="مثال از نمایش اطلاعات پرسنل" alt="مثال از نمایش اطلاعات پرسنل" src="https://static.palizafzar.com/media/editor_uploads/2024/01/08/mohammad-mohammadi.jpg" />
@@ -1485,19 +1497,19 @@
 <div id="VacationReport">
 <p>گزارش مرخصی | ماموریت: در این قسمت گزارش ماموریت و مرخصی ها و سقف مرخصی ها قابل مشاهده است.</p>
 <figure class="mar-btm-20">
-<img class="img-rounded img-responsive image-center" title="گزارش مرخصی ها" alt="گزارش مرخصی ها" src="https://static.palizafzar.com/media/editor_uploads/2024/01/10/mission-vacation-reports.jpg" />
+<img class="img-rounded img-responsive image-center" title="گزارش مرخصی مثال 1" alt="گزارش مرخصی مثال 1" src="https://static.palizafzar.com/media/editor_uploads/2024/01/10/mission-vacation-reports.jpg" />
 </figure>
 <figure class="mar-btm-20">
-<img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+<img class="img-rounded img-responsive image-center" title="گزارش مرخصی مثال 2" alt="گزارش مرخصی مثال 2" src="https://static.palizafzar.com/media/editor_uploads/2024/01/15/vacation-report-2.jpg" />
 </figure>
 <figure class="mar-btm-20">
-<img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+<img class="img-rounded img-responsive image-center" title="گزارش مرخصی مثال 3" alt="گزارش مرخصی مثال 3" src="https://static.palizafzar.com/media/editor_uploads/2024/01/15/two-personnel-reports.jpg" />
 </figure>
 </div>
 <p>گزارش نوبت كاری: این گزارش همان گزارش دوره‌ای به همراه نوبت كاریها می‌باشد.</p>
 <p>گزارشهای مختلف: این قسمت شامل گزارشهای كاردكس ماهانه، ترددها و پرسنلی می‌باشد.</p>
 <figure class="mar-btm-20">
-<img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+<img class="img-rounded img-responsive image-center" title="گزارش کاردکس ماهانه" alt="گزارش کاردکس ماهانه" src="https://static.palizafzar.com/media/editor_uploads/2024/01/15/monthly-report.jpg" />
 </figure>
 <div id="SelectiveReport">
 <p>گزارش انتخابی: این بخش شامل سه نوع گزارش می‌باشد:</p>
@@ -1507,19 +1519,19 @@
 <li>گزارش دوره ای</li>
 </ul>
 <figure class="mar-btm-20">
-<img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+<img class="img-rounded img-responsive image-center" title="گزارش انتخابی" alt="گزارش انتخابی" src="https://static.palizafzar.com/media/editor_uploads/2024/01/15/selected-report.jpg" />
 </figure>
 <p>در این نوع گزارشها امكان انتخاب پارامترهای مختلف به همراه ایجاد شرط و یا بدون شرط با ترتیب چیدمان دلخواه ما وجود دارد. برای ایجاد گزارش جدید ابتدا نوع آن را انتخاب نموده، كلید اضافه را می‌زنیم. </p>
 <figure class="mar-btm-20">
-<img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+<img class="img-rounded img-responsive image-center" title="افزودن پارامتر به گزارش ها" alt="افزودن پارامتر به گزارش ها" src="https://static.palizafzar.com/media/editor_uploads/2024/01/15/individual-report.jpg" />
 </figure>
 <p>پارامترهای مورد نظر را انتخاب كرده كلید ثبت كه با سه نقطه مشخص شده است را می‌زنیم. همچنین می‌توانیم پارامتر را به همراه شرط دلخواه انتخاب نموده ولی در گزارش نمایش ندهیم. پس از پایان انتخاب پارامترها گزارش را با نام دلخواه ذخیره می‌كنیم.  برای گزارشگیری، گزارش ساخته شده را انتخاب نموده و با زدن كلید چیدمان ستونها می‌توان ستونها را با هم جابجا نمود. و در نهایت برای استفاده از گزارش انتخابی ساخته شده از گزینه پیش نمایش استفاده می‌كنیم. با زدن كلید پیش نمایش و انتخاب پرسنل و محدوده تاریخ گزارش قابل استفاده است.</p>
 <figure class="mar-btm-20">
-<img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+<img class="img-rounded img-responsive image-center" title="پارامترهای ستون گزارش انتخابی" alt="پارامترهای ستون گزارش انتخابی" src="https://static.palizafzar.com/media/editor_uploads/2024/01/15/selected-report-parameters.jpg" />
 </figure>
 <p>نتیجه خروجی گزارش فوق به صورت تصویر زیر خواهد بود .</p>
 <figure class="mar-btm-20">
-<img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+<img class="img-rounded img-responsive image-center" title="خروجی گزارش دوره ای" alt="خروجی گزارش دوره ای" src="https://static.palizafzar.com/media/editor_uploads/2024/01/15/periodical-reports.jpg" />
 </figure>
 </div>
 </div>
@@ -1527,7 +1539,7 @@
 <h2>تشكیل فایل خروجی</h2>
 <p>تشكیل فایل خروجی: نرم افزار حضور و غیاب پالیزافزار توانایی تولید خروجی با تعیین ساختار فایل TXT جهت همه نوع سیستم های حقوق و دستمزد را دارد.</p>
 <figure class="mar-btm-20">
-<img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+<img class="img-rounded img-responsive image-center" title="انتخاب ستون برای فایل خروجی" alt="انتخاب ستون برای فایل خروجی" src="https://static.palizafzar.com/media/editor_uploads/2024/01/15/create-output-file.jpg" />
 </figure>
 <p>برای ایجاد خروجی مورد نظر ابتدا پارامترهای مورد نیاز در سیستم حقوق و دستمزد را انتخاب نموده سپس  قالب هر فیلد و قالب هر خط را مشخص می‌نماییم.</p>
 <ul>
@@ -1535,7 +1547,7 @@
 <li>ویرایش قالب خروجی: پس از انتخاب پارامترهای مورد نیاز برای سیستم حقوق و دستمزد شكل خروجی فایل را تعیین می‌كنیم. در اینجا روی خطوط اطلاعات قالب بندی صورت می‌گیرد. </li>
 </ul>
 <figure class="mar-btm-20">
-<img class="img-rounded img-responsive image-center" title="" alt="" src="" />
+<img class="img-rounded img-responsive image-center" title="قالب فایل" alt="قالب فایل" src="https://static.palizafzar.com/media/editor_uploads/2024/01/15/file-template.jpg" />
 </figure>
 <ul>
 <li>جداكننده ستونها (فیلدها): بین پارامترهای انتخاب شده می‌توان كاراكتر جداكننده قرار داد.</li>
