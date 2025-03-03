@@ -12,9 +12,9 @@
     font-style: normal;
 }
 
+
 body {
     font-family: 'IRANYekanMedium', sans-serif;
+    direction: rtl; /* جهت متن رو راست به چپ می‌کنه */
+    text-align: right; /* تراز متن رو به سمت راست می‌بره */
 }
-
-
-
