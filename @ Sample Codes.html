@@ -25,6 +25,7 @@
 
 <!--English-->
     <link rel="icon" href="https://static.palizafzar.com/static/images/favicon.844934f80647.png" type="image/x-icon" />
+
     <link rel="stylesheet" href="https://static.palizafzar.com/static/lib/bootstrap/dist/css/bootstrap.min.5c7070ef655a.css" type="text/css" />
     <link rel="stylesheet" href="https://static.palizafzar.com/static/lib/kendo/styles/kendo.common.min.13fe8101431d.css" type="text/css" />
     <link rel="stylesheet" href="https://static.palizafzar.com/static/lib/kendo/styles/kendo.blueopal.min.c1c225d03058.css" type="text/css" />
@@ -35,6 +36,7 @@
 
 <!-- Persian -->
 <link rel="alternate" href="https://www.palizafzar.com/en" hreflang="en" />
+    <link rel="stylesheet" href="../styles.css">
 <link rel="icon" href="https://static.palizafzar.com/static/images/favicon.844934f80647.png" type="image/x-icon" />
 <link rel="stylesheet" href="https://static.palizafzar.com/static/lib/bootstrap/dist/css/bootstrap.min.5c7070ef655a.css" type="text/css" />
 <link rel="stylesheet" href="https://static.palizafzar.com/static/lib/bootstrap-rtl/dist/css/bootstrap-rtl.min.8e59c9a11c4d.css" type="text/css" />
@@ -867,6 +869,31 @@ x.style.width = "64px";
 
 
 
+<!--  تبدیل نیم فاصله به فاصله معمولی-->
+<!--
+برای تبدیل نیم‌فاصله (Zero-Width Non-Joiner یا ZWNJ) به فاصله معمولی (Space) در زبان فارسی در WebStorm، می‌تونید از یک عبارت منظم (Regex) استفاده کنید. نیم‌فاصله در یونیکد با کاراکتر \u200C نمایش داده می‌شه. من یه کد رجیکس بهتون می‌دم که این کار رو انجام بده:
+
+الگوی Regex:
+جستجو (Find): \u200C
+جایگزینی (Replace): یک فاصله ساده یعنی " "
+مراحل استفاده در WebStorm:
+داخل WebStorm، از منوی Edit گزینه Find > Replace in File (یا کلید میانبر Ctrl + R در ویندوز / Cmd + R در مک) رو انتخاب کنید.
+در قسمت Find بنویسید:
+\u200C
+در قسمت Replace فقط یک فاصله تکی بزنید (یعنی یه اسپیس).
+تیک گزینه Regex رو فعال کنید (تا رجیکس کار کنه).
+روی Replace یا Replace All کلیک کنید تا نیم‌فاصله‌ها با فاصله معمولی جایگزین بشن.
+توضیحات:
+\u200C کد یونیکد نیم‌فاصله‌ست که در متون فارسی برای جداسازی کلمات بدون ایجاد فاصله کامل استفاده می‌شه (مثل "می‌روم" که می‌شه "می روم").
+اگر بخواید توی کد جاوااسکریپت یا زبان دیگه این کار رو انجام بدید، می‌تونید از این رجیکس استفاده کنید:
+javascript
+Wrap
+Copy
+let text = "سلام‌جهان";
+let result = text.replace(/\u200C/g, " ");
+console.log(result); // خروجی: "سلام جهان"
+
+-->
 
 
 </body>

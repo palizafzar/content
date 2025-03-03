@@ -1,0 +1,20 @@
+
+
+
+
+@font-face {
+    font-family: 'IRANYekanMedium';
+    src:
+            url('Fonts/IRANYekanWebMedium.woff2') format('woff2'),
+            url('Fonts/IRANYekanWebMedium.woff') format('woff'),
+            url('Fonts/IRANYekanWebMedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'IRANYekanMedium', sans-serif;
+}
+
+
+
