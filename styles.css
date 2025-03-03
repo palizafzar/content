@@ -2,19 +2,29 @@
 
 
 
+
+/* فونت ایران یکان */
 @font-face {
     font-family: 'IRANYekanMedium';
     src:
-            url('Fonts/IRANYekanWebMedium.woff2') format('woff2'),
-            url('Fonts/IRANYekanWebMedium.woff') format('woff'),
-            url('Fonts/IRANYekanWebMedium.ttf') format('truetype');
+            url('Fonts/IRANYekanWebRegular.woff') format('woff'),
+            url('Fonts/IRANYekanWebMedium.woff') format('woff');
     font-weight: normal;
+    font-style: normal;
+}
+
+/* فونت ایران سنس */
+@font-face {
+    font-family: 'IRANSansX-Medium';
+    src:
+            url('Fonts/IRANSansX-Medium.woff') format('woff');
+    font-weight: normal; /* یا 600 */
     font-style: normal;
 }
 
 
 body {
-    font-family: 'IRANYekanMedium', sans-serif;
-    direction: rtl; /* جهت متن رو راست به چپ می‌کنه */
-    text-align: right; /* تراز متن رو به سمت راست می‌بره */
+    font-family: 'IRANYekanMedium' , 'IRANSansX-Medium', sans-serif;
+    direction: rtl;
+    text-align: right;
 }
