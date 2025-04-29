@@ -7,119 +7,214 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Face detection</title>
 
-    <link rel="alternate" href="https://www.palizafzar.com/en" hreflang="en" />
+<link rel="alternate" href="https://www.palizafzar.com/en" hreflang="en" />
 
-    <link rel="stylesheet" href="https://static.palizafzar.com/static/lib/bootstrap/dist/css/bootstrap.min.5c7070ef655a.css" type="text/css" />
-    <link rel="stylesheet" href="https://static.palizafzar.com/static/lib/bootstrap-rtl/dist/css/bootstrap-rtl.min.8e59c9a11c4d.css" type="text/css" />
-    <link rel="stylesheet" href="https://static.palizafzar.com/static/lib/kendo/styles/kendo.common.min.13fe8101431d.css" type="text/css" />
-    <link rel="stylesheet" href="https://static.palizafzar.com/static/lib/kendo/styles/kendo.blueopal.min.c1c225d03058.css" type="text/css" />
-    <link rel="stylesheet" href="https://static.palizafzar.com/static/lib/kendo/styles/kendo.rtl.min.e8b04e84750d.css" type="text/css" />
-    <link rel="stylesheet" href="https://static.palizafzar.com/static/lib/font-awesome/css/font-awesome.min.bf0c425cdb73.css" type="text/css" />
-    <link rel="stylesheet" href="https://static.palizafzar.com/static/css/style.min.2a6db880f4d6.css" type="text/css" />
+<link rel="stylesheet" href="https://static.palizafzar.com/static/lib/bootstrap/dist/css/bootstrap.min.5c7070ef655a.css" type="text/css" />
+<link rel="stylesheet" href="https://static.palizafzar.com/static/lib/bootstrap-rtl/dist/css/bootstrap-rtl.min.8e59c9a11c4d.css" type="text/css" />
+<link rel="stylesheet" href="https://static.palizafzar.com/static/lib/kendo/styles/kendo.common.min.13fe8101431d.css" type="text/css" />
+<link rel="stylesheet" href="https://static.palizafzar.com/static/lib/kendo/styles/kendo.blueopal.min.c1c225d03058.css" type="text/css" />
+<link rel="stylesheet" href="https://static.palizafzar.com/static/lib/kendo/styles/kendo.rtl.min.e8b04e84750d.css" type="text/css" />
+<link rel="stylesheet" href="https://static.palizafzar.com/static/lib/font-awesome/css/font-awesome.min.bf0c425cdb73.css" type="text/css" />
+<link rel="stylesheet" href="https://static.palizafzar.com/static/css/style.min.2a6db880f4d6.css" type="text/css" />
+<link rel="stylesheet" href="../styles.css">
 
 </head>
 
 <body>
 
-<ul class="k-button-group">
-<li><a href="https://www.palizafzar.com/fa/" target="_blank" title="حضور و غیاب پالیزافزار">حضور و غیاب پالیزافزار</a></li>
-<li>&nbsp; &raquo; &nbsp;</li>
-<li><a href="https://www.palizafzar.com/fa/articles/" target="_blank" title="مقالات">مقالات</a></li>
-<li>&nbsp; &raquo; &nbsp;</li>
-<li><strong>فناوری تشخیص چهره</strong></li>
+<nav id="table-of-contents" class="mar-btm-40">
+<h2>فهرست محتوا</h2>
+<ul>
+<li><a scroll-to="intro">بیومتریک ضربه زدن به صفحه کلید چیست؟</a></li>
+<li><a scroll-to="how-it-works">عملکرد بیومتریک ضربه زدن به صفحه کلید چگونه است؟</a></li>
+<li><a scroll-to="applications">کاربرد بیومتریک ضربه زدن به صفحه کلید در دستگاه حضور و غیاب</a></li>
+<li><a scroll-to="advantages-disadvantages">مزایا و معایب استفاده از بیومتریک Keystroke Dynamics</a></li>
+<li><a scroll-to="comparison">تفاوت بیومتریک تایپ با دیگر روش‌های بیومتریک</a></li>
+<li><a scroll-to="faq">سوالات متداول درباره بیومتریک ضربه زدن به صفحه کلید</a></li>
+<li><a scroll-to="conclusion">نتیجه‌گیری</a></li>
 </ul>
+</nav>
 
-<p>با افزایش سرمایه گذاری در فناوری های تشخیص چهره و پیشرفت فناوری ها، شاهد استفاده گسترده از سیستم تشخیص چهره هستیم. یکی از این موارد بیماری همه گیر <a href="https://www.who.int/health-topics/coronavirus" target="_blank" title="COVID-19">COVID-19</a> در سراسر جهان است که فناوری تشخیص چهره بیومتریک به عنوان یک عامل مهم در شناسایی افراد است. با گسترش COVID-19 ، فناوری تشخیص چهره نیز به طور فزاینده ای در استفاده دیجیتالی از مراقبت های بهداشتی و پیشگیری از شیوع بیماری کرونا با استفاده از ترکیب آن با انواع دیگر بیومتریک و برنامه های کاربردی از شناسایی افراد دارای پوشش محافظ گرفته تا برنامه هایی از جمله تشخیص تب، به هنگام کنترل تردد افراد همراه با <a href="https://www.palizafzar.com/fa/articles/facial-recognition-attendance-machin/" target="_blank" title="دستگاه حضور و غياب تشخيص چهره">دستگاه حضور و غياب تشخيص چهره</a> مورد استفاده قرار می گیرند.</p>
+<section id="intro">
+<h2>بیومتریک ضربه زدن به صفحه کلید (Keystroke Dynamics) چیست؟</h2>
 
-<p>به طور کلی بازار رو به رشد تشخیص چهره، برای صنعت فناوری یک برکت مالی، خالص و ساده محسوب می گردد. در فناوری تشخیص چهره اغلب تمرکز بر روی هوش مصنوعی، یادگیری ماشینی <a href="https://www.coursera.org/learn/machine-learning" target="_blank" title="Machine Learning">Machine Learning</a> (عمدتا یادگیری عمیق Deep Learning) و فناوری های بینایی ماشینی <a href="https://www.coursera.org/learn/computer-vision-with-embedded-machine-learning" target="_blank" title="Machine Vision">Machine Vision</a> است که امکان تطبیق تصاویر دوربین ها با تصاویر موجود در پایگاه داده ها و سیستم های پیچیده تشخیص چهره را فراهم می کند که با فناوری های بسیار بیشتری در حال بهبود هستند.</p>
+<div>
+<p><a href="https://fa.wikipedia.org/wiki/%D8%B1%D8%AF%D9%87:%D8%AA%D8%B4%D8%AE%DB%8C%D8%B5_%D9%87%D9%88%DB%8C%D8%AA" target="_blank" title="تشخیص هویت">تشخیص هویت</a> از طریق بیومتریک نحوه ضربه زدن به صفحه کلید یا Keystroke Dynamics Recognition توسط صنعت ها و دانشگاهیان به عنوان فرایند اندازه گیری و ارزیابی ریتم تایپ کردن در دستگاه های دیجیتال مانند صفحه کلید کامپیوتر، تلفن های همراه و صفحه نمایش لمسی تبلت تعریف شده است.</p>
+<p>اگرچه بیومتریک بیشتر به ویژگی های جسمی مانند <a href="https://www.palizafzar.com/fa/articles/fake-fingerprint-detection/" target="_blank" title="تشخیص اثر انگشت">تشخیص اثر انگشت</a>، <a href="https://www.palizafzar.com/fa/articles/face-detection/" target="_blank" title="تشخیص چهره">تشخیص چهره</a> یا ویژگی های رفتاری متکی است، اما پویایی ضربه زدن به کلید نیز نوعی <a href="https://www.palizafzar.com/fa/articles/behavioral-biometrics/" target="_blank" title="بیومتریک رفتاری">بیومتریک رفتاری</a> محسوب می شود. تشخیص ضربه زدن به کلید که اغلب به آن &quot;پویایی ضربه زدن به صفحه کلید&quot; گفته می شود، به اطلاعات زمان بندی دقیق اشاره دارد که هر کلید بر روی یک دستگاه دیجیتال در چه مدت زمانی فشرده شده و پس از چند ثانیه توسط کاربر رها می گردد.</p>
+<p>بیومتریک رفتاری یکی از جذاب‌ترین شاخه‌های فناوری‌های شناسایی افراد است. در این میان، <strong>بیومتریک ضربه زدن به صفحه کلید</strong> یا <strong>Keystroke Dynamics</strong> به روشی نوین برای احراز هویت تبدیل شده که می‌تواند در کنار دستگاه‌های حضور و غیاب یا سیستم‌های کنترل تردد به کار رود.</p>
+<p>این روش، الگوی تایپ کردن کاربران را تحلیل می‌کند و بر اساس زمان‌بندی فشار و رهاسازی کلیدها، هویت فرد را تأیید یا رد می‌کند.</p>
+</div>
+</section>
 
-<h2 class="header-text">موارد استفاده از فناوری تشخیص چهره</h2>
+<section id="how-it-works">
+<h2>عملکرد بیومتریک ضربه زدن به صفحه کلید چگونه است؟</h2>
+<div>
+<p>گروه تحقیقاتی Biometrics، بیومتریک را به عنوان خصوصیات جسمی و رفتاری قابل اندازه گیری تعریف می کند که باعث می شود هویت شخصی یک فرد را تایید کنید. بنابراین بیومتریک به عنوان یک اصطلاح برای فناوری هایی که برای اندازه گیری ویژگی های منحصر به فرد و در نتیجه احراز هویت استفاده می شود، به کار می رود.</p>
 
-<p>فناوری تشخیص چهره بیومتریک می تواند در حوزه عمومی برای نظارت بر امنیت مرزها، شناسایی مجرمان و از بین بردن تقلب در هویت از جمله موارد استفاده از آن باشد. در بخش خصوصی و سازمان ها Face Detection می تواند به شما کمک کند اطلاعات کارمندان و ساعات کار را تایید کنید، تبلیغات را موثرتر نماید، به کاربران شبکه های اجتماعی کمک کند سایر کاربران را شناسایی و برچسب گذاری کنند و با <a href="https://www.palizafzar.com/fa/product-categories/security-control-automation/" target="_blank" title="کنترل دسترسی">کنترل دسترسی</a> به مکان های حساس، امنیت را افزایش می دهد. کارفرمایان <a href="https://www.palizafzar.com/fa/products/virdi-ubio-x-pro-2/" target="_blank" title="دستگاه حضور غياب تشخيص چهره">دستگاه حضور غياب تشخيص چهره</a> را به عنوان روشی کارآمد و مقرون به صرفه جهت ثبت دقیق سوابق زمانی کارمندان نظیر ورود و خروج پذیرفته اند. <a href="https://www.palizafzar.com/fa/articles/biometric-technology-features/" target="-blank" title="فناوری بیومتریک">فناوری بیومتریک</a> شناسایی چهره به طور کلی این امور را آسان تر، کارآمدتر و دقیق تر می کند. همچنین از فناوری تشخیص چهره می توان برای شناسایی موارد کلاهبرداری در گواهینامه رانندگی با مقایسه عکس های گواهینامه رانندگی با سایر بخش های تصاویر وسایل نقلیه موتوری موجود در پرونده استفاده نمود.</p>
+<p>Keystroke dynamics از یک الگوی بیومتریک منحصر به فرد برای شناسایی افراد بر اساس الگو، ریتم و سرعت تایپ استفاده می کند. اطلاعات اولیه ای که برای پویایی ضربه زدن به کلید استفاده می شوند عبارتند از: &ldquo;dwell time&rdquo; و &ldquo;flight time&rdquo;.</p>
 
-<p>
-<video class="full-block mar-btm-30" controls="" src="https://www.namasha.com/videos/dl/7271904836-240p/%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87_%D8%AD%D8%B6%D9%88%D8%B1_%D9%88_%D8%BA%DB%8C%D8%A7%D8%A8_%D8%AA%D8%B4%D8%AE%DB%8C%D8%B5_%DA%86%D9%87%D8%B1%D9%87_%D8%A8%D8%A7_%D8%AF%D9%88%D8%B1%D8%A8%DB%8C%D9%86_%D8%AA%D8%A8_%D8%B3%D9%86%D8%AC-240p.mp4" title="سیستم حضور و غیاب تشخیص چهره با دوربین حرارتی تب سنج" type="video/mp4">سیستم حضور و غیاب تشخیص چهره با دوربین حرارتی تب سنج</video>
-</p>
+<p>فناوری بیومتریک Keystroke Dynamics از دو شاخص مهم استفاده می‌کند:</p>
+<ul class="mar-btm-30">
+<li><strong>Dwell Time:</strong> مدت زمانی که کاربر کلیدی را نگه می‌دارد.</li>
+<li><strong>Flight Time:</strong> مدت زمانی که بین رها کردن یک کلید و فشار دادن کلید بعدی سپری می‌شود.</li>
+</ul>
+<p>هر کاربر دارای الگوی منحصر به فردی در تایپ کردن است که همانند اثر انگشت، می‌تواند برای شناسایی او به کار رود.</p>
+</div>
+</section>
 
-<h2 class="header-text">تاثیر بیماری همه گیر کرونا بر بازار فناوری تشخیص چهره</h2>
+<section id="applications">
+<h2>کاربرد بیومتریک ضربه زدن به صفحه کلید در دستگاه حضور و غیاب</h2>
+<div>
+<p>امروزه امنیت حضور و غیاب کارمندان فقط به اثر انگشت یا کارت خلاصه نمی‌شود. بسیاری از شرکت‌های پیشرو، به دنبال راهکارهای <strong>بیومتریک رفتاری</strong> مانند Keystroke Dynamics هستند تا اطمینان بیشتری از صحت حضور پرسنل داشته باشند.</p>
+<ul class="mar-btm-40">
+<li><strong>احراز هویت دومرحله‌ای:</strong> دستگاه‌های حضور و غیاب می‌توانند علاوه بر اثر انگشت یا چهره، از بیومتریک تایپ نیز به عنوان احراز هویت دومرحله‌ای استفاده کنند.</li>
+<li><strong>کنترل تردد پیشرفته:</strong> ترکیب الگوی تایپ با سایر روش‌های بیومتریک، امکان کنترل دقیق‌تر تردد را فراهم می‌کند.</li>
+<li><strong>کاهش تقلب در ورود و خروج:</strong> بیومتریک تایپ باعث جلوگیری از ثبت جعلی حضور توسط دیگران می‌شود.</li>
+</ul>
+</div>
+</section>
 
-<p>طبق گزارش تحقیقات ABI، ارزش پیشنهادی توسعه دهندگان الگوریتم اکنون شامل فناوری های تشخیص چهره و <a href="https://www.palizafzar.com/fa/articles/iris-biometric/" target="_blank" title="تشخیص عنبیه">تشخیص عنبیه</a> است که امکان شناسایی، <a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%B5%D8%A7%D9%84%D8%AA%E2%80%8C%D8%B3%D9%86%D8%AC%DB%8C" target="_blank" title="احراز هویت">احراز هویت</a> و نظارت را بر روی افرادی که صورت خود را به طور جزئی یا کامل با ماسک صورت یا سرپوش محافظ پوشانده اند. Dimitrios Pavlakis تحلیلگر تحقیقات ABI اظهار دارد که دستگاه های تشخیص چهره که امکان تشخیص دما و تب را دارند و در حال حاضر مورد استفاده بسیاری از کشورها هستند، در کنترل دسترسی مرزها توانسته اند نقش بسیار مهم و با ثباتی را ایفا نمایند.</p>
+<section id="advantages-disadvantages">
+<h2>مزایا و معایب استفاده از بیومتریک Keystroke Dynamics</h2>
 
-<p>برنامه های پزشکی از راه دور Telemedicine از طریق شناسایی بیومتریک نیز در جهت مراقبت های بهداشتی از راه دور در حال تسریع در فرآیند خود می باشند. در حال حاضر شرکت های بیومتریک شناسایی چهره هوش مصنوعی در حال پیشی گرفتن از سایر روش های بیومتریک تماسی نظیر اثر انگشت می باشد و در این حوزه شرکت های چینی که بیشترین سرمایه گذاری را بر روی تکنولوژی بدون تماس بیومتریک انجام داده اند، به عنوان کشور پیشگام در حال توسعه در تشخیص چهره بیومتریک شناخته شده اند.</p>
+<div>
+<h3 class="header-text">مزایا</h3>
+<ul class="mar-btm-30">
 
-<h2 class="header-text">سیستم تشخیص چهره چگونه کار می کند؟</h2>
-
-<p>همانطور که می دانید چهره یکی از شایع ترین روش های غیر کلامی است که انسان حالات هیجانی درونی اش را به وسیله چهره انتقال می دهد. تشخیص چهره در زمینه های مختلف مانند روانشناسی رشد، علوم رفتاری و واسط انسان و کامپیوتر کاربرد بالایی دارد. در عصر جدید احراز هویت با استفاده از روش های مختلفی نظیر اثر انگشت و تشخیص چهره صورت می گیرد. اولین تجربیات مربوط به تشخیص چهره را می توان به سال های 1960 دانست که به روش های ترسیمی اشاره داشتند. هیچ کس در آن زمان نمی توانست کاملا تصور کند که نیم قرن بعد، نرم افزار تشخیص چهره می تواند در همه جا مورد استفاده پلیس ها، متخصصان امنیتی، دولت و یا حتی به عنوان یک کلمه عبور در <a href="https://www.palizafzar.com/fa/products/tface-105/" target="_blank" title="دستگاه های حضور و غیاب تشخیص چهره">دستگاه های حضور و غیاب تشخیص چهره</a> مورد استفاده قرار گیرد. در حال حاضر مایکروسافت از نرم افزار شناسایی صورت برای احراز هویت در ویندوز 10 استفاده می کند. با استفاده از الگوریتم های کامپیوتری، <strong>سیستم تشخیص چهره</strong> سه بعدی جهت شناسایی افراد با اندازه گیری ویژگی های خاصی از صورت او مانند فاصله بین چشمان و یا عرض بینی به فرآیند تشخیص چهره می پردازد.</p>
-
-<p>بسیاری از تحقیقات علوم شناختی در زمینه پردازش چهره انسان مدعی هستند که فرآیند شناسایی چهره نسبت به فرآیند تشخیص سایر اشیاء بسیار پیچیده تر می باشد. این بدان معناست که شناسایی چهره تنها با تشخیص و در نظر گرفتن تک تک ویژگی ها صورت نمی گیرد بلکه پلک زدن چشم انسان به طور همزمان و همچنین تشخیص بافت زنده پوست نسبت به ماسک های سه بعدی تقلبی، جز اولین عامل های اساسی جهت شروع فرآیند تشخیص چهره می باشد.</p>
-
-<figure class="mar-btm-20"><img alt="شناسایی افراد متقلب به هنگام استفاده از نرم افزار تشخیص چهره" class="img-responsive img-rounded image-center" src="https://static.palizafzar.com/media/editor_uploads/2018/05/16/fake-face-recognition.jpg" title="شناسایی افراد متقلب به هنگام استفاده از نرم افزار تشخیص چهره" />
-<figcaption class="text-center">شناسایی افراد متقلب به هنگام استفاده از نرم افزار تشخیص چهره</figcaption>
-</figure>
-
-<h2 class="header-text">بازار سیستم ها و نرم افزار تشخیص چهره</h2>
-
-<p>بر اساس گزارشی یکی از مهم ترین عوامل رونق بازار تشخیص چهره، افزایش نیاز به نظارت افراد و کنترل تردد می باشد. ارزش بازار فناوری تشخیص چهره تا سال 2024 به 7 میلیارد دلار خواهد رسید و این بدان معنی است که رشد سالانه آن حدود 16 درصد می باشد. برای پی بردن به اهمیت این موضوع خوب است بدانید که بر اساس برآورد های انجام شده هزینه جهانی <a href="https://www.palizafzar.com/fa/articles/internet-of-things-iot/" target="_blank" title="اینترنت اشیا">اینترنت اشیا</a> تا سال 2022 انتظار می رود که از مبلغ یک تریلیون دلار بگذرد. همان طور که گفته شد این بازار به ظاهر کوچک اما بسیار بحث انگیز می باشد و این آمار تنها مربوط به بخش نرم افزار ها و خدمات مربوط به فناوری تشخیص چهره بود که مورد حسابرسی قرار گرفت و آنچه بدیهی است این است که ارزش این بازار فراتر از این خدمات می باشد و بازار گسترده تری برای زیرساخت های تشخیص چهره وجود دارد.</p>
-
-<figure class="mar-btm-20"><img alt="شناسایی افراد با سیستم تشخیص چهره بیومتریک" class="img-responsive img-rounded image-center" src="https://static.palizafzar.com/media/editor_uploads/2020/12/24/face-detection-in-public-cites.jpg" title="شناسایی افراد با سیستم تشخیص چهره بیومتریک" />
-<figcaption class="text-center">شناسایی افراد با سیستم تشخیص چهره بیومتریک</figcaption>
-</figure>
-
-<h2 class="header-text">کشورهای علاقمند به هوش مصنوعی و نرم افزار تشخیص چهره</h2>
-
-<p>در حال حاضر ابزارهای فناوری تشخیص چهره سه بعدی بسیار بهتر از تشخیص چهره دو بعدی عمل نموده و شامل ابزارهای موثرتری در تجزیه و تحلیل تصاویر چهره هستند. فناوری تشخیص چهره سه بعدی عمدتا در نظارت مرزی، تایید اسناد و مدیریت هویت و شناسایی افراد بسیار پرکاربرد هستند. شرکت های مهم که به طور ویژه در این فناوری موثرند عبارتند از: <a href="https://www.nec.com/" target="_blank" title="NEC">NEC</a> (ژاپن), Gemalto (هلند- که اکنون بخشی از شرکت Thales می باشد), Ayonix Face Technologies (ژاپن), Cognitec Systems GmbH (آلمان), NVISO SA (سوئیس), Techno Brain (کنیا), Neurotechnology (لیتوانی), Innovatrics (اسلواکی), id3 Technologies (فرانسه), IDEMIA (فرانسه), and MEGVII (چین).</p>
-
-<p>کشورهای منطقه آسیایی بیشترین رشد را در جهت استفاده از <strong>سیستم تشخیص چهره</strong> به علت سرمایه گذاری دولت در زیرساخت های امنیتی و نظارتی به خود اختصاص داده اند. چین، ژاپن، سنگاپور و به طور فزاینده ای هند، از جمله این شرکت ها هستند. با پاندمیک COVID-19 شاهد استفاده فراوان از این تکنولوژی در عرصه های مختلف بوده ایم. در مناطق دیگر نظیر ایالات متحده، کانادا و انگلیس سرمایه گذاری های کلان در حوزه سامانه تشخیص چهره در حال رشد و توسعه می باشد.</p>
-
-<h2 class="header-text">سیستم تشخیص چهره در برنامه های مشتریان و مصرف کنندگان</h2>
-
-<p>اولین چیزی که ممکن است افراد پس از شنیدن فناوری تشخیص چهره در ذهن خود تجسم کنند، استفاده از سیستم تشخیص چهره در فرودگاه ها، بررسی مرز ها و کنترل بر تردد ها می باشد. اما برنامه <a href="https://www.palizafzar.com/fa/news/lottery-winners-16-jan/" target="_blank" title="تشخیص چهره Facial Recognition">تشخیص چهره Facial Recognition</a> در مراکز خرده فروشی فروشگاه ها نیز جهت سلف پرداخت مورد استفاده قرار می گیرد. علاوه بر موارد فوق، فناوری شناسایی چهره در شبکه های اجتماعی برای اهداف بازاریابی دیجیتال، در مراقبت های پزشکی و درمانی جهت غربالگری بیمار، در رای دادن بیومتریک، در تحقیقات جنایی و برای دسترسی به امکانات خاص مورد استفاده قرار می گیرد.</p>
-
-<p>به گفته برخی کارشناسان، سیستم تشخیص چهره یکی از سخت افزارهایی است که به سرعت جای خود را در میان گوشی های هوشمند به عنوان ابزار شناسایی بیومتریک توانسته تثبیت نماید. از سویی دیگر با ظهور فناوری جدید در دوربین های مداربسته با رزولوشن بسیار بالا و فناوری تشخیص چهره سه بعدی همراه با تکنولوژی <a href="https://www.palizafzar.com/fa/products/ubio-x-iris/" target="_blank" title="تشخیص عنبیه">تشخیص عنبیه</a> بازار تشخیص چهره را برای مشتریان بسیار ارتقا بخشیده است.</p>
-
-<p>آنچه که در <a href="https://www.palizafzar.com/fa/products/titan/" target="_blank" title="دستگاه های تشخیص چهره">دستگاه های تشخیص چهره</a> حائز اهمیت است از طرفی دستیابی به دقت قابل قبول جهت تشخیص چهره و دیگری دو چالش حافظه و زمان مصرفی می باشد. بنابراین همواره نیاز به ارائه رویکردی جدید برای تشخیص هویت افراد در مجموعه داده های بزرگ در زمان و حافظه قابل قبول احساس می شود. یکی از چالش های موجود در تشخیص چهره بیومتریک که اخیراً توجه زیادی را در کامپیوتر و تشخیص الگو به خود جلب نموده تشخیص چهره تحت زوایا و ژست های گوناگون چهره نسبت به دوربین است. هدف اصلی در یک سیستم تشخیص چهره بازیابی تصاویر مشابه یک چهره از پایگاه های داده است، تصاویر چهره بازیابی شده می تواند برای بسیاری از برنامه های کاربردی مانند نظارت تصویری، شناسایی چهره و جستجو چهره های خاص از اینترنت مورد استفاده قرار گیرد.</p>
-
-<p>فناوری های تشخیص چهره <a href="https://www.palizafzar.com/en/articles/face-detection/" target="_blank" title="Face Detection Technology">Face Detection Technology</a> امروزه در نمایش تبلیغات به مخاطبان خود نقش بسیار مهمی را ایفا می کند. با استفاده از فناوری تشخیص چهره در دوربین های مداربسته با توجه به نوع مخاطب که خانم و یا آقا می باشد، پس از تشخیص چهره مخاطب آگهی های متناسب با این نوع افراد می تواند در صف های انتظار بیمارستان و یا فروشگاه ها به نمایش درآید.</p>
-
-<figure class="mar-btm-20"><img alt="نمایشگرهای تبلیغاتی مجهز به دستگاه تشخیص چهره" class="img-responsive img-rounded image-center" src="https://static.palizafzar.com/media/editor_uploads/2018/05/16/vlcsnap-error078.jpg" title="نمایشگرهای تبلیغاتی مجهز به دستگاه تشخیص چهره" />
-<figcaption class="text-center">نمایشگرهای تبلیغاتی مجهز به دستگاه تشخیص چهره</figcaption>
-</figure>
-
-<p>در حال حاضر در فرودگاه میامی از <strong>دستگاه تشخیص چهره</strong> جهت صرفه جویی در زمان افراد استفاده می شود. با استفاده از دستگاه های تشخیص چهره موجود علاوه بر تطبیق چهره فرد با عکس گذرنامه او ، هم زمان پیشینه فرد در بانک اطلاعاتی پلیس آمریکا بررسی می شود و تعیین هویت افراد برای ماموران در عرض چند ثانیه به راحتی صورت می پذیرد. تصویب راهکارهای مبتنی بر سیستم تشخیص چهره در برنامه های کلان دولتی نظیر شهر هوشمند و حمل و نقل هوشمند در حال رشد می باشد. با این حال نیاز روزافزون به <a href="https://www.palizafzar.com/fa/products/virdi-ac7000-face-recognition/" target="_blank" title="دستگاه حضور و غیاب چهره">دستگاه حضور و غیاب چهره</a> بیومتریک سبب شده است تا جهت مدیریت و تعیین هویت افراد، این سیستم ها در کنترل مرز، مدیریت امنیت، ارتش، بانکداری خدمات مالی و بیمه، خرده فروشی ها، پزشکی از راه دور و سازمان های دولتی به طور گسترده مورد استفاده قرار گیرد.</p>
-
-<div class="col-xs-12 text-center mar-btm-30">
-<div class="btn-group"><a class="btn btn-md btn-primary" href="https://ftp.palizafzar.com/Article/Face%20Recognition%20Technology.rar" target="_blank" title="دانلود رایگان مقاله تشخیص چهره">دانلود رایگان مقاله تشخیص چهره</a></div>
+<li>پیاده‌سازی آسان بر روی سیستم‌های موجود</li>
+<li>بدون نیاز به سخت‌افزار اضافی</li>
+<li>افزایش امنیت حضور و غیاب</li>
+<li>مناسب برای کنترل تردد از راه دور</li>
+<li>جلوگیری از کلاهبرداری های آنلاین</li>
+<li>کاهش اشتراک گزاری اکانت ها در سیستم های مختلف</li>
+<li>اعتبار بخشیدن به تراکنش ها و معاملات</li>
+<li>هرگونه الگویی که با ضربه زدن و فشارهای پی در پی به کلیدها ایجاد شود، می توان این داده ها را از طریق اتصالات پهنای باند کمی انتقال داد.</li>
+<li>روش پویایی ضربه زدن به کلید نوعی بیومتریک قابل دسترس برای کاربران است و به غیر از صفحه کلید به سخت افزار دیگری نیاز ندارد و با هزینه ای نسبتا کم در شرکتها و سایر نقاط امنیتی می تواند مورد استفاده قرار گیرد.</li>
+</ul>
 </div>
 
-<h4>مطالب پیشنهادی از پالیز افزار</h4>
+<div class="mar-btm-30">
+<h3 class="header-text">معایب</h3>
+<ul>
+<li>حساسیت به تغییرات فیزیکی کاربر (مثل بیماری یا خستگی)</li>
+<li>نیاز به جمع‌آوری داده‌های اولیه برای ساخت پروفایل تایپ</li>
+</ul>
+</div>
 
+</section>
+
+<section id="comparison">
+<h2>تفاوت بیومتریک تایپ با دیگر روش‌های بیومتریک</h2>
+<div>
+<table class="table table-bordered table-striped mar-btm-40">
+<thead>
+<tr>
+<th>روش بیومتریک</th>
+<th>نیاز به سخت‌افزار خاص</th>
+<th>مناسب برای کنترل تردد</th>
+<th>حساسیت به جعل</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>اثر انگشت</td>
+<td>دارد</td>
+<td>بله</td>
+<td>نسبتاً زیاد</td>
+</tr>
+<tr>
+<td>تشخیص چهره</td>
+<td>دارد</td>
+<td>بله</td>
+<td>متوسط</td>
+</tr>
+<tr>
+<td>الگوی تایپ</td>
+<td>ندارد</td>
+<td>بله</td>
+<td>کم</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="faq">
+<h2>سوالات متداول درباره بیومتریک ضربه زدن به صفحه کلید</h2>
+<div class="mar-right-30">
+<div class="faq-item">
+<h3 class="header-text">بیومتریک ضربه زدن به صفحه کلید چقدر دقیق است؟</h3>
+<p>دقت این روش می‌تواند به بالای ۹۰٪ برسد، به شرط اینکه داده‌های کافی برای آموزش سیستم جمع‌آوری شده باشد.</p>
+</div>
+
+<div class="faq-item">
+<h3 class="header-text">آیا می‌توان الگوی تایپ را جعل کرد؟</h3>
+<p>جعل کردن الگوی تایپ بسیار دشوار است چون حتی کوچک‌ترین تفاوت‌ها قابل تشخیص هستند.</p>
+</div>
+
+<div class="faq-item">
+<h3 class="header-text">آیا دستگاه حضور و غیاب پالیزافزار از بیومتریک تایپ پشتیبانی می‌کند؟</h3>
+<p>در حال حاضر بیشتر دستگاه‌های حضور و غیاب پالیزافزار بر پایه اثر انگشت و تشخیص چهره طراحی شده‌اند، اما امکان توسعه سیستم‌ها برای پشتیبانی از بیومتریک رفتاری نیز وجود دارد.</p>
+</div>
+
+<div class="faq-item">
+<h3 class="header-text">آیا بیومتریک تایپ برای شرکت‌های کوچک مناسب است؟</h3>
+<p>بله، به دلیل عدم نیاز به سخت‌افزار گران‌قیمت، این فناوری گزینه‌ای عالی برای کسب‌وکارهای کوچک محسوب می‌شود.</p>
+</div>
+</div>
+</section>
+
+<section id="conclusion">
+<h2>جمع بندی</h2>
+<div>
+<p><strong>بیومتریک ضربه زدن به صفحه کلید</strong> آینده‌ای نویدبخش برای <strong>دستگاه‌های حضور و غیاب</strong> و <strong>سیستم‌های کنترل تردد</strong> ترسیم می‌کند. استفاده از این روش، علاوه بر افزایش سطح امنیت، تجربه کاربری روان‌تر و هزینه‌های کمتر را نیز به همراه دارد.</p>
+<p>اگر به دنبال راهکارهای نوین و پیشرفته برای مدیریت حضور و غیاب سازمان خود هستید، تیم پالیزافزار آماده ارائه بهترین مشاوره‌ها به شماست.</p>
+</div>
+</section>
+<section>
+<h2>مطالب برگزیده</h2>
 <div class="row mar-right-20">
-<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-<h5><a href="https://www.palizafzar.com/fa/articles/fingerprint-attendance-device/" target="_blank" title="دستگاه حضور و غیاب اثر انگشتی">دستگاه حضور و غیاب اثر انگشتی</a></h5>
-<h5><a href="https://www.palizafzar.com/fa/product-categories/absence-automation/" target="_blank" title="خرید دستگاه حضور و غیاب">خرید دستگاه حضور و غیاب</a></h5>
-</div>
-
-<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-<h5><a href="https://www.palizafzar.com/fa/articles/access-control-devices/" target="_blank" title="دستگاه کنترل تردد اکسس کنترل">دستگاه کنترل تردد اکسس کنترل</a></h5>
+<article class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+<h5><a href="https://www.palizafzar.com/fa/articles/fingerprint-attendance-device/" target="_blank" title="دستگاه جضور و غیاب اثر انگشتی">دستگاه حضور و غیاب اثر انگشتی</a></h5>
+<h5><a href="https://www.palizafzar.com/fa/articles/buying-time-attendance-system/" target="_blank" title="قیمت دستگاه حضور و غیاب">قیمت دستگاه حضور و غیاب</a></h5>
 <h5><a href="https://www.palizafzar.com/fa/articles/connection-with-time-attendance-system/" target="_blank" title="ارتباط با دستگاه حضور و غیاب">ارتباط با دستگاه حضور و غیاب</a></h5>
-</div>
-</div>
 
-<h4>مطالب برگزیده</h4>
-
-<div class="row mar-right-20">
-<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+</article>
+<article class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+<h5><a href="https://www.palizafzar.com/fa/articles/time-and-attendance-system-buying-guide/" target="_blank" title="خرید دستگاه حضور و غیاب">خرید دستگاه حضور و غیاب</a></h5>
 <h5><a href="https://www.palizafzar.com/fa/articles/time-and-attendance-device-types/" target="_blank" title="انواع دستگاه حضور و غیاب">انواع دستگاه حضور و غیاب</a></h5>
-<h5><a href="https://www.palizafzar.com/fa/articles/best-time-attendance-systems/" target="_blank" title="بهترین دستگاه حضور و غیاب">بهترین دستگاه حضور و غیاب</a></h5>
-<h5><a href="https://www.palizafzar.com/fa/articles/biometric-time-attendance-system/" target="_blank" title="دستگاه حضور و غیاب بیومتریک">دستگاه حضور و غیاب بیومتریک</a></h5>
+<h5><a href="https://www.palizafzar.com/fa/articles/access-control-devices/" target="_blank" title="دستگاه کنترل تردد اکسس کنترل">دستگاه کنترل تردد اکسس کنترل</a></h5>
+</article>
 </div>
-<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-<h5><a href="https://www.palizafzar.com/fa/news/lottery-winners-14-jan/" target="_blank" title="نحوه کار با دستگاه حضور و غیاب انگشتی">نحوه کار با دستگاه حضور و غیاب انگشتی</a></h5>
-<h5><a href="https://www.palizafzar.com/fa/articles/time-and-attendance-system-buying-guide/" target="_blank" title="بهترین دستگاه حضور و غیاب ایرانی چیست؟">بهترین دستگاه حضور و غیاب ایرانی چیست؟</a></h5>
-<h5><a href="https://www.palizafzar.com/fa/articles/palm-vein-biometric-authentication-system/" target="_blank" title="تکنولوژی بیومتریک شناسایی کف دست">تکنولوژی بیومتریک شناسایی کف دست</a></h5>
-</div>
-</div>
-<script type="application/ld+json">{"@context": "https://schema.org","@type": "Article","name": "فناوری تشخیص چهره","image": "https://static.palizafzar.com/media/article_images/9336989baa5d401fb33593c31d53b19f.jpg","articleSection": "در فناوری تشخیص چهره اغلب تمرکز بر روی هوش مصنوعی، یادگیری ماشینی (عمدتا یادگیری عمیق Deep Learning) و فناوری های بینایی ماشینی Machine Vision است که امکان تطبیق تصاویر دوربین ها با تصاویر موجود در پایگاه داده ها و سیستم های پیچیده تشخیص چهره را فراهم می کند که با فناوری های بسیار بیشتری در حال بهبود هستند.","articleBody": "با افزایش سرمایه گذاری در فناوری های تشخیص چهره و پیشرفت فناوری ها، شاهد استفاده گسترده از سیستم تشخیص چهره هستیم. یکی از این موارد بیماری همه گیر COVID19 در سراسر جهان است که فناوری تشخیص چهره بیومتریک به عنوان یک عامل مهم در شناسایی افراد است. با گسترش COVID-19 ، فناوری تشخیص چهره نیز به طور فزاینده ای در استفاده دیجیتالی از مراقبت های بهداشتی و پیشگیری از شیوع بیماری کرونا با استفاده از ترکیب آن با انواع دیگر بیومتریک و برنامه های کاربردی از شناسایی افراد دارای پوشش محافظ گرفته تا برنامه هایی از جمله تشخیص تب، به هنگام کنترل تردد افراد همراه با <A href=\"https://www.palizafzar.com/fa/articles/facial-recognition-attendance-machin/\" target=\"_blank\" title=\"دستگاه حضور و غياب تشخيص چهره\">دستگاه حضور و غياب تشخيص چهره</A> مورد استفاده قرار می گیرند","url": "https://www.palizafzar.com/fa/articles/face-detection/"}</script>
+</section>
+
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Article",
+"mainEntityOfPage": {
+"@type": "WebPage",
+"@id": "https://www.palizafzar.com/fa/articles/keystroke-dynamics/"
+},
+"headline": "بیومتریک ضربه زدن به صفحه کلید",
+"description": "پویایی ضربه زدن به صفحه کلید به اطلاعات زمانی دقیق اشاره دارد که هر کلید بر روی یک دستگاه دیجیتال در چه مدت زمانی فشرده و پس از چند ثانیه توسط کاربر رها می گردد",
+"image": "https://static.palizafzar.com/media/article_images/2e1e3f57730e48d9a2095d24889b3e15.jpg",
+"author": {
+"@type": "Organization",
+"name": "palizafzar",
+"url": "https://www.palizafzar.com/"
+},
+"publisher": {
+"@type": "Organization",
+"name": "palizafzar",
+"logo": {
+"@type": "ImageObject",
+"url": "https://static.palizafzar.com/static/images/paliz_logo.27831a942350.png"
+}
+},
+"datePublished": ""
+}
+</script>
 
 
 </body>
