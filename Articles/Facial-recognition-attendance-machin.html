@@ -24,532 +24,686 @@
 <body>
 
 <section aria-label="مقدمه">
-<p>دستگاه حضور و غیاب با تشخیص چهره مبتنی بر الگوریتم های تشخیص چهره دو بعدی یا سه بعدی می باشد که جهت تجزیه و تحلیل تصاویر، ثبت و ردیابی تردد ورود و خروج افراد استفاده می گردد. <strong>دستگاه حضور و غیاب تشخیص چهره یا تصویری</strong> از محاسبات ریاضی و <a href="https://en.wikipedia.org/wiki/Deep_learning" target="_blank" title="Deep Learning">Deep Learning</a> جهت شناسایی چهره انسان در تصاویر یا فیلم ها و اندازه گیری ویژگی های خاص صورت استفاده می کند که این مقیاس ها می تواند شامل فاصله بین چشم ها، موقعیت های نسبی بینی، چانه و دهان باشد. در این مقاله به بررسی جدیدترین و بهترین دستگاه های حضور و غیاب تشخیص چهره پالیزافزار می پردازیم که ضمن معرفی و توضیح عملی به صورت ویدیو به مقایسه امکانات دستگاه های تشخیص چهره می پردازیم.</p>
+    <p>دستگاه حضور و غیاب با تشخیص چهره مبتنی بر الگوریتم های تشخیص چهره دو بعدی یا سه بعدی می باشد که جهت تجزیه و تحلیل تصاویر، ثبت و ردیابی تردد ورود و خروج افراد استفاده می گردد. <strong>دستگاه حضور و غیاب تشخیص چهره یا تصویری</strong> از محاسبات ریاضی و <a href="https://en.wikipedia.org/wiki/Deep_learning" target="_blank" title="Deep Learning">Deep Learning</a> جهت شناسایی چهره انسان در تصاویر یا فیلم ها و اندازه گیری ویژگی های خاص صورت استفاده می کند که این مقیاس ها می تواند شامل فاصله بین چشم ها، موقعیت های نسبی بینی، چانه و دهان باشد.</p>
+
+    <p>در این راهنما علاوه بر آشنایی با فناوری تشخیص چهره، انواع دستگاه&zwnj;های حضور و غیاب تشخیص چهره، تفاوت مدل&zwnj;های مختلف، کاربرد هر دستگاه، مزایا و محدودیت&zwnj;ها، نحوه انتخاب مناسب&zwnj;ترین مدل و مقایسه محصولات پالیزافزار را بررسی می&zwnj;کنیم تا بتوانید متناسب با نیاز سازمان خود بهترین تصمیم را بگیرید.</p>
+
+    <div class="alert alert-info mar-top-20 mar-btm-20">
+        <p>اگر هنوز نمی&zwnj;دانید کدام فناوری حضور و غیاب برای سازمان شما مناسب&zwnj;تر است یا قصد دارید با انواع سیستم&zwnj;های ثبت تردد، نرم&zwnj;افزارها و راهنمای انتخاب آن&zwnj;ها آشنا شوید، پیشنهاد می&zwnj;کنیم ابتدا<a href="https://www.palizafzar.com/fa/categories/absence-automation/" title="دستگاه حضور و غیاب">راهنمای جامع دستگاه حضور و غیاب</a> را مطالعه کنید.</p>
+    </div>
 </section>
 
-<section class="alert alert-info" id="TOC">
-<h4>آنچه در ادامه می آموزید:</h4>
+<section class="mar-btm-40" id="Guide">
+    <h2>راهنمای انتخاب دستگاه حضور و غیاب تشخیص چهره</h2>
 
-<nav aria-label="فهرست مطالب">
-<ul class="mar-btm-40">
-<li><a scroll-to="Best" title="بهترین دستگاه حضور و غیاب تشخیص چهره">بهترین دستگاه حضور و غیاب تشخیص چهره</a></li>
-<li><a scroll-to="Face-and-fingerprint" title="لیست دستگاه های حضور و غیاب تشخیص چهره و اثر انگشت ویا کارت">دستگاه های حضور و غیاب تشخیص چهره و اثر انگشت</a></li>
-<li><a scroll-to="Tiam" title="ویدیو دستگاه حضور و غیاب تشخیص چهره تیام">ویدیو دستگاه حضور و غیاب تشخیص چهره تیام</a></li>
-<li><a scroll-to="Iranian" title=" مقایسه مدل های دستگاه حضور و غیاب تشخیص چهره ایرانی پالیزافزار">مقایسه مدل های دستگاه حضور و غیاب تشخیص چهره ایرانی پالیزافزار</a></li>
-<li><a scroll-to="Tisa-series" title=" مقایسه مدل های دستگاه حضور و غیاب تشخیص چهره سری تیسا">مقایسه مدل های دستگاه حضور و غیاب تشخیص چهره سری تیسا</a></li>
-<li><a scroll-to="Virdi-devices" title=" مقایسه مدل های دستگاه حضور و غیاب تشخیص چهره ویردی Virdi کره جنوبی">مقایسه مدل های دستگاه حضور و غیاب تشخیص چهره ویردی Virdi</a></li>
-<li><a scroll-to="Facilities" title="مقایسه امکانات دستگاه های حضور و غیاب تشخیص چهره آنلاین Virdi">مقایسه امکانات دستگاه های حضور و غیاب تشخیص چهره آنلاین ویردی Virdi</a></li>
-<li><a scroll-to="Features" title="ویژگی‌های دستگاه حضور و غیاب تشخیص چهره">ویژگی های دستگاه حضور و غیاب تشخیص چهره</a></li>
-<li><a scroll-to="Best-attendance" title="بهترین دستگاه حضور و غیاب تشخیص چهره چیست؟">بهترین دستگاه حضور و غیاب تشخیص چهره چیست؟</a></li>
-<li><a scroll-to="Identifying" title="نحوه شناسایی چهره در دستگاه‌های حضور و غیاب">نحوه شناسایی چهره در دستگاه های حضور و غیاب</a></li>
-<li><a scroll-to="3D" title="تشخیص چهره سه بعدی">تشخیص چهره سه بعدی</a></li>
-<li><a scroll-to="Purchase" title="مزایای خرید دستگاه حضور و غیاب تشخیص چهره">مزایای خرید دستگاه حضور و غیاب تشخیص چهره</a></li>
-<li><a scroll-to="FaceAdvantages" title="مزایای دستگاه‌ حضور و غیاب تشخیص چهره نسبت به دستگاه‌های اثر انگشت">مزایای دستگاه حضور و غیاب تشخیص چهره نسبت به دستگاه های اثر انگشت</a></li>
-<li><a scroll-to="Applications" title="کاربردهای دستگاه حضور و غیاب تشخیص چهره">کاربردهای دستگاه حضور و غیاب تشخیص چهره</a></li>
-<li><a scroll-to="Challenges" title="چالش‌های دستگاه‌های حضور و غیاب تشخیص چهره">چالش های دستگاه های حضور و غیاب تشخیص چهره</a></li>
-<li><a scroll-to="Conclusion" title="جمع بندی">جمع بندی</a></li>
-</ul>
-</nav>
+    <p>انتخاب دستگاه حضور و غیاب تشخیص چهره تنها به ظرفیت ثبت چهره محدود نمی&zwnj;شود. عواملی مانند تعداد پرسنل، نوع محیط کاری، سرعت احراز هویت، قابلیت اتصال به نرم افزار حضور و غیاب، امکان کنترل تردد، روش&zwnj;های ارتباطی و فناوری تشخیص چهره در انتخاب دستگاه مناسب نقش بسیار مهمی دارند.</p>
+
+    <p>اگر سازمان شما دارای تعداد زیادی کارمند، شیفت&zwnj;های کاری متعدد یا چندین شعبه است، استفاده از دستگاه&zwnj;های تشخیص چهره آنلاین همراه با نرم افزار حضور و غیاب تحت وب می&zwnj;تواند مدیریت ترددها را بسیار ساده&zwnj;تر کند.</p>
 </section>
 
-<section class="mar-btm-40" id="Best">
-<h2>بهترین دستگاه حضور و غیاب تشخیص چهره</h2>
+<section class="mar-btm-40" id="Types">
+    <h2>انواع دستگاه حضور و غیاب تشخیص چهره</h2>
 
-<p><strong>خرید دستگاه حضور و غیاب تشخیص چهره</strong> جزء جدیدترین راهکار های امنیتی مبتنی بر فناوری می باشد که با شناخت ویژگی های صورت، امنیت در محل کار را فراهم می آورند. <strong>ساعت حضور و غیاب با تشخیص چهره</strong> ویژگی های چهره را ضبط کرده و الگوهای ضبط شده را در پایگاه داده و یا حافظه دستگاه ذخیره می کنند. هنگامی که کاربر روبروی <strong>دستگاه حضور و غیاب با چهره</strong> قرار می گیرد، دستگاه چهره فرد را دریافت کرده و یک تحلیل دو بعدی یا سه بعدی از نقاط صورت انجام می دهد که برای هر کارمند منحصر به فرد است. سپس تطبیقی بین الگوی دریافت شده با الگوهای از پیش تعریف شده صورت می گیرد. هنگامی که احراز هویت موفقیت آمیز باشد دستگاه هویت کارمند را تایید می کند و ساعت ورود یا خروج کارمند ثبت می گردد در غیر این صورت عمل شناسایی فرد موفقیت آمیز نبوده است.</p>
+    <p>دستگاه&zwnj;های حضور و غیاب تشخیص چهره از نظر روش احراز هویت به چند گروه تقسیم می&zwnj;شوند. هر گروه متناسب با سطح امنیت، بودجه و نیاز سازمان طراحی شده است.</p>
+
+    <h3 class="header-text">دستگاه تشخیص چهره</h3>
+
+    <p>این مدل&zwnj;ها تنها از فناوری تشخیص چهره برای ثبت ورود و خروج استفاده می&zwnj;کنند و مناسب سازمان&zwnj;هایی هستند که سرعت ثبت تردد اهمیت بالایی دارد.</p>
+
+    <h3 class="header-text">دستگاه تشخیص چهره و اثر انگشت</h3>
+
+    <p>در این مدل&zwnj;ها علاوه بر تشخیص چهره، امکان استفاده از اثر انگشت نیز وجود دارد تا در شرایط خاص یا بنا بر سیاست سازمان، کاربران بتوانند از هر دو روش استفاده کنند.</p>
+
+    <h3 class="header-text">دستگاه تشخیص چهره و کارت</h3>
+
+    <p>این تجهیزات علاوه بر تشخیص چهره، از کارت&zwnj;های RFID یا Mifare نیز پشتیبانی می&zwnj;کنند و برای مجموعه&zwnj;هایی که برخی کاربران کارت پرسنلی دارند گزینه مناسبی هستند.</p>
+
+    <h3 class="header-text">دستگاه تشخیص چهره، اثر انگشت و کارت</h3>
+
+    <p>کامل&zwnj;ترین گروه دستگاه&zwnj;های حضور و غیاب هستند که امکان استفاده همزمان از چند روش احراز هویت را فراهم می&zwnj;کنند و بیشترین انعطاف را برای سازمان&zwnj;های بزرگ ارائه می&zwnj;دهند.</p>
 </section>
 
-<section class="mar-btm-40" id="Face-and-fingerprint">
-<h2>دستگاه های حضور و غیاب تشخیص چهره و اثر انگشت ویا کارت</h2>
+<section class="mar-btm-40" id="New-features">
+    <h2>ویژگی&zwnj;های مهم دستگاه حضور و غیاب تشخیص چهره</h2>
 
-<div class="row">
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
-<figure><a href="https://www.palizafzar.com/fa/products/face-fingerprint-tiam-pro/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره تیام پرو"><img alt="دستگاه حضور و غیاب تشخیص چهره تیام پرو" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2024/10/20/tiam-pro-facr-fingerprint.jpg" title="دستگاه حضور و غیاب تشخیص چهره تیام پرو" /></a></figure>
+    <p>هنگام انتخاب دستگاه حضور و غیاب تشخیص چهره، تنها ظرفیت ثبت چهره اهمیت ندارد. کیفیت الگوریتم تشخیص، سرعت شناسایی، امنیت، امکانات ارتباطی و قابلیت اتصال به نرم&zwnj;افزار حضور و غیاب از مهم&zwnj;ترین عواملی هستند که عملکرد واقعی دستگاه را تعیین می&zwnj;کنند.</p>
 
-<h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/face-fingerprint-tiam-pro/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره تیام پرو">دستگاه حضور و غیاب تشخیص چهره تیام پرو</a></h5>
+    <h3 class="header-text">سرعت و دقت شناسایی</h3>
 
-<div class="text-center">
-<p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/face-fingerprint-tiam-pro/" target="_blank" title="مشاهده محصول دستگاه حضور و غیاب تشخیص چهره تیام پرو">مشاهده محصول</a></p>
-</div>
-</div>
+    <p>دستگاه&zwnj;های جدید با استفاده از الگوریتم&zwnj;های هوش مصنوعی قادرند در کمتر از یک ثانیه چهره افراد را شناسایی کنند. هرچه سرعت پردازش و دقت الگوریتم بالاتر باشد، صف ورود و خروج پرسنل نیز کوتاه&zwnj;تر خواهد بود.</p>
 
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
-<figure><a href="https://www.palizafzar.com/fa/products/tiam/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره تیام"><img alt="دستگاه حضور و غیاب تشخیص چهره تیام" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2025/12/16/tiam.jpg" title="دستگاه حضور و غیاب تشخیص چهره تیام" /></a></figure>
+    <h3 class="header-text">تشخیص چهره زنده (Live Face Detection)</h3>
 
-<h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/tiam/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره تیام">دستگاه حضور و غیاب تشخیص چهره تیام</a></h5>
+    <p>فناوری تشخیص زنده بودن چهره از سوءاستفاده با استفاده از عکس یا ویدئو جلوگیری می&zwnj;کند و امنیت سیستم حضور و غیاب را به میزان قابل توجهی افزایش می&zwnj;دهد.</p>
 
-<div class="text-center">
-<p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/tiam/" target="_blank" title="دانلود کاتالوگ دستگاه حضور و غیاب تشخیص چهره تیام">مشاهده محصول</a></p>
-</div>
-</div>
+    <h3 class="header-text">عملکرد در شرایط نوری مختلف</h3>
 
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
-<figure><a href="https://www.palizafzar.com/fa/products/titan/" target="_blank" title="دستگاه حضور و غیاب و کنترل تردد تشخیص چهره تیتان"><img alt="دستگاه حضور و غیاب تشخیص چهره تیتان" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2025/12/16/titan.jpg" title="خرید دستگاه کنترل تردد تشخیص چهره تیتان" /></a></figure>
+    <p>دستگاه&zwnj;های مجهز به دوربین مادون قرمز (IR) و فناوری Visible Light حتی در محیط&zwnj;های کم&zwnj;نور یا دارای نور شدید نیز عملکرد پایداری دارند و دقت شناسایی خود را حفظ می&zwnj;کنند.</p>
 
-<h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/titan/" target="_blank" title="دستگاه حضور و غیاب و کنترل تردد تشخیص چهره تیتان">دستگاه حضور و غیاب تشخیص چهره تیتان</a></h5>
+    <h3 class="header-text">روش&zwnj;های ارتباطی</h3>
 
-<div class="text-center">
-<p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/titan/" target="_blank" title="مشاهده محصول">مشاهده محصول</a></p>
-</div>
-</div>
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
-<figure><a href="https://www.palizafzar.com/fa/products/face-card-attendance-tisa-pro/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره تیسا پرو"><img alt="دستگاه حضور و غیاب تشخیص چهره تیسا پرو" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2026/05/09/tisa-pro-face-recognition.jpg" title="دستگاه حضور و غیاب تشخیص چهره تیسا پرو" /></a></figure>
+    <p>پشتیبانی از TCP/IP، USB، Wi-Fi و ارتباط آنلاین با نرم&zwnj;افزار حضور و غیاب باعث می&zwnj;شود انتقال اطلاعات با سرعت و امنیت بیشتری انجام شود و مدیریت چندین دستگاه در شعب مختلف نیز ساده&zwnj;تر گردد.</p>
 
-<h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/face-card-attendance-tisa-pro/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره تیسا پرو">دستگاه حضور و غیاب تشخیص چهره تیسا پرو</a></h5>
+    <h3 class="header-text">ظرفیت کاربران و ثبت تردد</h3>
 
-<div class="text-center">
-<p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/face-card-attendance-tisa-pro/" target="_blank" title="مشاهده محصول دستگاه حضور و غیاب تشخیص چهره تیسا پرو">مشاهده محصول</a></p>
-</div>
-</div>
-
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
-<figure><a href="https://www.palizafzar.com/fa/products/face-recognition-tisa-plus/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره تیسا پلاس"><img alt="دستگاه حضور و غیاب تشخیص چهره تیسا پلاس" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2026/05/09/tisa-plus-face-recognition.jpg" title="دستگاه حضور و غیاب تشخیص چهره تیسا پرو" /></a></figure>
-
-<h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/face-recognition-tisa-plus/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره تیسا پلاس">دستگاه حضور و غیاب تشخیص چهره تیسا پلاس</a></h5>
-
-<div class="text-center">
-<p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/face-recognition-tisa-plus/" target="_blank" title="مشاهده محصول دستگاه حضور و غیاب تشخیص چهره تیسا پلاس">مشاهده محصول</a></p>
-</div>
-</div>
-
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
-<figure><a href="https://www.palizafzar.com/fa/products/tisa/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره تیسا"><img alt="دستگاه حضور و غیاب تشخیص چهره تیسا" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2025/12/16/tisa.jpg" title="دستگاه حضور و غیاب تشخیص چهره تیسا" /></a></figure>
-
-<h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/tisa/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره تیسا">دستگاه حضور و غیاب تشخیص چهره تیسا</a></h5>
-
-<div class="text-center">
-<p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/tisa/" target="_blank" title="مشاهده محصول دستگاه حضور و غیاب تشخیص چهره تیسا">مشاهده محصول</a></p>
-</div>
-</div>
-
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
-<figure><a href="https://www.palizafzar.com/fa/products/virdi-ubio-x-pro-2/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره UBio-X Pro 2"><img alt="دستگاه حضور و غیاب تشخیص چهره UBio-X Pro 2" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2024/10/21/ubiox-pro-2-face-fingerprint.jpg" title="خرید دستگاه حضور و غیاب تشخیص چهره UBio-X Pro 2" /></a></figure>
-
-<h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/virdi-ubio-x-pro-2/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره UBio-X Pro 2">دستگاه حضور و غیاب تشخیص چهره UBio-X Pro 2</a></h5>
-
-<div class="text-center">
-<p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/virdi-ubio-x-pro-2/" target="_blank" title="مشاهده محصول دستگاه حضور و غیاب تشخیص چهره UBio-X Pro 2">مشاهده محصول</a></p>
-</div>
-</div>
-
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
-<figure><a href="https://www.palizafzar.com/fa/products/ubio-x-pro-lite/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره UBio-X Pro Lite"><img alt="دستگاه حضور و غیاب تشخیص چهره UBio-X Pro Lite" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2024/10/21/pro-lite.jpg" title="خرید دستگاه حضور و غیاب تشخیص چهره UBio-X Pro Lite" /></a></figure>
-
-<h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/ubio-x-pro-lite/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره UBio-X Pro Lite">دستگاه حضور و غیاب تشخیص چهره Pro Lite</a></h5>
-
-<div class="text-center">
-<p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/ubio-x-pro-lite/" target="_blank" title="مشاهده محصول دستگاه حضور و غیاب تشخیص چهره UBio-X Pro Lite">مشاهده محصول</a></p>
-</div>
-</div>
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
-<figure><a href="https://www.palizafzar.com/fa/products/face-attendance-ubio-x-pro/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره Virdi UBio-X Pro"><img alt="دستگاه حضور و غیاب تشخیص چهره Virdi UBio-X Pro" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2024/10/21/ubiox-pro.jpg" title="خرید دستگاه حضور و غیاب تشخیص چهره Virdi UBio-X Pro" /></a></figure>
-
-<h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/face-attendance-ubio-x-pro/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره UBio-X Pro">دستگاه حضور و غیاب تشخیص چهره UBio-X Pro</a></h5>
-
-<div class="text-center">
-<p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/face-attendance-ubio-x-pro/" target="_blank" title="مشاهده محصول دستگاه حضور و غیاب تشخیص چهره Virdi UBio-X Pro">مشاهده محصول</a></p>
-</div>
-</div>
-
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
-<figure><a href="https://www.palizafzar.com/fa/products/ubio-x-face/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره UBio-X Face"><img alt="دستگاه حضور و غیاب تشخیص چهره UBio-X Face" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2024/10/21/x-face.jpg" title="خرید دستگاه حضور و غیاب تشخیص چهره UBio-X Face" /></a></figure>
-
-<h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/ubio-x-face/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره UBio-X Face">دستگاه حضور و غیاب چهره X Face </a></h5>
-
-<div class="text-center">
-<p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/ubio-x-face/" target="_blank" title="مشاهده محصول دستگاه حضور و غیاب تشخیص چهره UBio-X Face">مشاهده محصول</a></p>
-</div>
-</div>
-
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
-<figure><a href="https://www.palizafzar.com/fa/products/zk-uface-302/" target="_blank" title="دستگاه حضور و غیاب ثبت چهره uFace302"><img alt="دستگاه حضور و غیاب ثبت چهره uFace302" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2024/10/21/uface-302.jpg" title="خرید دستگاه حضور و غیاب ثبت چهره uFace302" /></a></figure>
-
-<h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/zk-uface-302/" target="_blank" title="دستگاه حضور و غیاب ثبت چهره ZKTeco uFace302">دستگاه حضور و غیاب ثبت چهره UFace 302</a></h5>
-
-<div class="text-center">
-<p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/zk-uface-302/" target="_blank" title="مشاهده محصول دستگاه حضور و غیاب ثبت چهره uFace302">مشاهده محصول</a></p>
-</div>
-</div>
-
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
-<figure><a href="https://www.palizafzar.com/fa/products/zk-uface102-face-recognition/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره UFace 602"><img alt="دستگاه حضور و غیاب تشخیص چهره UFace 602" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2024/10/21/uface-602.jpg" title="خرید دستگاه حضور و غیاب تشخیص چهره UFace 602" /></a></figure>
-
-<h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/zk-uface102-face-recognition/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره UFace 602">دستگاه حضور و غیاب تشخیص چهره UFace 602</a></h5>
-
-<div class="text-center">
-<p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/zk-uface102-face-recognition/" target="_blank" title="مشاهده محصول دستگاه حضور و غیاب تشخیص چهره UFace 602">مشاهده محصول</a></p>
-</div>
-</div>
-</div>
+    <p>بسته به اندازه سازمان، ظرفیت ثبت چهره، تعداد کاربران و حجم ذخیره&zwnj;سازی ترددها اهمیت زیادی دارد. سازمان&zwnj;های بزرگ معمولاً به دستگاه&zwnj;هایی با ظرفیت بالا و امکان ثبت میلیون&zwnj;ها رکورد تردد نیاز دارند.</p>
 </section>
 
-<section class="mar-btm-40" id="Tiam">
-<h2>ویدیو دستگاه حضور و غیاب تشخیص چهره ایرانی تیام</h2>
+<section class="mar-btm-40" id="Operation">
+    <h2>نحوه عملکرد فناوری تشخیص چهره در دستگاه حضور و غیاب</h2>
 
-<p>
-<video class="full-block mar-btm-30" controls="" src="https://static.palizafzar.com/media/video/files/tiam-facial-recognition-time-attendance-terminal.mp4" title="ویدیو دستگاه حضور و غیاب تشخیص چهره تیام" type="video/mp4">&nbsp;</video>
-</p>
+    <p>دستگاه حضور و غیاب تشخیص چهره با استفاده از دوربین، پردازنده داخلی و الگوریتم&zwnj;های هوش مصنوعی، ویژگی&zwnj;های منحصر به&zwnj;فرد صورت هر فرد را استخراج و به یک الگوی بیومتریک تبدیل می&zwnj;کند. هنگام ثبت تردد، تصویر جدید با الگوی ذخیره شده مقایسه شده و در صورت تطابق، ورود یا خروج کاربر ثبت می&zwnj;شود.</p>
 
-<p>دستگاه حضور و غیاب تشخیص چهره و کنترل تردد تیام با شناسایی چهره (با ماسک)، اثر انگشت، کارت و رمز می باشد که قادر به شناسایی همزمان 5 کاربر به طور همزمان است. فاصله تشخیص چهره دستگاه تیام از 0.8 متر تا 2.5 متر قابل تنظیم است که شناسایی پرسنل توسط الگوریتم تشخیص چهره پویا در 0.2 ثانیه انجام می شود.</p>
+    <p>برخلاف تصور رایج، این دستگاه&zwnj;ها تصویر کامل افراد را با یکدیگر مقایسه نمی&zwnj;کنند؛ بلکه مجموعه&zwnj;ای از نقاط کلیدی صورت مانند فاصله چشم&zwnj;ها، فرم بینی، خطوط فک و سایر ویژگی&zwnj;های هندسی را به صورت یک قالب رمزگذاری شده (Face Template) ذخیره می&zwnj;کنند. به همین دلیل فرآیند شناسایی بسیار سریع، دقیق و ایمن انجام می&zwnj;شود.</p>
 
-<div class="text-left">
-<p><a class="btn btn-md btn-primary" href="https://www.palizafzar.com/fa/articles/review-tiam-face-recognition-device/" target="_blank" title="نقد و بررسی دستگاه تشخیص چهره تیام">نقد و بررسی دستگاه تشخیص چهره تیام</a></p>
-</div>
+    <h3 class="header-text">مرحله اول: تشخیص وجود چهره (Face Detection)</h3>
+
+    <p>در اولین مرحله، دوربین دستگاه حضور و غیاب محل قرارگیری صورت را در تصویر تشخیص می&zwnj;دهد تا از پردازش بخش&zwnj;های غیرضروری جلوگیری شود.</p>
+
+    <h3 class="header-text">مرحله دوم: استخراج ویژگی&zwnj;های بیومتریک</h3>
+
+    <p>پس از شناسایی چهره، الگوریتم هوش مصنوعی صدها ویژگی منحصر به&zwnj;فرد صورت را استخراج کرده و آن&zwnj;ها را به یک شناسه بیومتریک تبدیل می&zwnj;کند.</p>
+
+    <h3 class="header-text">مرحله سوم: مقایسه با اطلاعات ثبت شده</h3>
+
+    <p>الگوی استخراج شده با اطلاعات ذخیره شده کاربران مقایسه می&zwnj;شود و در صورت تطابق، تردد فرد ثبت خواهد شد. این فرآیند معمولا در کمتر از یک ثانیه انجام می&zwnj;شود.</p>
+
+    <h3 class="header-text">تشخیص زنده بودن چهره (Live Face Detection)</h3>
+
+    <p>دستگاه&zwnj;های نسل جدید علاوه بر تشخیص چهره، از فناوری تشخیص زنده بودن نیز استفاده می&zwnj;کنند تا از ثبت تردد با استفاده از عکس، فیلم یا تصاویر چاپ شده جلوگیری شود. این قابلیت امنیت سیستم حضور و غیاب را به میزان قابل توجهی افزایش می&zwnj;دهد.</p>
 </section>
 
-<section class="mar-btm-40" id="Iranian">
-<h2>مقایسه مدل های دستگاه حضور و غیاب تشخیص چهره ایرانی پالیزافزار</h2>
+<section class="mar-btm-40" id="3D">
+    <h2>فناوری تشخیص چهره سه&zwnj;بعدی (3D Face Recognition)</h2>
 
-<table class="table table-bordered table-hover table-striped">
-<tbody>
-<tr>
-<th>مدل</th>
-<th><a href="https://www.palizafzar.com/fa/products/tiam/" target="_blank" title="Tiam">Tiam</a></th>
-<th><a href="https://www.palizafzar.com/fa/products/face-fingerprint-tiam-pro/" target="_blank" title="Tiam Pro">Tiam Pro</a></th>
-<th><a href="https://www.palizafzar.com/fa/products/tisa/" target="_blank" title="Tisa">Tisa</a></th>
-<th><a href="https://www.palizafzar.com/fa/products/titan/" target="_blank" title="Titan">Titan</a></th>
-</tr>
-<tr>
-<td>تعداد کاربر</td>
-<td>15 هزار</td>
-<td>20 هزار</td>
-<td>15 هزار</td>
-<td>100 هزار</td>
-</tr>
-<tr>
-<td>تعداد ترددها</td>
-<td>500 هزار</td>
-<td>500 هزار</td>
-<td>500 هزار</td>
-<td>10 میلیون</td>
-</tr>
-<tr>
-<td>تعداد چهره</td>
-<td>8 هزار</td>
-<td>12 هزار</td>
-<td>5 هزار</td>
-<td>50 هزار</td>
-</tr>
-<tr>
-<td>تعداد اثرانگشت</td>
-<td>10 هزار</td>
-<td>15 هزار</td>
-<td>---</td>
-<td>100 هزار</td>
-</tr>
-<tr>
-<td>تعداد کارت</td>
-<td>15 هزار</td>
-<td>20 هزار</td>
-<td>15 هزار</td>
-<td>100 هزار</td>
-</tr>
-</tbody>
-</table>
+    <p>در مدل&zwnj;های پیشرفته، علاوه بر تصویر دوبعدی، عمق چهره نیز اندازه&zwnj;گیری می&zwnj;شود. این فناوری با استفاده از دوربین مادون قرمز (IR)، نور ساختاریافته یا حسگرهای عمق، مدل سه&zwnj;بعدی از صورت ایجاد می&zwnj;کند که امکان فریب دستگاه با استفاده از عکس یا نمایشگر تلفن همراه را تا حد زیادی از بین می&zwnj;برد.</p>
+
+    <p>فناوری تشخیص چهره سه&zwnj;بعدی در محیط&zwnj;های امنیتی، سازمان&zwnj;های بزرگ، بانک&zwnj;ها، مراکز درمانی و کارخانه&zwnj;هایی که امنیت ورود و خروج اهمیت بالایی دارد، بیشترین کاربرد را دارد.</p>
 </section>
 
-<section class="mar-btm-40" id="Tisa-series">
-<h2>مقایسه مدل های دستگاه حضور و غیاب تشخیص چهره سری تیسا</h2>
+<section class="mar-btm-40" id="Business">
+    <h2>دستگاه حضور و غیاب تشخیص چهره برای چه کسب&zwnj;وکارهایی مناسب است؟</h2>
 
-<table class="table table-bordered table-hover table-striped">
-<tbody>
-<tr>
-<th>مدل</th>
-<th><a href="https://www.palizafzar.com/fa/products/face-card-attendance-tisa-pro/" target="_blank" title="Tisa Pro">Tisa Pro</a></th>
-<th><a href="https://www.palizafzar.com/fa/products/face-recognition-tisa-plus/" target="_blank" title="Tisa Plus">Tisa Plus</a></th>
-<th><a href="https://www.palizafzar.com/fa/products/tisa/" target="_blank" title="Tisa">Tisa</a></th>
-</tr>
-<tr>
-<td>تعداد کاربر</td>
-<td>20 هزار</td>
-<td>16 هزار</td>
-<td>15 هزار</td>
-</tr>
-<tr>
-<td>تعداد ترددها</td>
-<td>500 هزار</td>
-<td>500 هزار</td>
-<td>500 هزار</td>
-</tr>
-<tr>
-<td>تعداد چهره</td>
-<td>12 هزار</td>
-<td>8 هزار</td>
-<td>5 هزار</td>
-</tr>
-<tr>
-<td>تعداد کارت</td>
-<td>20 هزار</td>
-<td>16 هزار</td>
-<td>15 هزار</td>
-</tr>
-</tbody>
-</table>
+    <p>دستگاه&zwnj;های حضور و غیاب تشخیص چهره با توجه به سرعت شناسایی، امنیت بالا و عدم نیاز به تماس فیزیکی، در طیف گسترده&zwnj;ای از کسب&zwnj;وکارها قابل استفاده هستند. انتخاب مدل مناسب به تعداد کاربران، شرایط محیطی و نیازهای مدیریتی هر مجموعه بستگی دارد.</p>
+
+    <h3 class="header-text">شرکت&zwnj;ها و سازمان&zwnj;های اداری</h3>
+
+    <p>در محیط&zwnj;های اداری، ظاهر دستگاه، سرعت ثبت تردد و اتصال آسان به نرم افزار حضور و غیاب اهمیت زیادی دارد. مدل&zwnj;های رومیزی یا دیواری با ظرفیت متوسط بهترین گزینه برای این مجموعه&zwnj;ها هستند.</p>
+
+    <h3 class="header-text">کارخانه&zwnj;ها و محیط&zwnj;های صنعتی</h3>
+
+    <p>در محیط&zwnj;های صنعتی که کارکنان با گردوغبار، روغن یا مواد شیمیایی سروکار دارند، استفاده از دستگاه&zwnj;های تشخیص چهره نسبت به مدل&zwnj;های اثر انگشتی عملکرد دقیق&zwnj;تر و سریع&zwnj;تری ارائه می&zwnj;دهد.</p>
+
+    <h3 class="header-text">بیمارستان&zwnj;ها و مراکز درمانی</h3>
+
+    <p>ثبت تردد بدون تماس، امکان شناسایی با ماسک و رعایت الزامات بهداشتی، دستگاه&zwnj;های تشخیص چهره را به گزینه&zwnj;ای مناسب برای مراکز درمانی و آزمایشگاه&zwnj;ها تبدیل کرده است.</p>
+
+    <h3 class="header-text">مدارس، دانشگاه&zwnj;ها و مراکز آموزشی</h3>
+
+    <p>این دستگاه&zwnj;ها علاوه بر ثبت حضور کارکنان، برای کنترل ورود و خروج دانشجویان، اساتید و پرسنل نیز مورد استفاده قرار می&zwnj;گیرند و امکان تهیه گزارش&zwnj;های دقیق تردد را فراهم می&zwnj;کنند.</p>
+
+    <h3 class="header-text">مراکز امنیتی و نظامی</h3>
+
+    <p>در محیط&zwnj;هایی که امنیت اهمیت بالایی دارد، استفاده از دستگاه&zwnj;های مجهز به فناوری تشخیص زنده بودن چهره (Live Face Detection) و کنترل تردد، امنیت ورود و خروج افراد را افزایش می&zwnj;دهد.</p>
+
+    <h3 class="header-text">سازمان&zwnj;های چند شعبه&zwnj;ای</h3>
+
+    <p>در سازمان&zwnj;هایی که دارای چندین شعبه هستند، دستگاه&zwnj;های متصل به نرم افزار حضور و غیاب تحت وب امکان مدیریت متمرکز اطلاعات و مشاهده گزارش&zwnj;های لحظه&zwnj;ای را فراهم می&zwnj;کنند.</p>
 </section>
 
+<section class="mar-btm-40" id="Comparison-Face-Fingerprint">
+    <h2>مقایسه دستگاه حضور و غیاب تشخیص چهره با دستگاه اثر انگشتی</h2>
 
-<section class="mar-btm-40" id="Virdi-devices">
-<h2>مقایسه مدل های دستگاه حضور و غیاب تشخیص چهره ویردی Virdi</h2>
+    <p>دستگاه&zwnj;های حضور و غیاب تشخیص چهره و اثر انگشتی هر دو از فناوری&zwnj;های بیومتریک برای احراز هویت استفاده می&zwnj;کنند، اما تفاوت&zwnj;هایی در نحوه عملکرد، سرعت شناسایی، شرایط استفاده و هزینه دارند. انتخاب بهترین گزینه به تعداد پرسنل، محیط کاری، بودجه و سطح امنیت مورد نیاز سازمان بستگی دارد.</p>
 
-<table class="table table-bordered table-hover table-striped">
-<tbody>
-<tr>
-<th>مدل</th>
-<th><a href="https://www.palizafzar.com/fa/products/virdi-ubio-x-pro-2/" target="_blank" title="X Pro2">X Pro2</a></th>
-<th><a href="https://www.palizafzar.com/fa/products/face-attendance-ubio-x-pro/" target="_blank" title="X Pro">X Pro</a></th>
-<th><a href="https://www.palizafzar.com/fa/products/ubio-x-pro-lite/" target="_blank" title="Pro Lite">Pro Lite</a></th>
-<th><a href="https://www.palizafzar.com/fa/products/ubio-x-face/" target="_blank" title="X Face">X Face</a></th>
-</tr>
-<tr>
-<td>تعداد کاربر</td>
-<td>500 هزار</td>
-<td>500 هزار</td>
-<td>500 هزار</td>
-<td>500 هزار</td>
-</tr>
-<tr>
-<td>تعداد ترددها</td>
-<td>10 میلیون</td>
-<td>10 میلیون</td>
-<td>10 میلیون</td>
-<td>10 میلیون</td>
-</tr>
-<tr>
-<td>تعداد چهره</td>
-<td>20 هزار</td>
-<td>30 هزار</td>
-<td>7 هزار</td>
-<td>20 هزار</td>
-</tr>
-<tr>
-<td>تعداد اثرانگشت</td>
-<td>100 هزار</td>
-<td>100 هزار</td>
-<td>100 هزار</td>
-<td>x</td>
-</tr>
-<tr>
-<td>عکس تردد</td>
-<td>20 هزار</td>
-<td>20 هزار</td>
-<td>20 هزار</td>
-<td>20 هزار</td>
-</tr>
-</tbody>
-</table>
+    <div class="table-responsive mar-btm-30">
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>ویژگی</th>
+                <th>تشخیص چهره</th>
+                <th>اثر انگشتی</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>سرعت شناسایی</td>
+                <td>بسیار بالا و بدون تماس</td>
+                <td>بالا</td>
+            </tr>
+            <tr>
+                <td>تماس فیزیکی</td>
+                <td>ندارد</td>
+                <td>دارد</td>
+            </tr>
+            <tr>
+                <td>عملکرد در محیط صنعتی</td>
+                <td>عالی</td>
+                <td>در اثر آلودگی یا آسیب انگشت ممکن است کاهش یابد</td>
+            </tr>
+            <tr>
+                <td>امنیت</td>
+                <td>بسیار بالا (با Live Face Detection)</td>
+                <td>بالا</td>
+            </tr>
+            <tr>
+                <td>هزینه</td>
+                <td>بالاتر</td>
+                <td>اقتصادی&zwnj;تر</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>اگر کارکنان شما در محیط&zwnj;های صنعتی، کارگاهی یا درمانی فعالیت می&zwnj;کنند، دستگاه&zwnj;های تشخیص چهره به دلیل عدم نیاز به تماس فیزیکی انتخاب مناسب&zwnj;تری هستند. در مقابل، برای شرکت&zwnj;های کوچک و مجموعه&zwnj;هایی با بودجه محدود، دستگاه&zwnj;های اثر انگشتی همچنان یکی از اقتصادی&zwnj;ترین گزینه&zwnj;ها محسوب می&zwnj;شوند.</p>
 </section>
 
-<section class="mar-btm-40" id="Facilities">
-<h2>مقایسه امکانات دستگاه های حضور و غیاب تشخیص چهره آنلاین ویردی</h2>
+<div id="Advantages">
+    <h2>مزایای دستگاه حضور و غیاب تشخیص چهره نسبت به دستگاه های اثر انگشت</h2>
 
-<table class="table table-bordered table-hover table-striped">
-<tbody>
-<tr>
-<th>&nbsp;</th>
-<th>UBio-X Pro</th>
-<th>UBio-X Pro Lite</th>
-<th>UBio-X Pro 2</th>
-<th>UBio-X Face</th>
-</tr>
-<tr>
-<th>سازگاری تمپلیت</th>
-<td>No</td>
-<td>AC7000 / T9</td>
-<td>UBio-X Face</td>
-<td>UBio-x Pro 2</td>
-</tr>
-<tr>
-<th>تعداد کاربر</th>
-<td>30 هزار</td>
-<td>7 هزار</td>
-<td>20 هزار</td>
-<td>20 هزار</td>
-</tr>
-<tr>
-<th>روش های شناسایی</th>
-<td>چهره/اثرانگشت/کارت</td>
-<td>چهره/اثرانگشت/کارت</td>
-<td>چهره/اثرانگشت/کارت</td>
-<td>چهره/کارت</td>
-</tr>
-<tr>
-<th>نوع تشخیص</th>
-<td>ثابت جلوی دستگاه</td>
-<td>ثابت جلوی دستگاه</td>
-<td>حین راه رفتن</td>
-<td>حین راه رفتن</td>
-</tr>
-<tr>
-<th>تکنولوژی عکس</th>
-<td>IR Light</td>
-<td>IR Light</td>
-<td>Visible Light</td>
-<td>Visible Light</td>
-</tr>
-<tr>
-<th>برنامه ارتباط با سرور</th>
-<td>UNIS / Alpeta/ SDK</td>
-<td>UNIS / Alpeta/ SDK</td>
-<td>Alpeta / SDK</td>
-<td>Alpeta / SDK</td>
-</tr>
-</tbody>
-</table>
+    <p>یکی از مهم ترین مزایای دستگاه های تشخیص چهره نسبت به دستگاه های اثر انگشت، عدم نیاز به تماس فیزیکی است. این ویژگی نه تنها در کاهش زمان تردد کارکنان موثر است، بلکه در محیط های آلوده یا زمانی که بیماری های واگیردار شیوع دارند، از انتقال ویروس ها و باکتری ها جلوگیری می کند. همچنین، در محیط هایی مانند کارگاه ها و بخش های صنعتی که اثر انگشت افراد ممکن است دچار آسیب شده باشد، استفاده از دستگاه های تشخیص چهره کاربرد بیشتری دارد.</p>
+</div>
+
+<section class="mar-btm-40" id="Comparison-Iranian-Devices">
+    <h2>مقایسه مدل های دستگاه حضور و غیاب تشخیص چهره ایرانی پالیزافزار</h2>
+
+    <table class="table table-bordered table-hover table-striped">
+        <tbody>
+        <tr>
+            <th>مدل</th>
+            <th><a href="https://www.palizafzar.com/fa/products/tiam/" target="_blank" title="Tiam">Tiam</a></th>
+            <th><a href="https://www.palizafzar.com/fa/products/face-fingerprint-tiam-pro/" target="_blank" title="Tiam Pro">Tiam Pro</a></th>
+            <th><a href="https://www.palizafzar.com/fa/products/tisa/" target="_blank" title="Tisa">Tisa</a></th>
+            <th><a href="https://www.palizafzar.com/fa/products/titan/" target="_blank" title="Titan">Titan</a></th>
+        </tr>
+        <tr>
+            <td>تعداد کاربر</td>
+            <td>15 هزار</td>
+            <td>20 هزار</td>
+            <td>15 هزار</td>
+            <td>100 هزار</td>
+        </tr>
+        <tr>
+            <td>تعداد ترددها</td>
+            <td>500 هزار</td>
+            <td>500 هزار</td>
+            <td>500 هزار</td>
+            <td>10 میلیون</td>
+        </tr>
+        <tr>
+            <td>تعداد چهره</td>
+            <td>8 هزار</td>
+            <td>12 هزار</td>
+            <td>5 هزار</td>
+            <td>50 هزار</td>
+        </tr>
+        <tr>
+            <td>تعداد اثرانگشت</td>
+            <td>10 هزار</td>
+            <td>15 هزار</td>
+            <td>---</td>
+            <td>100 هزار</td>
+        </tr>
+        <tr>
+            <td>تعداد کارت</td>
+            <td>15 هزار</td>
+            <td>20 هزار</td>
+            <td>15 هزار</td>
+            <td>100 هزار</td>
+        </tr>
+        </tbody>
+    </table>
 </section>
 
-<div id="Features">
-<h2>ویژگی های دستگاه حضور و غیاب تشخیص چهره</h2>
+<section class="mar-btm-40" id="Comparison-Tisa-Models">
+    <h2>مقایسه مدل های دستگاه حضور و غیاب تشخیص چهره سری تیسا</h2>
 
-<ol class="mar-btm-40">
-<li>دقت و سرعت شناسایی این دستگاه ها با استفاده از الگوریتم های پیچیده و فناوری های نوین، قادر به شناسایی چهره ها با دقت بسیار بالا و در کسری از ثانیه هستند. این ویژگی باعث افزایش سرعت ورود و خروج افراد و کاهش زمان انتظار می شود، به خصوص در محیط هایی با حجم بالای تردد.</li>
-<li>عدم نیاز به تماس فیزیکی یکی از مهم ترین مزایای دستگاه های تشخیص چهره، عدم نیاز به تماس فیزیکی است. این مزیت به ویژه در دوران شیوع بیماری های واگیردار مانند کرونا، اهمیت بیشتری پیدا کرد. کاربران بدون نیاز به لمس دستگاه می توانند به راحتی حضور خود را ثبت کنند.</li>
-<li>قابلیت تشخیص در شرایط نوری مختلف دستگاه های حضور و غیاب تشخیص چهره قادر به کار در شرایط نوری مختلف هستند. این دستگاه ها با استفاده از تنظیمات نوری پیشرفته می توانند در نور کم یا زیاد نیز به درستی عمل کنند و چهره افراد را تشخیص دهند.</li>
-<li>پشتیبانی از چندین روش شناسایی علاوه بر تشخیص چهره، بسیاری از دستگاه ها از روش های دیگری مانند اثر انگشت، کارت و رمز نیز پشتیبانی می کنند. این امر به کاربران اجازه می دهد بر اساس نیاز و شرایط، روش مناسب برای شناسایی را انتخاب کنند.</li>
-</ol>
-</div>
+    <table class="table table-bordered table-hover table-striped">
+        <tbody>
+        <tr>
+            <th>مدل</th>
+            <th><a href="https://www.palizafzar.com/fa/products/face-card-attendance-tisa-pro/" target="_blank" title="Tisa Pro">Tisa Pro</a></th>
+            <th><a href="https://www.palizafzar.com/fa/products/face-recognition-tisa-plus/" target="_blank" title="Tisa Plus">Tisa Plus</a></th>
+            <th><a href="https://www.palizafzar.com/fa/products/tisa/" target="_blank" title="Tisa">Tisa</a></th>
+        </tr>
+        <tr>
+            <td>تعداد کاربر</td>
+            <td>20 هزار</td>
+            <td>16 هزار</td>
+            <td>15 هزار</td>
+        </tr>
+        <tr>
+            <td>تعداد ترددها</td>
+            <td>500 هزار</td>
+            <td>500 هزار</td>
+            <td>500 هزار</td>
+        </tr>
+        <tr>
+            <td>تعداد چهره</td>
+            <td>12 هزار</td>
+            <td>8 هزار</td>
+            <td>5 هزار</td>
+        </tr>
+        <tr>
+            <td>تعداد کارت</td>
+            <td>20 هزار</td>
+            <td>16 هزار</td>
+            <td>15 هزار</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
 
-<div id="Best-attendance">
-<h2>بهترین دستگاه حضور و غیاب تشخیص چهره چیست؟</h2>
+<section class="mar-btm-40" id="Comparison-Virdi-Models">
+    <h2>مقایسه مدل های دستگاه حضور و غیاب تشخیص چهره ویردی Virdi</h2>
 
-<p>دستگاه های حضور و غیاب تشخیص چهره شرکت های معتبری مانند پالیزافزار، با داشتن ویژگی های پیشرفته و الگوریتم های امنیتی قوی، توانسته اند جایگاه خود را در بازار تثبیت کنند. این دستگاه ها با دقت بالا و سرعتی قابل توجه، تضمین می کنند که هیچ ترددی از دست نمی رود و حتی در صورت تلاش برای تقلب یا دست کاری، دستگاه از طریق مکانیزم های امنیتی خود محافظت می شود.</p>
-</div>
+    <table class="table table-bordered table-hover table-striped">
+        <tbody>
+        <tr>
+            <th>مدل</th>
+            <th><a href="https://www.palizafzar.com/fa/products/virdi-ubio-x-pro-2/" target="_blank" title="X Pro2">X Pro2</a></th>
+            <th><a href="https://www.palizafzar.com/fa/products/face-attendance-ubio-x-pro/" target="_blank" title="X Pro">X Pro</a></th>
+            <th><a href="https://www.palizafzar.com/fa/products/ubio-x-pro-lite/" target="_blank" title="Pro Lite">Pro Lite</a></th>
+            <th><a href="https://www.palizafzar.com/fa/products/ubio-x-face/" target="_blank" title="X Face">X Face</a></th>
+        </tr>
+        <tr>
+            <td>تعداد کاربر</td>
+            <td>500 هزار</td>
+            <td>500 هزار</td>
+            <td>500 هزار</td>
+            <td>500 هزار</td>
+        </tr>
+        <tr>
+            <td>تعداد ترددها</td>
+            <td>10 میلیون</td>
+            <td>10 میلیون</td>
+            <td>10 میلیون</td>
+            <td>10 میلیون</td>
+        </tr>
+        <tr>
+            <td>تعداد چهره</td>
+            <td>20 هزار</td>
+            <td>30 هزار</td>
+            <td>7 هزار</td>
+            <td>20 هزار</td>
+        </tr>
+        <tr>
+            <td>تعداد اثرانگشت</td>
+            <td>100 هزار</td>
+            <td>100 هزار</td>
+            <td>100 هزار</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td>عکس تردد</td>
+            <td>20 هزار</td>
+            <td>20 هزار</td>
+            <td>20 هزار</td>
+            <td>20 هزار</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
 
-<div id="Identifying">
-<h2>نحوه شناسایی چهره در دستگاه های حضور و غیاب</h2>
+<section class="mar-btm-40" id="Comparison-Virdi-Facilities">
+    <h2>مقایسه امکانات دستگاه های حضور و غیاب تشخیص چهره آنلاین ویردی</h2>
 
-<p>دستگاه های تشخیص چهره با استفاده از شبکه های عصبی مصنوعی و الگوریتم های پیچیده مانند شبکه عصبی پیچشی (CNN)، به تحلیل و مقایسه ویژگی های چهره افراد می پردازند. این سیستم با بهره گیری از نسبت های مختلف صورت مانند فاصله چشم ها تا خط مو، گوش ها تا بینی و دیگر ویژگی ها، قادر به شناسایی دقیق افراد است. این فرآیند حتی در شرایط نوری مختلف نیز دقیق عمل می کند و چهره افراد را با دقت بالا تشخیص می دهد.</p>
-</div>
+    <table class="table table-bordered table-hover table-striped">
+        <tbody>
+        <tr>
+            <th>&nbsp;</th>
+            <th>UBio-X Pro</th>
+            <th>UBio-X Pro Lite</th>
+            <th>UBio-X Pro 2</th>
+            <th>UBio-X Face</th>
+        </tr>
+        <tr>
+            <th>سازگاری تمپلیت</th>
+            <td>No</td>
+            <td>AC7000 / T9</td>
+            <td>UBio-X Face</td>
+            <td>UBio-x Pro 2</td>
+        </tr>
+        <tr>
+            <th>تعداد کاربر</th>
+            <td>30 هزار</td>
+            <td>7 هزار</td>
+            <td>20 هزار</td>
+            <td>20 هزار</td>
+        </tr>
+        <tr>
+            <th>روش های شناسایی</th>
+            <td>چهره/اثرانگشت/کارت</td>
+            <td>چهره/اثرانگشت/کارت</td>
+            <td>چهره/اثرانگشت/کارت</td>
+            <td>چهره/کارت</td>
+        </tr>
+        <tr>
+            <th>نوع تشخیص</th>
+            <td>ثابت جلوی دستگاه</td>
+            <td>ثابت جلوی دستگاه</td>
+            <td>حین راه رفتن</td>
+            <td>حین راه رفتن</td>
+        </tr>
+        <tr>
+            <th>تکنولوژی عکس</th>
+            <td>IR Light</td>
+            <td>IR Light</td>
+            <td>Visible Light</td>
+            <td>Visible Light</td>
+        </tr>
+        <tr>
+            <th>برنامه ارتباط با سرور</th>
+            <td>UNIS / Alpeta/ SDK</td>
+            <td>UNIS / Alpeta/ SDK</td>
+            <td>Alpeta / SDK</td>
+            <td>Alpeta / SDK</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
 
-<div id="3D">
-<h2>تشخیص چهره سه بعدی</h2>
+<div id="Face-Identification">
+    <h2>نحوه شناسایی چهره در دستگاه های حضور و غیاب</h2>
 
-<p>دستگاه های پیشرفته حضور و غیاب با فناوری تشخیص سه بعدی، امکان شناسایی چهره در زوایای مختلف را فراهم می کنند. این ویژگی به دستگاه اجازه می دهد تا حتی با تغییرات جزئی در چهره افراد مانند تغییر حالت صورت، همچنان با دقت بالا شناسایی را انجام دهد.</p>
-</div>
-
-<div id="FaceAdvantages">
-<h2>مزایای دستگاه حضور و غیاب تشخیص چهره نسبت به دستگاه های اثر انگشت</h2>
-
-<p>یکی از مهم ترین مزایای دستگاه های تشخیص چهره نسبت به دستگاه های اثر انگشت، عدم نیاز به تماس فیزیکی است. این ویژگی نه تنها در کاهش زمان تردد کارکنان موثر است، بلکه در محیط های آلوده یا زمانی که بیماری های واگیردار شیوع دارند، از انتقال ویروس ها و باکتری ها جلوگیری می کند. همچنین، در محیط هایی مانند کارگاه ها و بخش های صنعتی که اثر انگشت افراد ممکن است دچار آسیب شده باشد، استفاده از دستگاه های تشخیص چهره کاربرد بیشتری دارد.</p>
+    <p>دستگاه های تشخیص چهره با استفاده از شبکه های عصبی مصنوعی و الگوریتم های پیچیده مانند شبکه عصبی پیچشی (CNN)، به تحلیل و مقایسه ویژگی های چهره افراد می پردازند. این سیستم با بهره گیری از نسبت های مختلف صورت مانند فاصله چشم ها تا خط مو، گوش ها تا بینی و دیگر ویژگی ها، قادر به شناسایی دقیق افراد است. این فرآیند حتی در شرایط نوری مختلف نیز دقیق عمل می کند و چهره افراد را با دقت بالا تشخیص می دهد.</p>
 </div>
 
 <div id="Purchase">
-<h2>مزایای خرید دستگاه حضور و غیاب تشخیص چهره</h2>
+    <h2>مزایای خرید دستگاه حضور و غیاب تشخیص چهره</h2>
 
-<ol class="mar-btm-40">
-<li>سیستمی خودکار و دقیق دستگاه های حضور و غیاب تشخیص چهره، با دقت بالا تمام اطلاعات مربوط به ورود، خروج و حتی اضافه کاری کارکنان را ثبت می کنند. این سیستم ها به طور خودکار زمان های تردد را محاسبه کرده و خطاهای انسانی را به حداقل می رسانند.</li>
-<li>صرفه جویی در زمان با استفاده از این دستگاه ها، کارکنان تنها با یک نگاه به دستگاه، حضور خود را ثبت می کنند. این فرآیند در کمترین زمان ممکن انجام شده و باعث افزایش بهره وری می شود.</li>
-<li>بهبود امنیت دستگاه های حضور و غیاب تشخیص چهره نه تنها برای ردیابی تردد کارکنان استفاده می شوند، بلکه می توانند به عنوان یک لایه امنیتی اضافی در سازمان ها عمل کنند. این دستگاه ها قادر به شناسایی و ثبت ورود و خروج افراد غیرمجاز نیز هستند.</li>
-<li>مدیریت دقیق حقوق و دستمزد با استفاده از دستگاه های حضور و غیاب تشخیص چهره، اطلاعات تردد کارکنان به صورت خودکار به نرم افزارهای حقوق و دستمزد منتقل می شود. این ویژگی از بروز خطاهای انسانی جلوگیری کرده و فرآیند محاسبه دستمزد را تسهیل می کند.</li>
-<li>رهایی از سیستم های سنتی و دستی با استفاده از دستگاه های تشخیص چهره، سازمان ها می توانند به راحتی از سیستم های سنتی مانند کاغذ و قلم فاصله بگیرند. این سیستم ها داده ها را به صورت الکترونیکی ذخیره می کنند که نه تنها مدیریت اطلاعات را آسان تر می کند، بلکه از خطاهای ناشی از ثبت دستی جلوگیری می کند.</li>
-</ol>
+    <ol class="mar-btm-40">
+        <li>سیستمی خودکار و دقیق دستگاه های حضور و غیاب تشخیص چهره، با دقت بالا تمام اطلاعات مربوط به ورود، خروج و حتی اضافه کاری کارکنان را ثبت می کنند. این سیستم ها به طور خودکار زمان های تردد را محاسبه کرده و خطاهای انسانی را به حداقل می رسانند.</li>
+        <li>صرفه جویی در زمان با استفاده از این دستگاه ها، کارکنان تنها با یک نگاه به دستگاه، حضور خود را ثبت می کنند. این فرآیند در کمترین زمان ممکن انجام شده و باعث افزایش بهره وری می شود.</li>
+        <li>بهبود امنیت دستگاه های حضور و غیاب تشخیص چهره نه تنها برای ردیابی تردد کارکنان استفاده می شوند، بلکه می توانند به عنوان یک لایه امنیتی اضافی در سازمان ها عمل کنند. این دستگاه ها قادر به شناسایی و ثبت ورود و خروج افراد غیرمجاز نیز هستند.</li>
+        <li>مدیریت دقیق حقوق و دستمزد با استفاده از دستگاه های حضور و غیاب تشخیص چهره، اطلاعات تردد کارکنان به صورت خودکار به نرم افزارهای حقوق و دستمزد منتقل می شود. این ویژگی از بروز خطاهای انسانی جلوگیری کرده و فرآیند محاسبه دستمزد را تسهیل می کند.</li>
+        <li>رهایی از سیستم های سنتی و دستی با استفاده از دستگاه های تشخیص چهره، سازمان ها می توانند به راحتی از سیستم های سنتی مانند کاغذ و قلم فاصله بگیرند. این سیستم ها داده ها را به صورت الکترونیکی ذخیره می کنند که نه تنها مدیریت اطلاعات را آسان تر می کند، بلکه از خطاهای ناشی از ثبت دستی جلوگیری می کند.</li>
+    </ol>
 </div>
 
-<div id="Applications">
-<h2>کاربردهای دستگاه حضور و غیاب تشخیص چهره</h2>
+<section id="Applications">
+    <h2>کاربردهای دستگاه حضور و غیاب تشخیص چهره</h2>
 
-<ol class="mar-btm-40">
-<li>سازمان ها و شرکت ها استفاده از دستگاه های حضور و غیاب تشخیص چهره در سازمان ها و شرکت ها، به مدیریت دقیق ورود و خروج کارکنان کمک کرده و بهره وری را افزایش می دهد. این دستگاه ها با دقت بالا، ساعت های کاری و اضافه کاری را ثبت می کنند.</li>
-<li>مدارس و دانشگاه ها این دستگاه ها در محیط های آموزشی نیز کاربرد دارند و می توانند به بهبود مدیریت حضور دانش آموزان و دانشجویان کمک کنند. همچنین، از تقلب های احتمالی در ثبت حضور جلوگیری می کنند.</li>
-<li>مراکز درمانی و بهداشتی در مراکز بهداشتی و درمانی که عدم تماس فیزیکی اهمیت بالایی دارد، دستگاه های حضور و غیاب تشخیص چهره می توانند به کاهش انتقال بیماری ها کمک کنند.</li>
-<li>مراکز امنیتی و نظامی در مراکز حساس مانند پایگاه های نظامی و امنیتی، این دستگاه ها با افزایش امنیت و کنترل دقیق تردد، می توانند از بروز خطرات امنیتی جلوگیری کنند.</li>
-</ol>
-</div>
+    <ol class="mar-btm-40">
+        <li>سازمان ها و شرکت ها استفاده از دستگاه های حضور و غیاب تشخیص چهره در سازمان ها و شرکت ها، به مدیریت دقیق ورود و خروج کارکنان کمک کرده و بهره وری را افزایش می دهد. این دستگاه ها با دقت بالا، ساعت های کاری و اضافه کاری را ثبت می کنند.</li>
+        <li>مدارس و دانشگاه ها این دستگاه ها در محیط های آموزشی نیز کاربرد دارند و می توانند به بهبود مدیریت حضور دانش آموزان و دانشجویان کمک کنند. همچنین، از تقلب های احتمالی در ثبت حضور جلوگیری می کنند.</li>
+        <li>مراکز درمانی و بهداشتی در مراکز بهداشتی و درمانی که عدم تماس فیزیکی اهمیت بالایی دارد، دستگاه های حضور و غیاب تشخیص چهره می توانند به کاهش انتقال بیماری ها کمک کنند.</li>
+        <li>مراکز امنیتی و نظامی در مراکز حساس مانند پایگاه های نظامی و امنیتی، این دستگاه ها با افزایش امنیت و کنترل دقیق تردد، می توانند از بروز خطرات امنیتی جلوگیری کنند.</li>
+    </ol>
+</section>
 
-<div id="Challenges">
-<h2>چالش های دستگاه های حضور و غیاب تشخیص چهره</h2>
+<section class="mar-btm-40" id="Products-Introduce">
+    <h3 class="header-text">دستگاه حضور و غیاب تشخیص چهره تیام پرو</h3>
 
-<ol class="mar-btm-40">
-<li>هزینه های بالا یکی از معایب اصلی این دستگاه ها، هزینه های اولیه بالا برای خرید و نصب آنهاست. اگرچه این هزینه ها در بلندمدت جبران می شوند، اما ممکن است برای سازمان ها و شرکت های کوچک چالش برانگیز باشد.</li>
-<li>نگرانی های حریم خصوصی استفاده از تکنولوژی تشخیص چهره می تواند نگرانی هایی را در مورد حریم خصوصی افراد به وجود آورد. سازمان ها باید به طور شفاف در مورد نحوه استفاده و نگهداری از داده های چهره اطلاع رسانی کنند تا از بروز مشکلات قانونی جلوگیری شود.</li>
-</ol>
+    <p>اگر به دنبال یک دستگاه حضور و غیاب تشخیص چهره برای سازمان&zwnj;های متوسط و بزرگ هستید که علاوه بر سرعت بالا، از فناوری تشخیص زنده بودن چهره (Live Face Detection)، قابلیت کنترل تردد و ارتباط آنلاین با نرم افزار حضور و غیاب نیز پشتیبانی کند، <strong>تیام پرو</strong> یکی از کامل&zwnj;ترین گزینه&zwnj;های پالیزافزار محسوب می&zwnj;شود.</p>
 
-<p class="text-center"><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/articles/attendance-device-names-types-top-brands/" target="_blank" title="اسم دستگاه حضور و غیاب - انواع و معرفی بهترین برندها">اسم دستگاه حضور و غیاب - انواع و معرفی بهترین برندها</a></p>
-</div>
+    <p>این مدل برای شرکت&zwnj;های چند شعبه&zwnj;ای، کارخانه&zwnj;ها، سازمان&zwnj;های دولتی و مجموعه&zwnj;هایی با حجم بالای تردد طراحی شده و با بهره&zwnj;گیری از دوربین دوگانه، الگوریتم هوش مصنوعی و ظرفیت بالای ثبت کاربران، عملکرد سریع و دقیقی در احراز هویت ارائه می&zwnj;دهد.</p>
 
-<div id="Conclusion">
-<h2>جمع بندی</h2>
+    <h3 class="header-text">دستگاه حضور و غیاب تشخیص چهره تیسا</h3>
 
-<p>دستگاه های حضور و غیاب تشخیص چهره با ارائه دقت، سرعت و امنیت بالا، توانسته اند جایگزین مناسبی برای روش های سنتی حضور و غیاب باشند. این دستگاه ها به بهبود مدیریت منابع انسانی و افزایش بهره وری سازمان ها کمک کرده و با حذف خطاهای انسانی، فرآیند محاسبه حقوق و دستمزد را ساده تر می کنند. باوجود هزینه های اولیه بالا، استفاده از این تکنولوژی در بلندمدت به صرفه تر خواهد بود و باعث بهبود عملکرد سازمان ها می شود.</p>
-</div>
+    <p>تیسا انتخابی مناسب برای شرکت&zwnj;ها، دفاتر اداری و مجموعه&zwnj;های کوچک تا متوسط است که به دنبال دستگاهی با طراحی زیبا، کاربری ساده و قیمت اقتصادی هستند. این مدل علاوه بر تشخیص چهره، امکان استفاده از کارت و سایر روش&zwnj;های احراز هویت را نیز در اختیار سازمان قرار می&zwnj;دهد.</p>
+
+    <h3 class="header-text">دستگاه حضور و غیاب تشخیص چهره Virdi</h3>
+
+    <p>دستگاه&zwnj;های تشخیص چهره ویردی برای پروژه&zwnj;های سازمانی، مراکز امنیتی و مجموعه&zwnj;هایی طراحی شده&zwnj;اند که دقت شناسایی، امنیت و ظرفیت بالا برای آن&zwnj;ها اهمیت ویژه&zwnj;ای دارد. این تجهیزات با بهره&zwnj;گیری از فناوری&zwnj;های پیشرفته بیومتریک، گزینه&zwnj;ای مناسب برای سازمان&zwnj;های بزرگ و پروژه&zwnj;های حرفه&zwnj;ای محسوب می&zwnj;شوند.</p>
+</section>
+
+<section class="mar-btm-40" id="Products-Catalog">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
+            <figure><a href="https://www.palizafzar.com/fa/products/face-fingerprint-tiam-pro/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره تیام پرو"><img alt="دستگاه حضور و غیاب تشخیص چهره تیام پرو" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2024/10/20/tiam-pro-facr-fingerprint.jpg" title="دستگاه حضور و غیاب تشخیص چهره تیام پرو" /></a></figure>
+
+            <h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/face-fingerprint-tiam-pro/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره تیام پرو">دستگاه حضور و غیاب تشخیص چهره تیام پرو</a></h5>
+
+            <div class="text-center">
+                <p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/face-fingerprint-tiam-pro/" target="_blank" title="مشاهده محصول دستگاه حضور و غیاب تشخیص چهره تیام پرو">مشاهده محصول</a></p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
+            <figure><a href="https://www.palizafzar.com/fa/products/tiam/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره تیام"><img alt="دستگاه حضور و غیاب تشخیص چهره تیام" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2025/12/16/tiam.jpg" title="دستگاه حضور و غیاب تشخیص چهره تیام" /></a></figure>
+
+            <h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/tiam/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره تیام">دستگاه حضور و غیاب تشخیص چهره تیام</a></h5>
+
+            <div class="text-center">
+                <p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/tiam/" target="_blank" title="دانلود کاتالوگ دستگاه حضور و غیاب تشخیص چهره تیام">مشاهده محصول</a></p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
+            <figure><a href="https://www.palizafzar.com/fa/products/titan/" target="_blank" title="دستگاه حضور و غیاب و کنترل تردد تشخیص چهره تیتان"><img alt="دستگاه حضور و غیاب تشخیص چهره تیتان" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2025/12/16/titan.jpg" title="خرید دستگاه کنترل تردد تشخیص چهره تیتان" /></a></figure>
+
+            <h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/titan/" target="_blank" title="دستگاه حضور و غیاب و کنترل تردد تشخیص چهره تیتان">دستگاه حضور و غیاب تشخیص چهره تیتان</a></h5>
+
+            <div class="text-center">
+                <p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/titan/" target="_blank" title="مشاهده محصول">مشاهده محصول</a></p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
+            <figure><a href="https://www.palizafzar.com/fa/products/face-card-attendance-tisa-pro/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره تیسا پرو"><img alt="دستگاه حضور و غیاب تشخیص چهره تیسا پرو" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2026/05/09/tisa-pro-face-recognition.jpg" title="دستگاه حضور و غیاب تشخیص چهره تیسا پرو" /></a></figure>
+
+            <h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/face-card-attendance-tisa-pro/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره تیسا پرو">دستگاه حضور و غیاب تشخیص چهره تیسا پرو</a></h5>
+
+            <div class="text-center">
+                <p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/face-card-attendance-tisa-pro/" target="_blank" title="مشاهده محصول دستگاه حضور و غیاب تشخیص چهره تیسا پرو">مشاهده محصول</a></p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
+            <figure><a href="https://www.palizafzar.com/fa/products/face-recognition-tisa-plus/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره تیسا پلاس"><img alt="دستگاه حضور و غیاب تشخیص چهره تیسا پلاس" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2026/05/09/tisa-plus-face-recognition.jpg" title="دستگاه حضور و غیاب تشخیص چهره تیسا پرو" /></a></figure>
+
+            <h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/face-recognition-tisa-plus/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره تیسا پلاس">دستگاه حضور و غیاب تشخیص چهره تیسا پلاس</a></h5>
+
+            <div class="text-center">
+                <p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/face-recognition-tisa-plus/" target="_blank" title="مشاهده محصول دستگاه حضور و غیاب تشخیص چهره تیسا پلاس">مشاهده محصول</a></p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
+            <figure><a href="https://www.palizafzar.com/fa/products/tisa/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره تیسا"><img alt="دستگاه حضور و غیاب تشخیص چهره تیسا" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2025/12/16/tisa.jpg" title="دستگاه حضور و غیاب تشخیص چهره تیسا" /></a></figure>
+
+            <h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/tisa/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره تیسا">دستگاه حضور و غیاب تشخیص چهره تیسا</a></h5>
+
+            <div class="text-center">
+                <p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/tisa/" target="_blank" title="مشاهده محصول دستگاه حضور و غیاب تشخیص چهره تیسا">مشاهده محصول</a></p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
+            <figure><a href="https://www.palizafzar.com/fa/products/virdi-ubio-x-pro-2/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره UBio-X Pro 2"><img alt="دستگاه حضور و غیاب تشخیص چهره UBio-X Pro 2" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2024/10/21/ubiox-pro-2-face-fingerprint.jpg" title="خرید دستگاه حضور و غیاب تشخیص چهره UBio-X Pro 2" /></a></figure>
+
+            <h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/virdi-ubio-x-pro-2/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره UBio-X Pro 2">دستگاه حضور و غیاب تشخیص چهره UBio-X Pro 2</a></h5>
+
+            <div class="text-center">
+                <p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/virdi-ubio-x-pro-2/" target="_blank" title="مشاهده محصول دستگاه حضور و غیاب تشخیص چهره UBio-X Pro 2">مشاهده محصول</a></p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
+            <figure><a href="https://www.palizafzar.com/fa/products/ubio-x-pro-lite/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره UBio-X Pro Lite"><img alt="دستگاه حضور و غیاب تشخیص چهره UBio-X Pro Lite" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2024/10/21/pro-lite.jpg" title="خرید دستگاه حضور و غیاب تشخیص چهره UBio-X Pro Lite" /></a></figure>
+
+            <h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/ubio-x-pro-lite/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره UBio-X Pro Lite">دستگاه حضور و غیاب تشخیص چهره Pro Lite</a></h5>
+
+            <div class="text-center">
+                <p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/ubio-x-pro-lite/" target="_blank" title="مشاهده محصول دستگاه حضور و غیاب تشخیص چهره UBio-X Pro Lite">مشاهده محصول</a></p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
+            <figure><a href="https://www.palizafzar.com/fa/products/face-attendance-ubio-x-pro/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره Virdi UBio-X Pro"><img alt="دستگاه حضور و غیاب تشخیص چهره Virdi UBio-X Pro" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2024/10/21/ubiox-pro.jpg" title="خرید دستگاه حضور و غیاب تشخیص چهره Virdi UBio-X Pro" /></a></figure>
+
+            <h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/face-attendance-ubio-x-pro/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره UBio-X Pro">دستگاه حضور و غیاب تشخیص چهره UBio-X Pro</a></h5>
+
+            <div class="text-center">
+                <p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/face-attendance-ubio-x-pro/" target="_blank" title="مشاهده محصول دستگاه حضور و غیاب تشخیص چهره Virdi UBio-X Pro">مشاهده محصول</a></p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
+            <figure><a href="https://www.palizafzar.com/fa/products/ubio-x-face/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره UBio-X Face"><img alt="دستگاه حضور و غیاب تشخیص چهره UBio-X Face" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2024/10/21/x-face.jpg" title="خرید دستگاه حضور و غیاب تشخیص چهره UBio-X Face" /></a></figure>
+
+            <h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/ubio-x-face/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره UBio-X Face">دستگاه حضور و غیاب چهره X Face </a></h5>
+
+            <div class="text-center">
+                <p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/ubio-x-face/" target="_blank" title="مشاهده محصول دستگاه حضور و غیاب تشخیص چهره UBio-X Face">مشاهده محصول</a></p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
+            <figure><a href="https://www.palizafzar.com/fa/products/zk-uface-302/" target="_blank" title="دستگاه حضور و غیاب ثبت چهره uFace302"><img alt="دستگاه حضور و غیاب ثبت چهره uFace302" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2024/10/21/uface-302.jpg" title="خرید دستگاه حضور و غیاب ثبت چهره uFace302" /></a></figure>
+
+            <h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/zk-uface-302/" target="_blank" title="دستگاه حضور و غیاب ثبت چهره ZKTeco uFace302">دستگاه حضور و غیاب ثبت چهره UFace 302</a></h5>
+
+            <div class="text-center">
+                <p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/zk-uface-302/" target="_blank" title="مشاهده محصول دستگاه حضور و غیاب ثبت چهره uFace302">مشاهده محصول</a></p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mar-btm-40">
+            <figure><a href="https://www.palizafzar.com/fa/products/zk-uface102-face-recognition/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره UFace 602"><img alt="دستگاه حضور و غیاب تشخیص چهره UFace 602" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2024/10/21/uface-602.jpg" title="خرید دستگاه حضور و غیاب تشخیص چهره UFace 602" /></a></figure>
+
+            <h5 class="text-center"><a href="https://www.palizafzar.com/fa/products/zk-uface102-face-recognition/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره UFace 602">دستگاه حضور و غیاب تشخیص چهره UFace 602</a></h5>
+
+            <div class="text-center">
+                <p><a class="btn btn-md btn-default" href="https://www.palizafzar.com/fa/products/zk-uface102-face-recognition/" target="_blank" title="مشاهده محصول دستگاه حضور و غیاب تشخیص چهره UFace 602">مشاهده محصول</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mar-btm-40" id="Tiam-Video">
+    <h2>ویدیو دستگاه حضور و غیاب تشخیص چهره ایرانی تیام</h2>
+
+    <p>
+        <video class="full-block mar-btm-30" controls="" src="https://static.palizafzar.com/media/video/files/tiam-facial-recognition-time-attendance-terminal.mp4" title="ویدیو دستگاه حضور و غیاب تشخیص چهره تیام" type="video/mp4">&nbsp;</video>
+    </p>
+
+    <p>دستگاه حضور و غیاب تشخیص چهره و کنترل تردد تیام با شناسایی چهره (با ماسک)، اثر انگشت، کارت و رمز می باشد که قادر به شناسایی همزمان 5 کاربر به طور همزمان است. فاصله تشخیص چهره دستگاه تیام از 0.8 متر تا 2.5 متر قابل تنظیم است که شناسایی پرسنل توسط الگوریتم تشخیص چهره پویا در 0.2 ثانیه انجام می شود.</p>
+
+    <div class="text-left">
+        <p><a class="btn btn-md btn-primary" href="https://www.palizafzar.com/fa/articles/review-tiam-face-recognition-device/" target="_blank" title="نقد و بررسی دستگاه تشخیص چهره تیام">نقد و بررسی دستگاه تشخیص چهره تیام</a></p>
+    </div>
+</section>
+
+<section id="Tips">
+    <h2>هنگام خرید دستگاه حضور و غیاب تشخیص چهره به چه نکاتی توجه کنیم؟</h2>
+
+    <p>قبل از خرید دستگاه حضور و غیاب تشخیص چهره، بهتر است علاوه بر قیمت، امکانات فنی و نیازهای واقعی سازمان خود را نیز بررسی کنید. انتخاب صحیح باعث می&zwnj;شود دستگاه در سال&zwnj;های آینده نیز پاسخگوی رشد مجموعه شما باشد.</p>
+
+    <h3 class="header-text">تعداد پرسنل</h3>
+
+    <p>ظرفیت ثبت چهره و حجم ذخیره&zwnj;سازی تردد باید متناسب با تعداد کارکنان و برنامه توسعه آینده سازمان انتخاب شود.</p>
+
+    <h3 class="header-text">نوع محیط کاری</h3>
+
+    <p>شرایط محیطی مانند نور، گردوغبار، رطوبت یا فضای باز می&zwnj;تواند در انتخاب مدل مناسب تأثیرگذار باشد. برخی دستگاه&zwnj;ها برای محیط&zwnj;های صنعتی طراحی شده&zwnj;اند و مقاومت بیشتری در برابر شرایط سخت دارند.</p>
+
+    <h3 class="header-text">سرعت و فاصله شناسایی</h3>
+
+    <p>در سازمان&zwnj;هایی با حجم بالای تردد، سرعت شناسایی و امکان ثبت چهره از فاصله مناسب، نقش مهمی در جلوگیری از ایجاد صف ورود و خروج دارد.</p>
+
+    <h3 class="header-text">روش&zwnj;های ارتباطی</h3>
+
+    <p>پشتیبانی از شبکه (TCP/IP)، USB، Wi-Fi و ارتباط آنلاین با نرم افزار حضور و غیاب، مدیریت اطلاعات را ساده&zwnj;تر و سریع&zwnj;تر می&zwnj;کند.</p>
+
+    <h3 class="header-text">کنترل تردد</h3>
+
+    <p>اگر علاوه بر ثبت حضور و غیاب، نیاز به کنترل درب، گیت یا قفل برقی دارید، دستگاه باید از قابلیت اکسس کنترل نیز پشتیبانی کند.</p>
+
+    <h3 class="header-text">نرم افزار و خدمات پس از فروش</h3>
+
+    <p>وجود نرم افزار حضور و غیاب، امکان اتصال به سیستم حقوق و دستمزد، گارانتی معتبر، آموزش و خدمات پس از فروش از مهم&zwnj;ترین معیارهای انتخاب دستگاه مناسب هستند.</p>
+</section>
+
+<section id="FAQ">
+    <h2>سوالات متداول درباره دستگاه حضور و غیاب تشخیص چهره</h2>
+
+    <h3 class="header-text">دستگاه حضور و غیاب تشخیص چهره چگونه کار می&zwnj;کند؟</h3>
+
+    <p>این دستگاه با استفاده از دوربین، الگوریتم&zwnj;های هوش مصنوعی و ویژگی&zwnj;های بیومتریک صورت، هویت افراد را شناسایی کرده و ورود و خروج آن&zwnj;ها را ثبت می&zwnj;کند.</p>
+
+    <h3 class="header-text">آیا دستگاه حضور و غیاب تشخیص چهره با ماسک نیز کار می&zwnj;کند؟</h3>
+
+    <p>بسیاری از مدل&zwnj;های جدید از فناوری تشخیص چهره با ماسک پشتیبانی می&zwnj;کنند و می&zwnj;توانند با استفاده از ویژگی&zwnj;های اطراف چشم و ساختار صورت، افراد را شناسایی کنند.</p>
+
+    <h3 class="header-text">تشخیص چهره بهتر است یا اثر انگشت؟</h3>
+
+    <p>در محیط&zwnj;های اداری هر دو فناوری عملکرد مناسبی دارند، اما در کارخانه&zwnj;ها، کارگاه&zwnj;ها و محیط&zwnj;های دارای گردوغبار، دستگاه&zwnj;های تشخیص چهره به دلیل عدم نیاز به تماس فیزیکی و تأثیر نپذیرفتن از وضعیت انگشتان، انتخاب مناسب&zwnj;تری هستند.</p>
+
+    <h3 class="header-text">آیا امکان اتصال دستگاه به نرم افزار حضور و غیاب وجود دارد؟</h3>
+
+    <p>بله. اغلب دستگاه&zwnj;های تشخیص چهره از ارتباط TCP/IP، USB یا Wi-Fi پشتیبانی می&zwnj;کنند و به راحتی به نرم افزار حضور و غیاب تحت ویندوز یا تحت وب متصل می&zwnj;شوند.</p>
+
+    <h3 class="header-text">برای شرکت&zwnj;های کوچک چه دستگاهی مناسب&zwnj;تر است؟</h3>
+
+    <p>برای شرکت&zwnj;های کوچک معمولا دستگاه&zwnj;های تشخیص چهره با ظرفیت متوسط و امکانات ارتباطی پایه انتخابی مقرون&zwnj;به&zwnj;صرفه و مناسب هستند.</p>
+
+    <h3 class="header-text">برای کارخانه&zwnj;ها چه دستگاهی پیشنهاد می&zwnj;شود؟</h3>
+
+    <p>در محیط&zwnj;های صنعتی، دستگاه&zwnj;های مجهز به فناوری Visible Light، دوربین مادون قرمز (IR) و قابلیت تشخیص زنده بودن چهره، عملکرد دقیق&zwnj;تر و پایدارتری نسبت به مدل&zwnj;های ساده دارند.</p>
+
+    <h3 class="header-text">آیا دستگاه حضور و غیاب تشخیص چهره در نور کم نیز کار می&zwnj;کند؟</h3>
+
+    <p>بله. مدل&zwnj;های مجهز به دوربین مادون قرمز و فناوری نور مرئی (Visible Light) در شرایط نوری مختلف، حتی در محیط&zwnj;های کم&zwnj;نور، عملکرد دقیقی ارائه می&zwnj;دهند.</p>
+
+    <h3 class="header-text">هنگام خرید دستگاه حضور و غیاب تشخیص چهره به چه نکاتی توجه کنیم؟</h3>
+
+    <p>تعداد پرسنل، ظرفیت ثبت چهره، سرعت شناسایی، امکانات ارتباطی، قابلیت اتصال به نرم افزار حضور و غیاب، امکان کنترل تردد و خدمات پس از فروش از مهم&zwnj;ترین معیارهای انتخاب دستگاه مناسب هستند.</p>
+
+    <h3 class="header-text">قیمت دستگاه حضور و غیاب تشخیص چهره چگونه تعیین می&zwnj;شود؟</h3>
+
+    <p>قیمت دستگاه حضور و غیاب تشخیص چهره به عواملی مانند فناوری تشخیص چهره، ظرفیت ثبت کاربران، امکانات ارتباطی، قابلیت کنترل تردد، نرم&zwnj;افزار و خدمات پس از فروش بستگی دارد. به همین دلیل نمی&zwnj;توان برای همه مدل&zwnj;ها یک قیمت ثابت اعلام کرد. اگر می&zwnj;خواهید با عوامل مؤثر بر قیمت و بازه قیمتی مدل&zwnj;های مختلف آشنا شوید، مقاله<a href="https://www.palizafzar.com/fa/articles/buying-time-attendance-system/" title="قیمت دستگاه حضور و غیاب"> قیمت دستگاه حضور و غیاب</a>را مطالعه کنید.</p>
+
+    <h3 class="header-text">تشخیص چهره بهتر است یا اثر انگشت؟</h3>
+
+    <p>اگر سرعت، ثبت بدون تماس و عملکرد در محیط&zwnj;های پرتردد برای شما اهمیت دارد، دستگاه&zwnj;های تشخیص چهره گزینه مناسب&zwnj;تری هستند. در مقابل، دستگاه&zwnj;های اثر انگشتی برای بسیاری از شرکت&zwnj;های کوچک و محیط&zwnj;های اداری همچنان انتخابی اقتصادی و قابل اعتماد محسوب می&zwnj;شوند. مقایسه کامل این دو فناوری را در مقاله<a href="https://www.palizafzar.com/fa/articles/time-and-attendance-device-types/" title="انواع دستگاه حضور و غیاب"> انواع دستگاه حضور و غیاب</a> مطالعه کنید.</p>
+</section>
+
+<section id="Summary">
+    <h2>جمع&zwnj;بندی و راهنمای انتخاب نهایی</h2>
+
+    <p>اگر به دنبال سریع&zwnj;ترین و دقیق&zwnj;ترین روش ثبت تردد پرسنل هستید، دستگاه حضور و غیاب تشخیص چهره یکی از بهترین گزینه&zwnj;های موجود است. این فناوری علاوه بر حذف تماس فیزیکی، امنیت بالاتری نسبت به سیستم&zwnj;های کارتی داشته و در بسیاری از محیط&zwnj;های صنعتی و اداری عملکرد دقیق&zwnj;تری نسبت به دستگاه&zwnj;های اثر انگشتی ارائه می&zwnj;دهد.</p>
+
+    <p>در انتخاب دستگاه مناسب، تنها به قیمت یا ظرفیت ثبت چهره توجه نکنید. تعداد پرسنل، نوع محیط کاری، امکانات ارتباطی، قابلیت اتصال به نرم&zwnj;افزار حضور و غیاب، نیاز به کنترل تردد و خدمات پس از فروش از مهم&zwnj;ترین معیارهایی هستند که باید پیش از خرید بررسی شوند.</p>
+
+    <p>اگر هنوز در انتخاب مدل مناسب تردید دارید، می&zwnj;توانید مشخصات فنی مدل&zwnj;های مختلف را با یکدیگر مقایسه کرده یا از کارشناسان پالیزافزار برای انتخاب مناسب&zwnj;ترین دستگاه متناسب با نیاز سازمان خود مشاوره دریافت کنید.</p>
+</section>
 
 <div class="alert alert-success text-center">
-<h4>مشاوره رایگان و دریافت قیمت</h4>
+    <h4>مشاوره رایگان و دریافت قیمت</h4>
 
-<p>برای مشاوره تخصصی، اطلاع دقیق از مدل&zwnj;های دستگاه و دریافت قیمت، همین حالا با کارشناسان ما تماس بگیرید:</p>
+    <p>برای مشاوره تخصصی، اطلاع دقیق از مدل&zwnj;های دستگاه و دریافت قیمت، همین حالا با کارشناسان ما تماس بگیرید:</p>
 
-<p>تلفن تماس: <strong><a href="tel:02189567000">89567000-021</a></strong></p>
+    <p>تلفن تماس: <strong><a href="tel:02189567000">89567000-021</a></strong></p>
 
-<p>درخواست مشاوره رایگان پیش از خرید:</p>
+    <p>درخواست مشاوره رایگان پیش از خرید:</p>
 
-<p class="text-center"><a class="btn btn-md btn-primary" href="https://wa.me/message/HTA4TKAN2XO2I1" target="_blank" title="درخواست مشاوره رایگان">درخواست مشاوره رایگان</a></p>
+    <p class="text-center"><a class="btn btn-md btn-primary" href="https://wa.me/message/HTA4TKAN2XO2I1" target="_blank" title="درخواست مشاوره رایگان">درخواست مشاوره رایگان</a></p>
 </div>
 
 <section>
-<h3 class="mar-top-30 mar-btm-10">مطالب مرتبط</h3>
+    <h3 class="mar-top-30 mar-btm-10">مطالب پیشنهادی</h3>
 
-<div class="row mar-right-20">
-<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-<h5><a href="https://www.palizafzar.com/fa/articles/economical-time-attendance-device/" target="_blank" title="دستگاه حضور و غیاب ارزان">دستگاه حضور و غیاب ارزان</a></h5>
+    <div class="row mar-right-20">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/fa/articles/face-detection/" target="_blank" title="فناوری تشخیص چهره">فناوری تشخیص چهره</a></h5>
 
-<h5><a href="https://www.palizafzar.com/fa/articles/face-detection/" target="_blank" title="فناوری تشخیص چهره">فناوری تشخیص چهره</a></h5>
+            <h5><a href="https://www.palizafzar.com/fa/articles/time-and-attendance-system-buying-guide/" target="_blank" title="راهنمای خرید دستگاه حضور و غیاب ایرانی">راهنمای خرید دستگاه حضور و غیاب ایرانی</a></h5>
 
-<h5><a href="https://www.palizafzar.com/fa/articles/time-and-attendance-system-buying-guide/" target="_blank" title="بهترین دستگاه حضور و غیاب ایرانی">بهترین دستگاه حضور و غیاب ایرانی</a></h5>
-</div>
+            <h5><a href="https://www.palizafzar.com/fa/articles/iris-biometric/" target="_blank" title="تشخیص هویت و شناسایی با عنبیه چشم">تشخیص هویت و شناسایی با عنبیه چشم</a></h5>
+        </div>
 
-<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-<h5><a href="https://www.palizafzar.com/fa/products/ubio-x-iris/" target="_blank" title="دستگاه حضور و غیاب تشخیص عنبیه">دستگاه حضور و غیاب تشخیص عنبیه</a></h5>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5><a href="https://www.palizafzar.com/fa/articles/access-control-devices/" target="_blank" title="دستگاه کنترل تردد اکسس کنترل">دستگاه کنترل تردد اکسس کنترل</a></h5>
 
-<h5><a href="https://www.palizafzar.com/fa/articles/time-and-attendance-device-types/" target="_blank" title="انواع دستگاه حضور و غیاب">انواع دستگاه حضور و غیاب</a></h5>
+            <h5><a href="https://www.palizafzar.com/fa/articles/best-time-attendance-systems/" target="_blank" title="بهترین دستگاه حضور و غیاب">بهترین دستگاه حضور و غیاب</a></h5>
 
-<h5><a href="https://www.palizafzar.com/fa/news/tiam-pro-best-face-recognition-attendance-system/" target="_blank" title="تیام پرو، نگاهی دقیق به بهترین دستگاه حضور و غیاب تشخیص چهره">تیام پرو، نگاهی دقیق به بهترین دستگاه حضور و غیاب تشخیص چهره</a></h5>
-</div>
-</div>
+            <h5><a href="https://www.palizafzar.com/fa/articles/review-tiam-face-recognition-device/" target="_blank" title="نقد و بررسی دستگاه حضور و غیاب چهره تیام">نقد و بررسی دستگاه حضور و غیاب چهره تیام</a></h5>
+        </div>
+    </div>
 </section>
-
-<section>
-<h3 class="mar-top-30 mar-btm-10">پر بازدیدها</h3>
-
-<div class="row mar-right-20">
-<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-<h5><a href="https://www.palizafzar.com/fa/educations/timax-attendance-communication/" target="_blank" title="ارتباط با دستگاه حضور و غیاب تایمکس Timax">ارتباط با دستگاه حضور و غیاب تایمکس Timax</a></h5>
-
-<h5><a href="https://www.palizafzar.com/fa/educations/zk-communication-client-server-mode/" target="_blank" title="ارتباط با دستگاه حضور و غیاب ZKTeco">ارتباط با دستگاه حضور و غیاب ZKTeco</a></h5>
-
-<h5><a href="https://www.palizafzar.com/fa/articles/buying-time-attendance-system/" target="_blank" title="قیمت دستگاه حضور و غیاب">قیمت دستگاه حضور و غیاب</a></h5>
-</div>
-
-<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-<h5><a href="https://www.palizafzar.com/fa/articles/iris-biometric/" target="_blank" title="تشخیص هویت و شناسایی با عنبیه چشم">تشخیص هویت و شناسایی با عنبیه چشم</a></h5>
-
-<h5><a href="https://www.palizafzar.com/fa/articles/connection-with-time-attendance-system/" target="_blank" title="ارتباط با دستگاه حضور و غیاب">ارتباط با دستگاه حضور و غیاب</a></h5>
-
-<h5><a href="https://www.palizafzar.com/fa/articles/zkteco-time-attendance-machine/" target="_blank" title="دستگاه حضور و غیاب ZKTeco">دستگاه حضور و غیاب ZKTeco</a></h5>
-</div>
-</div>
-</section>
-
-<section>
-<h3 class="mar-top-30 mar-btm-10">جدیدترین مطالب</h3>
-
-<div class="row mar-right-20">
-<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-<h5><a href="https://www.palizafzar.com/fa/articles/access-control-devices/" target="_blank" title="دستگاه کنترل تردد اکسس کنترل">دستگاه کنترل تردد اکسس کنترل</a></h5>
-
-<h5><a href="https://www.palizafzar.com/fa/articles/review-tiam-face-recognition-device/" target="_blank" title="نقد و بررسی دستگاه حضور و غیاب چهره تیام">نقد و بررسی دستگاه حضور و غیاب چهره تیام</a></h5>
-
-<h5><a href="https://www.palizafzar.com/fa/articles/time-attendance-systems-in-tehran/" target="_blank" title="فروش دستگاه حضور و غیاب در تهران">فروش دستگاه حضور و غیاب در تهران</a></h5>
-</div>
-
-<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-<h5><a href="https://www.palizafzar.com/fa/articles/best-time-attendance-systems/" target="_blank" title="بهترین دستگاه حضور و غیاب">بهترین دستگاه حضور و غیاب</a></h5>
-
-<h5><a href="https://www.palizafzar.com/fa/products/ptr72/" target="_blank" title="دستگاه حضور و غیاب کارتی">دستگاه حضور و غیاب کارتی</a></h5>
-
-<h5><a href="https://www.palizafzar.com/fa/articles/how-to-install-access-control-system/" target="_blank" title="نصب و راه اندازی دستگاه کنترل تردد">نصب و راه اندازی دستگاه کنترل تردد</a></h5>
-</div>
-</div>
-</section>
-<script type="application/ld+json">{"@context": "https://schema.org","@type": "Article","name": "دستگاه حضور و غیاب تشخیص چهره","image": ["https://static.palizafzar.com/media/article_images/9737861c272f448195096dcd5b85b7d4.jpg","https://static.palizafzar.com/media/editor_uploads/2024/10/20/tiam-pro-facr-fingerprint.jpg","https://static.palizafzar.com/media/editor_uploads/2025/12/16/tiam.jpg","https://static.palizafzar.com/media/editor_uploads/2025/12/16/titan.jpg","https://static.palizafzar.com/media/editor_uploads/2026/05/09/tisa-pro-face-recognition.jpg","https://static.palizafzar.com/media/editor_uploads/2026/05/09/tisa-plus-face-recognition.jpg","https://static.palizafzar.com/media/editor_uploads/2025/12/16/tisa.jpg","https://static.palizafzar.com/media/editor_uploads/2024/10/21/ubiox-pro-2-face-fingerprint.jpg","https://static.palizafzar.com/media/editor_uploads/2024/10/21/pro-lite.jpg","https://static.palizafzar.com/media/editor_uploads/2024/10/21/ubiox-pro.jpg","https://static.palizafzar.com/media/editor_uploads/2026/05/09/face-premium.jpg","https://static.palizafzar.com/media/editor_uploads/2024/10/21/x-face.jpg","https://static.palizafzar.com/media/editor_uploads/2024/10/21/uface-302.jpg","https://static.palizafzar.com/media/editor_uploads/2024/10/21/uface-602.jpg"],"articleSection": "دستگاه های حضور و غیاب بیومتریک نظیر دستگاه حضور و غیاب تشخیص چهره و دستگاه حضور و غیاب اثر انگشتی جهت شناسایی ویژگی های فیزیولوژیکی منحصر به فرد کاربران طراحی شده اند. با استفاده از دستگاه های حضور و غیاب تشخیص چهره یا اثر انگشت بر خلاف سیستم های حضور و غیاب کارتی، دیگر امکان تقلب و یا کارتزنی بجای شخص دیگر وجود ندارد. امروزه بسیاری از شرکت های فناوری از جمله اپل، سامسونگ و گوگل برای احراز هویت، احراز هویت بیومتریک را همراه با سخت افزار دستگاه های خود ادغام کرده اند. قیمت دستگاه های حضور و غیاب چهره ایرانی و چینی از بازه قیمت 4 میلیون و 900 هزار تومان تا 19 میلیون و 800 هزار تومان می باشد و همچنین قیمت دستگاه های حضور و غیاب تصویری ویردی کره از بازه قیمت 35 میلیون 900 هزار تومان تا 69 میلیون و 700 هزار تومان می باشد.","articleBody": "با استفاده از دستگاه حضور و غیاب تشخیص چهره ردیابی زمان بدون نیاز به پرسنل برای نظارت بر سیستم به طور 24 ساعت در روز وجود دارد. دستگاه حضور و غیاب تشخیص چهره همانند یک انسان هوشمند است که با سیستم های خودکار خطای انسانی را حذف می کند. سیستم حضور و غیاب با استفاده از تکنولوژی تشخیص چهره می تواند با دقت گزارش حضور، عدم حضور و اضافه کاری را با فرآیندی سریع و دقیق شناسایی کند. با استفاده از یک سیستم حضور و غیاب تشخیص چهره می توان سابقه حضور کلی کارکنان سازمان اعم از نگهداری زمان ورود و خروج، اضافه کاری، تردد های ثبت نشده، غیبت ها، ماموریت ها و همه چیز را به خوبی مدیریت و برنامه ریزی کرد. همچنین منظم بودن کارکنان از طریق آن می تواند شناخته شود که در نهایت می تواند ساعت های بهره وری را افزایش دهد."}</script><script type="application/ld+json">{"@context": "https://schema.org","@type": "VideoObject","name": "ویدیو دستگاه حضور و غیاب تشخیص چهره UBio-X Pro 2","description": "ویدیو معرفی جامع نحوه کار و ارتباط با دستگاه حضور و غیاب تشخیص چهره UBio-X Pro 2","duration": "PT12M31S","contentUrl": "https://dl12.mp4.ir/video/2021/10/33585-613499159/33585-613499159.mp4"}</script><script type="application/ld+json">{"@context": "https: //schema.org","@type": "FAQPage","mainEntity": [{"@type": "Question","name": "بهترین دستگاه حضور و غیاب تشخیص چهره چیست؟","acceptedAnswer": {"@type": "Answer","text": "دستگاه های حضور و غیاب تشخیص چهره پالیزافزار به قدری قابل اطمینان هستند که شما هیچ گاه نگرانی از بابت خرید این دستگاه ها نخواهید داشت کافیست پس از نصب و راه اندازی دستگاه حضور و غیاب تشخیص چهره (Facial Recognition  Attendance Machine) یک بار آن را به همراه نرم افزار حضور و غیاب با توجه به نیازها و برنامه های سازمانی خود تنظیم نموده و از خدمات آن بهره ببرید."}},{"@type": "Question","name": "مزیت دستگاه های حضور و غیاب تشخیص چهره نسبت به دستگاه های اثر انگشتی چیست؟","acceptedAnswer": {"@type": "Answer","text": "صرفه جویی در زمان و کاهش بیماری با خرید دستگاه حضور غیاب تشخیص چهره: زمانی که بیماری هایی مانند سرماخوردگی و ویروس کرونا یا آنفولانزا در بین کارمندان گسترش پیدا کند، حضور کارمندان در محل کار را کاهش می دهد. با استفاده از دستگاه تردد تشخیص چهره ، کارکنان می توانند در مدت زمان کوتاه تری وارد و از محل خارج شوند، زیرا نیازی به لمس و تماس فیزیکی با دستگاه حضور و غیاب جهت ورود و خروج نیست. این امر موجب صرفه جویی در زمان و همچنین به حداقل رساندن بیماری های گسترش یافته به علت تماس فیزیکی است. دستگاه حضور غیاب چهره برای محیط های کارگاهی، بخش های صنعتی، بخش های عمرانی، ساختمان سازی، تراشکاری و کلا محیط هایی که افراد بنا به کارشان دارای اثر انگشت سالمی نیستند و استفاده فیزیکی از بدن خود برای انجام کارها می نمایند، می تواند مفید واقع شود. اما در مکان هایی نظیر محیط های اداری، ارگان دولتی و غیره که محیط کار سالم و بدون دغدغه و دخالت اعضای بدن صورت می گیرد استفاده از دستگاه حضور و غیاب اثر انگشتی می تواند انتخاب مناسبی جهت کنترل تردد ها باشد. "}},{"@type": "Question","name": "مزایای خرید دستگاه حضور و غیاب تشخیص چهره چیست؟","acceptedAnswer": {"@type": "Answer","text": "استفاده کارفرمایان از دستگاه حضور و غیاب تشخیص چهره جهت ردیابی تردد کارمندان آنها را قادر می سازد تا خطاهای انسانی را از بین ببرند. این بدان معنی است که تعداد دقیق ساعت حضور کارمند و کارکرد وی به سیستم محاسبه حقوق و دستمزد انتقال یافته و کارفرما دیگر نگران اضافه کاری اشتباه نمی باشد. سیستمی خودکار و دقیق: تشخیص صورت دقیق تمام آیتم های حضور، عدم حضور و اضافه کاری را گزارش می دهد. فرایند شناسایی در هر زمان تنها با یک سرعت که تقریبا نامحدود است شروع می شود این سیستم می تواند هزاران کاربر را در کمتر از یک ثانیه مطابقت و اطلاعاتی را فراهم کند که 100٪ صحیح است بدون اینکه بخواهید انگشت خود را بلند کنید. سیستم ردیابی خودکار: با استفاده از دستگاه حضور و غیاب تشخیص چهره ردیابی زمان بدون نیاز به پرسنل برای نظارت بر سیستم به طور 24 ساعت در روز وجود دارد. دستگاه حضور و غیاب با تشخیص چهره همانند یک انسان هوشمند است که با سیستم های خودکار خطای انسانی را حذف می کند. سیستم حضور و غیاب با استفاده از تکنولوژی تشخیص چهره Facial Recognition می تواند با دقت گزارش حضور، عدم حضور و اضافه کاری را با فرآیندی سریع و دقیق شناسایی کند. با استفاده از یک سیستم حضور و غیاب تشخیص چهره می توان سابقه حضور کلی کارکنان سازمان اعم از نگهداری زمان ورود و خروج، اضافه کاری، تردد های ثبت نشده، غیبت ها، ماموریت ها و همه چیز را به خوبی مدیریت و برنامه ریزی کرد. همچنین منظم بودن کارکنان از طریق آن می تواند شناخته شود که در نهایت می تواند ساعت های بهره وری را افزایش دهد."}},{"@type": "Question","name": "کاربردهای سیستم حضور و غیاب تشخیص چهره کجا می باشد؟","acceptedAnswer": {"@type": "Answer","text": "بسیاری از فرودگاهها و خطوط هوایی در سراسر جهان از سیستم حضور و غیاب بیومتریک تشخیص چهره جهت کنترل و شناسایی آسان مسافران به هنگام عبور از گیت های امنیتی استفاده می کنند. در حال حاضر ایستگاه راه آهن King Cross، منطقه ای در شمال لندن، از دستگاه های تشخیص چهره جهت شناسایی هزاران نفر استفاده می کند. نیروهای پلیس انگلیس از سال 2015 به طور آزمایشی از سیستم تشخیص چهره جهت شناسایی سریع مجرمان استفاده می کنند."}},{"@type": "Question","name": "نحوه شناسایی چهره در دستگاه های حضور و غیاب تشخیص چهره چگونه می باشد؟","acceptedAnswer": {"@type": "Answer","text": "بیشتر برنامه های پیشرفته تشخیص چهره دارای نوعی شبکه عصبی به نام شبکه عصبی پیچشی Convolutional Neural Network(CNN) هستند. این سیستم برای انجام تجزیه و تحلیل پیچیده تصویر و حتی شناسایی افراد، حیوانات یا اشیا از پیچش و سایر الگوریتم ها در مراحل پی در پی استفاده می کند. شبکه های عصبی تشخیص چهره اغلب از نسبت ها استفاده می کنند، مانند نسبت چشم به خط رویش مو، نسبت گوش به بینی یا سایر نسبت های موجود صورت که می تواند در تشخیص چهره کمک کند. برنامه ML می تواند از یکتایی هر چهره برای یادگیری نحوه شناسایی فرد با استفاده از داده های موجود و اصول برون یابی استفاده کند. سپس تصویر با تمام چهره های شناخته شده مقایسه می شود تا هویت آن شخص را به طور منحصر به فرد شناسایی کند."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org","@type": "Organization","name": "حضور و غیاب پالیز افزار","url": "https://www.palizafzar.com/","logo": "https://static.palizafzar.com/static/images/paliz_logo.png","sameAs": ["https://www.facebook.com/PalizafzarCorp/","https://twitter.com/palizafzar","https://www.instagram.com/palizafzarco/","https://www.youtube.com/channel/UCnLtCo1f5fRrNW0wA4PR7yA","https://www.linkedin.com/company/palizafzar","https://www.pinterest.com/palizafzar/","https://telegram.me/palizafzar_co","https://www.aparat.com/palizafzar"]}</script><script type="application/ld+json">{"@context": "https://schema.org","@type": "VideoObject","name": "ویدیو دستگاه حضور و غیاب تشخیص چهره تیام","description": "دستگاه حضور و غیاب تشخیص چهره و کنترل تردد تیام با شناسایی چهره (با ماسک)، اثر انگشت، کارت و رمز می باشد که قادر به شناسایی همزمان 5 کاربر به طور همزمان است. فاصله تشخیص چهره دستگاه تیام از 0.8 متر تا 2.5 متر قابل تنظیم  است که شناسایی پرسنل توسط الگوریتم تشخیص چهره پویا در 0.2 ثانیه انجام می شود.","duration": "PT5M39S","contentUrl": "https://dl12.mp4.ir/video/2022/9/33585-840662343/33585-840662343.mp4"}</script>
-
+<script type="application/ld+json">{"@context": "https://schema.org","@type": "Article","@id": "https://www.palizafzar.com/fa/articles/facial-recognition-attendance-machin/#article","mainEntityOfPage": {"@type": "WebPage","@id": "https://www.palizafzar.com/fa/articles/facial-recognition-attendance-machin/"},"headline": "دستگاه حضور و غیاب تشخیص چهره","description": "راهنمای جامع انتخاب دستگاه حضور و غیاب تشخیص چهره، بررسی فناوری تشخیص چهره، مقایسه مدل‌ها، مزایا، کاربردها و نکات خرید دستگاه حضور و غیاب چهره.","articleSection": "دستگاه حضور و غیاب تشخیص چهره","keywords": ["دستگاه حضور و غیاب تشخیص چهره","دستگاه حضور و غیاب چهره","دستگاه حضور و غیاب تصویری","Face Recognition Attendance","سیستم حضور و غیاب بیومتریک","کنترل تردد","نرم افزار حضور و غیاب"],"image": ["https://static.palizafzar.com/media/article_images/9737861c272f448195096dcd5b85b7d4.jpg","https://static.palizafzar.com/media/editor_uploads/2024/10/20/tiam-pro-facr-fingerprint.jpg","https://static.palizafzar.com/media/editor_uploads/2026/05/09/tisa-pro-face-recognition.jpg","https://static.palizafzar.com/media/editor_uploads/2024/10/21/ubiox-pro-2-face-fingerprint.jpg"],"articleBody": "در این مقاله با فناوری دستگاه حضور و غیاب تشخیص چهره، نحوه عملکرد الگوریتم‌های تشخیص چهره، فناوری تشخیص زنده (Live Face Detection)، مقایسه با دستگاه‌های اثر انگشتی، معرفی مدل‌های مختلف پالیزافزار و نکات مهم انتخاب و خرید دستگاه حضور و غیاب آشنا می‌شوید. همچنین کاربرد این تجهیزات در شرکت‌ها، کارخانه‌ها، بیمارستان‌ها، مدارس و سازمان‌های بزرگ بررسی شده و معیارهای انتخاب مناسب‌ترین دستگاه بر اساس تعداد کاربران، شرایط محیطی و امکانات نرم‌افزاری ارائه شده است.","about": [{"@type": "Thing","name": "Face Recognition"},{"@type": "Thing","name": "Attendance System"},{"@type": "Thing","name": "Biometric Authentication"},{"@type": "Thing","name": "Access Control"}],"mentions": [{"@type": "Thing","name": "اثر انگشت"},{"@type": "Thing","name": "تشخیص چهره"},{"@type": "Thing","name": "Live Face Detection"},{"@type": "Thing","name": "کنترل تردد"},{"@type": "Thing","name": "نرم افزار حضور و غیاب"},{"@type": "Thing","name": "RFID Card"}],"author": {"@type": "Organization","name": "پالیزافزار"},"publisher": {"@type": "Organization","name": "پالیزافزار","logo": {"@type": "ImageObject","url": "https://static.palizafzar.com/static/images/paliz_logo.png"}}}</script>
 
 
 
