@@ -19,197 +19,372 @@
 <body>
 
 
-<section aria-label="مقدمه">
-<p>کارت های بدون تماس یا <a href="https://www.palizafzar.com/en/articles/contacless-card/" target="_blank" title="Contactless Cards">Contactless Cards</a> کارت های هوشمندی هستند که بدون اتصال به <a href="https://www.palizafzar.com/fa/products/125-khz-contactless-reader/" target="_blank" title="دستگاه کارتخوان">دستگاه کارتخوان</a> قادر به ارسال اطلاعات کارت به صورت ID می باشند که این ID می تواند شامل کد پرسنلی، پلاک ماشین یا هر رقم دیگری باشد. برای خوانده شدن اطلاعات کارت نیاز به یک انرژی خارجی است که این انرژی از دستگاه های کارتخوان از طریق فرکانس رادیویی تامین می گردد.</p>
-</section>
-<section class="mar-top-40">
+<!-- ============================================================
+ CLUSTER: کارت‌های بدون تماس (Contactless Cards)
+ Parent Hub: دستگاه حضور و غیاب کارتی
+ Search Intent: Informational
+ Playbook: Rule 011/012/019 (Cluster) / STANDARD-002
+ یادداشت اجرایی: تصاویر و لینک‌های محصولات (کارتخوان‌ها، رایترها،
+ هولدر و تگ) از نسخه قبلی مقاله عیناً حفظ شده‌اند چون دارایی
+ واقعی و معتبر سایت هستند (Rule KR-001: Knowledge Duplicate
+ نمی‌شود، Reference می‌شود). لینک‌های مشخص‌شده با TODO باید
+ پیش از انتشار با URL نهایی جایگزین شوند.
+ ============================================================ -->
+
+
+<article>
+<p><strong>کارت‌های بدون تماس (Contactless Cards)</strong> کارت‌های هوشمندی هستند که بدون نیاز به قرار گرفتن فیزیکی داخل دستگاه کارت‌خوان، قادر به ارسال اطلاعات هویتی خود (مانند کد پرسنلی) به‌صورت بی‌سیم هستند. این کارت‌ها امروزه پایه‌ی اصلی اکثر <a href="https://www.palizafzar.com/fa/articles/card-attendance-device/" target="_blank" title="دستگاه حضور و غیاب کارتی">دستگاه‌های حضور و غیاب کارتی</a>، سیستم‌های کنترل تردد، پارکینگ و حمل‌ونقل عمومی را تشکیل می‌دهند. در این مقاله با نحوه عملکرد این کارت‌ها، انواع فرکانسی آن‌ها (LF، HF، UHF)، رایج‌ترین استانداردها (Mifare، DESFire، EM، NFC)، مزایا، محدودیت‌ها و کاربردهای آن‌ها آشنا می‌شوید.</p>
+</article>
+
+<div class="well mar-top-20 mar-btm-20">
+<p><strong>تعریف کوتاه:</strong> کارت بدون تماس، کارتی هوشمند است که با استفاده از یک تراشه (IC) و آنتن داخلی، اطلاعات هویتی خود را از طریق امواج رادیویی و بدون تماس فیزیکی، به دستگاه کارت‌خوان ارسال می‌کند.</p>
+</div>
+
+<section>
 <h2>نگاهی بر موضوعات پیش رو</h2>
-<nav id="TOC" class="alert alert-info" aria-label="فهرست مطالب">
+<nav aria-label="فهرست مطالب" class="alert alert-info" id="TOC">
 <ul>
-<li><a href="#what-is" scroll-to="what-is" title="کارت هوشمند بدون تماس چیست؟">کارت هوشمند بدون تماس چیست؟</a></li>
-<li><a href="#Types" scroll-to="Types" title="انواع کارت های بدون تماس">انواع کارت های بدون تماس</a></li>
-<li><a href="#Uses" scroll-to="Uses" title="موارد استفاده از کارت های بدون تماس">موارد استفاده از کارت های بدون تماس</a></li>
+<li><a href="#what-is" scroll-to="what-is" title="کارت بدون تماس چیست؟">کارت بدون تماس چیست؟</a></li>
+<li><a href="#HowItWorks" scroll-to="HowItWorks" title="کارت‌های بدون تماس چگونه کار می‌کنند؟">کارت‌های بدون تماس چگونه کار می‌کنند؟</a></li>
+<li><a href="#Technologies" scroll-to="Technologies" title="فناوری‌های مورد استفاده در کارت‌های بدون تماس">فناوری‌های مورد استفاده در کارت‌های بدون تماس</a></li>
+<li><a href="#Types" scroll-to="Types" title="انواع کارت‌های بدون تماس">انواع کارت‌های بدون تماس</a></li>
+<li><a href="#Standards" scroll-to="Standards" title="رایج‌ترین استانداردهای کارت‌های RFID">رایج‌ترین استانداردهای کارت‌های RFID</a></li>
+<li><a href="#Uses" scroll-to="Uses" title="کاربرد کارت‌های بدون تماس">کاربرد کارت‌های بدون تماس</a></li>
+<li><a href="#Advantages" scroll-to="Advantages" title="مزایای کارت‌های بدون تماس">مزایای کارت‌های بدون تماس</a></li>
+<li><a href="#Limitations" scroll-to="Limitations" title="محدودیت‌های کارت‌های بدون تماس">محدودیت‌های کارت‌های بدون تماس</a></li>
+<li><a href="#VsBiometric" scroll-to="VsBiometric" title="کارت بدون تماس یا فناوری بیومتریک؟">کارت بدون تماس یا فناوری بیومتریک؟</a></li>
+<li><a href="#FAQs" scroll-to="FAQs" title="سؤالات متداول">سؤالات متداول</a></li>
+<li><a href="#Attendance" scroll-to="Attendance" title="کارت‌های بدون تماس در دستگاه‌های حضور و غیاب">کارت‌های بدون تماس در دستگاه‌های حضور و غیاب</a></li>
+<li><a href="#Conclusion" scroll-to="Conclusion" title="جمع‌بندی">جمع‌بندی</a></li>
 </ul>
 </nav>
 </section>
-<section  id="what-is" class="mar-top-40">
-<h2>کارت هوشمند بدون تماس چیست؟</h2>
 
-<p>کارت های بدون تماس در ابعاد کارت های اعتباری بانکی هستند که قادر به نگهداری اطلاعات ثبت شده می باشند. اطلاعات کارت از طریق دستگاه های رایتر قابل نوشتن و نگهداری بر روی کارت هستند و در زمانی که کارت در مجاورت دستگاه های کارتخوان قرار می گیرد این اطلاعات از طریق فرکانس رادیویی به <a href="https://www.palizafzar.com/fa/products/virdi-vs-r20d/" target="_blank" title="دستگاه کارتخوان">دستگاه کارتخوان</a> ارسال می شوند. کارت های هوشمند بدون تماس شامل چندین لایه هستند، این لایه ها عبارتند از:</p>
+<section class="mar-top-40" id="what-is">
+<h2>کارت بدون تماس چیست؟</h2>
 
-<ul class="mar-btm-40">
-<li>لایه اول و آخر: اطلاعات چاپی روی لایه اول و آخر بنا به درخواست سازمان ها و شرکت ها انجام می شود.</li>
-<li>لایه میانی: لایه های میانی شامل یک <a href="https://fa.wikipedia.org/wiki/%D9%85%D8%AF%D8%A7%D8%B1_%D9%85%D8%AC%D8%AA%D9%85%D8%B9" target="_blank" title="IC">IC</a> و سیم پیچی است که نقش آنتن را ایفا می کند. ارتباط در کارت های بدون تماس همیشه به صورت یک طرفه است که این عمل توسط دستگاه کارتخوان انجام می شود. طریقه خواندن اطلاعات کارت بدین صورت است که انرژی الکتریکی که به صورت فرکانس از دستگاه کارتخوان ارسال می شود، این موج توسط آنتن درون کارت دریافت می گردد و بعد به ولتاژ تبدیل شده سپس اطلاعات ذخیره شده درون IC به دستگاه ارسال می گردد.</li>
+<p>کارت بدون تماس، کارتی در ابعاد کارت‌های اعتباری بانکی است که یک تراشه (IC) و یک سیم‌پیچ آنتن در لایه میانی آن تعبیه شده است. برخلاف کارت‌های تماسی (مانند برخی کارت‌های بانکی قدیمی‌تر یا کارت‌های مغناطیسی) که باید داخل دستگاه کارت‌خوان کشیده یا وارد شوند، کارت بدون تماس کافی است در فاصله چند سانتی‌متری کارت‌خوان قرار گیرد تا اطلاعات آن به‌صورت بی‌سیم خوانده شود.</p>
+
+<h3 class="header-text">تفاوت کارت بدون تماس با کارت تماسی</h3>
+<p>در کارت‌های تماسی، انتقال اطلاعات از طریق اتصال فیزیکی پایه‌های فلزی کارت به دستگاه کارت‌خوان انجام می‌شود؛ به همین دلیل این کارت‌ها مستعد سایش و خرابی مکانیکی هستند. در کارت‌های بدون تماس، هیچ اتصال فیزیکی وجود ندارد و انتقال اطلاعات صرفاً از طریق امواج رادیویی صورت می‌گیرد؛ همین موضوع باعث افزایش دوام، سرعت و سهولت استفاده از این کارت‌ها شده است.</p>
+</section>
+
+<section class="mar-top-40" id="HowItWorks">
+<h2>کارت‌های بدون تماس چگونه کار می‌کنند؟</h2>
+
+<p>عملکرد کارت‌های بدون تماس بر پایه چهار جزء اصلی است:</p>
+
+<ul>
+<li><strong>Reader (خواننده):</strong> دستگاهی که میدان الکترومغناطیسی تولید کرده و اطلاعات کارت را دریافت می‌کند.</li>
+<li><strong>Tag / کارت:</strong> حاوی یک تراشه (IC) و آنتن که شناسه یا اطلاعات ذخیره‌شده را نگهداری می‌کند.</li>
+<li><strong>انتقال اطلاعات:</strong> وقتی کارت وارد میدان الکترومغناطیسی خواننده می‌شود، انرژی لازم برای فعال‌سازی تراشه تأمین شده و اطلاعات کارت به‌صورت یک‌طرفه (از کارت به خواننده) ارسال می‌شود.</li>
+<li><strong>فاصله خواندن:</strong> بسته به نوع فرکانس کارت (LF، HF یا UHF)، فاصله خواندن از چند سانتی‌متر تا چند متر متغیر است.</li>
 </ul>
 </section>
-<section id="Types" class="mar-top-40">
-<h2>انواع کارت های بدون تماس</h2>
 
-<p>از نظر فرکانس <a href="https://www.palizafzar.com/fa/articles/rfid-technology/" target="_blank" title="RFID">RFID</a>،کارت های بدون تماس به چند دسته مختلف تقسیم می شوند:</p>
+<section class="mar-top-40" id="Technologies">
+<h2>فناوری‌های مورد استفاده در کارت‌های بدون تماس</h2>
+
+<p>پیش از بررسی انواع فرکانسی کارت‌ها، آشنایی کوتاه با سه فناوری زیربنایی این حوزه لازم است:</p>
+
+<ul>
+<li><strong>RFID:</strong> فناوری اصلی و پایه‌ای که تمام کارت‌های بدون تماس بر اساس آن کار می‌کنند؛ شناسایی از طریق امواج رادیویی و بدون تماس فیزیکی.</li>
+<li><strong>NFC:</strong> زیرمجموعه‌ای از خانواده RFID با برد بسیار کوتاه‌تر که امکان شبیه‌سازی کارت روی گوشی‌های هوشمند را نیز فراهم می‌کند.</li>
+<li><strong>MIFARE:</strong> رایج‌ترین استاندارد تجاری برای کارت‌های RFID با فرکانس ۱۳.۵۶ مگاهرتز که در بخش استانداردها به‌طور کامل معرفی می‌شود.</li>
+</ul>
+
+<p>برای آشنایی کامل با نحوه عملکرد فناوری RFID، مقاله <a href="https://www.palizafzar.com/fa/articles/rfid-technology/" target="_blank" title="تکنولوژی RFID">تکنولوژی RFID</a> را مطالعه کنید.</p>
+</section>
+
+<section class="mar-top-40" id="Types">
+<h2>انواع کارت‌های بدون تماس</h2>
+
+<p>از نظر فرکانس <a href="https://www.palizafzar.com/fa/articles/rfid-technology/" target="_blank" title="RFID">RFID</a>، کارت‌های بدون تماس به سه دسته اصلی تقسیم می‌شوند:</p>
 
 <div class="mar-right-30">
-<h3 class="header-text">کارت های بدون تماس با فرکانس کم Low Frequency</h3>
+<h3 class="header-text">کارت‌های LF (فرکانس پایین، 125 کیلوهرتز)</h3>
 
-<p>کارت های هوشمند LF با فرکانس پایین (134KHz ~ 120) به طور عمده در برنامه های شناسایی، <a href="https://www.palizafzar.com/fa/product-categories/security-control-automation/" target="_blank" title="کنترل تردد و کنترل دسترسی">کنترل تردد و کنترل دسترسی</a> استفاده می شود. کارت های LF دارای محدوده خواندن و سرعت ارتباطی کمتر از سایر انواع کارت های هوشمند بدون تماس هستند که در آن یک ID ساده یا کلید شناسایی مورد نیاز است. با توجه به شکل امواج آنها، کارت های LF کمتر تحت تأثیر سایر سیگنال های رادیویی و مواد در محیط مانند آب و فلز قرار می گیرند که باعث می شود آنها در محیط های صنعتی انتخاب مناسبی باشند. انواع مختلف این دسته از کارت ها عبارتند از : RF 125KHz, HID Prox, Indalla Prox, Keri Prox, ioProx, EM4102, and HITAG</p>
+<p>کارت‌های LF با فرکانس پایین (۱۲۰ تا ۱۳۴ کیلوهرتز) عمدتاً در برنامه‌های شناسایی و <a href="https://www.palizafzar.com/fa/product-categories/security-control-automation/" target="_blank" title="کنترل تردد و کنترل دسترسی">کنترل تردد و کنترل دسترسی</a> استفاده می‌شوند. این کارت‌ها فاصله خواندن و سرعت انتقال کمتری نسبت به سایر انواع دارند، اما به دلیل شکل موج خود، کمتر تحت تأثیر فلز و آب قرار می‌گیرند و برای محیط‌های صنعتی گزینه مناسبی هستند. از رایج‌ترین مدل‌های این خانواده می‌توان به EM4102 و HITAG اشاره کرد.</p>
 
-<figure class="mar-btm-30"><img alt="محدوده فرکانس پایین Low Frequency برای کارت های بدون تماس" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2017/09/11/low_frequency_contactless_cards.jpg" title="محدوده فرکانس پایین Low Frequency برای کارت های بدون تماس" />
-<figcaption class="text-center"><em>محدوده فرکانس پایین Low Frequency برای کارت های بدون تماس</em></figcaption>
+<figure class="mar-btm-30"><img alt="محدوده فرکانس پایین Low Frequency برای کارت‌های بدون تماس" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2017/09/11/low_frequency_contactless_cards.jpg" title="محدوده فرکانس پایین Low Frequency برای کارت‌های بدون تماس" />
+<figcaption class="text-center"><em>محدوده فرکانس پایین Low Frequency برای کارت‌های بدون تماس</em></figcaption>
 </figure>
 
 <div class="row">
 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mar-btm-30">
-<figure><a href="https://www.palizafzar.com/fa/products/125-khz-contactless-reader/" target="_blank" title="دستگاه کارتخوان بدون تماس 125KHz"><picture> <img alt="دستگاه کارتخوان بدون تماس 125KHz" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2021/09/12/rf-card-reader-300h.jpg" title="دستگاه کارتخوان بدون تماس 125KHz" /> </picture> </a>
-
-<figcaption class="text-center"><a href="https://www.palizafzar.com/fa/products/125-khz-contactless-reader/" target="_blank" title="دستگاه کارتخوان بدون تماس 125KHz"><strong>دستگاه کارتخوان بدون تماس 125KHz</strong></a></figcaption>
-<a href="https://www.palizafzar.com/fa/products/125-khz-contactless-reader/" target="_blank" title="دستگاه کارتخوان بدون تماس 125KHz"> </a></figure>
+<figure><a href="https://www.palizafzar.com/fa/products/125-khz-contactless-reader/" target="_blank" title="دستگاه کارت‌خوان بدون تماس 125KHz"><picture><img alt="دستگاه کارت‌خوان بدون تماس 125KHz" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2021/09/12/rf-card-reader-300h.jpg" title="دستگاه کارت‌خوان بدون تماس 125KHz" /></picture></a>
+<figcaption class="text-center"><a href="https://www.palizafzar.com/fa/products/125-khz-contactless-reader/" target="_blank" title="دستگاه کارت‌خوان بدون تماس 125KHz"><strong>دستگاه کارت‌خوان بدون تماس 125KHz</strong></a></figcaption>
+</figure>
 </div>
 
 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mar-btm-30">
-<figure><a href="https://www.palizafzar.com/fa/products/virdi-vs-r20d/virdi-vs-r20d-rf/" target="_blank" title="دستگاه کارتخوان بدون تماس VS-R20D"><picture> <img alt="دستگاه کارتخوان بدون تماس VS-R20D" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2021/09/12/rfid-card-reader-300h.jpg" title="دستگاه کارتخوان بدون تماس VS-R20D" /> </picture> </a>
-
-<figcaption class="text-center"><a href="https://www.palizafzar.com/fa/products/virdi-vs-r20d/virdi-vs-r20d-rf/" target="_blank" title="دستگاه کارتخوان بدون تماس VS-R20D"><strong>دستگاه کارتخوان بدون تماس VS-R20D</strong></a></figcaption>
-<a href="https://www.palizafzar.com/fa/products/virdi-vs-r20d/virdi-vs-r20d-rf/" target="_blank" title="دستگاه کارتخوان بدون تماس VS-R20D"> </a></figure>
+<figure><a href="https://www.palizafzar.com/fa/products/virdi-vs-r20d/virdi-vs-r20d-rf/" target="_blank" title="دستگاه کارت‌خوان بدون تماس VS-R20D"><picture><img alt="دستگاه کارت‌خوان بدون تماس VS-R20D" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2021/09/12/rfid-card-reader-300h.jpg" title="دستگاه کارت‌خوان بدون تماس VS-R20D" /></picture></a>
+<figcaption class="text-center"><a href="https://www.palizafzar.com/fa/products/virdi-vs-r20d/virdi-vs-r20d-rf/" target="_blank" title="دستگاه کارت‌خوان بدون تماس VS-R20D"><strong>دستگاه کارت‌خوان بدون تماس VS-R20D</strong></a></figcaption>
+</figure>
 </div>
 
 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-<figure><a href="https://www.palizafzar.com/fa/products/card-holder/" target="_blank" title="جاکارتی | هولدر کارت حضور و غیاب"><picture> <img alt="جاکارتی | هولدر کارت حضور و غیاب" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2021/09/12/time-card-rack-card-holder.jpg" title="جاکارتی | هولدر کارت حضور و غیاب" /> </picture> </a>
-
+<figure><a href="https://www.palizafzar.com/fa/products/card-holder/" target="_blank" title="جاکارتی | هولدر کارت حضور و غیاب"><picture><img alt="جاکارتی | هولدر کارت حضور و غیاب" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2021/09/12/time-card-rack-card-holder.jpg" title="جاکارتی | هولدر کارت حضور و غیاب" /></picture></a>
 <figcaption class="text-center"><a href="https://www.palizafzar.com/fa/products/card-holder/" target="_blank" title="جاکارتی | هولدر کارت حضور و غیاب"><strong>جاکارتی | هولدر کارت حضور و غیاب</strong></a></figcaption>
-<a href="https://www.palizafzar.com/fa/products/card-holder/" target="_blank" title="جاکارتی | هولدر کارت حضور و غیاب"> </a></figure>
+</figure>
 </div>
 
 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-<figure><a href="https://www.palizafzar.com/fa/products/cabinet-tag/" target="_blank" title="تگ دستبندی بدون تماس 125 کیلوهرتز"><picture> <img alt="تگ دستبندی بدون تماس 125 کیلوهرتز" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2021/09/12/rfid-contactless-bracelet-tag.jpg" title="تگ دستبندی بدون تماس 125 کیلوهرتز" /> </picture> </a>
-
+<figure><a href="https://www.palizafzar.com/fa/products/cabinet-tag/" target="_blank" title="تگ دستبندی بدون تماس 125 کیلوهرتز"><picture><img alt="تگ دستبندی بدون تماس 125 کیلوهرتز" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2021/09/12/rfid-contactless-bracelet-tag.jpg" title="تگ دستبندی بدون تماس 125 کیلوهرتز" /></picture></a>
 <figcaption class="text-center"><a href="https://www.palizafzar.com/fa/products/cabinet-tag/" target="_blank" title="تگ دستبندی بدون تماس 125 کیلوهرتز"><strong>تگ دستبندی بدون تماس 125 کیلوهرتز</strong></a></figcaption>
-<a href="https://www.palizafzar.com/fa/products/cabinet-tag/" target="_blank" title="تگ دستبندی بدون تماس 125 کیلوهرتز"> </a></figure>
+</figure>
 </div>
 </div>
 
-<h3 class="header-text">کارت های بدون تماس با فرکانس 13.56 مگاهرتز High Frequency</h3>
+<h3 class="header-text">کارت‌های HF (فرکانس بالا، 13.56 مگاهرتز)</h3>
 
-<p>کارت های 13.56 مگاهرتز کارت های هوشمندی هستند که دارای فرکانس بالایی هستند و فاصله خواندن آنها تا 1 متر است. کارت های HF برای کارت های شناسایی دانشگاه ها، <a href="https://www.palizafzar.com/fa/product-categories/absence-automation/" target="_blank" title="دستگاه حضور و غیاب">دستگاه حضور و غیاب</a>، کنترل دسترسی و شناسایی، به عنوان پرداخت های خرده فروشی و در حمل و نقل به عنوان بلیط استفاده می شود. کارت های HF 13.56Mhz تحت استانداردهای ISO / IEC 14443A / B یا ISO / IEC 15693 قرار می گیرند کارت های HF اغلب برای برنامه های کاربردی که نیاز به ارتباط امن و تبادل مقدار زیادی از داده ها بین کارت و ریدر را بر عهده دارند، انتخاب می شوند.</p>
+<p>کارت‌های HF فاصله خواندن تا حدود یک متر دارند و تحت استانداردهای ISO/IEC 14443A/B یا ISO/IEC 15693 قرار می‌گیرند. این کارت‌ها برای کارت‌های شناسایی دانشگاه‌ها، <a href="https://www.palizafzar.com/fa/product-categories/absence-automation/" target="_blank" title="دستگاه حضور و غیاب">دستگاه حضور و غیاب</a>، کنترل دسترسی و پرداخت‌های خرد استفاده می‌شوند و برای برنامه‌هایی که نیاز به ارتباط امن و تبادل حجم بیشتری از داده دارند، انتخاب مناسبی هستند.</p>
 
-<figure class="mar-btm-30"><img alt="محدوده فرکانس بالا High Frequency یا 13.56MHz برای کارت های هوشمند" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2017/09/11/high_frequency_contactless_cards.jpg" title="محدوده فرکانس بالا High Frequency یا 13.56MHz برای کارت های هوشمند" />
-<figcaption class="text-center"><em>محدوده فرکانس بالا High Frequency یا 13.56MHz برای کارت های هوشمند</em></figcaption>
+<figure class="mar-btm-30"><img alt="محدوده فرکانس بالا High Frequency یا 13.56MHz برای کارت‌های هوشمند" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2017/09/11/high_frequency_contactless_cards.jpg" title="محدوده فرکانس بالا High Frequency یا 13.56MHz برای کارت‌های هوشمند" />
+<figcaption class="text-center"><em>محدوده فرکانس بالا High Frequency یا 13.56MHz برای کارت‌های هوشمند</em></figcaption>
 </figure>
 
 <div class="row">
 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-<figure><a href="https://www.palizafzar.com/fa/products/virdi-vs-r20d/virdi-vs-r20d-sc/" target="_blank" title="دستگاه کارتخوان مایفر و DESFire"><picture> <img alt="دستگاه کارتخوان مایفر و DESFire" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2021/09/12/mifare-card-reader-163h.jpg" title="دستگاه کارتخوان مایفر و DESFire" /> </picture> </a>
-
-<figcaption class="text-center"><a href="https://www.palizafzar.com/fa/products/virdi-vs-r20d/virdi-vs-r20d-sc/" target="_blank" title="دستگاه کارتخوان مایفر و DESFire"><strong>دستگاه کارتخوان مایفر و DESFire</strong></a></figcaption>
-<a href="https://www.palizafzar.com/fa/products/virdi-vs-r20d/virdi-vs-r20d-sc/" target="_blank" title="دستگاه کارتخوان مایفر و DESFire"> </a></figure>
+<figure><a href="https://www.palizafzar.com/fa/products/virdi-vs-r20d/virdi-vs-r20d-sc/" target="_blank" title="دستگاه کارت‌خوان مایفر و DESFire"><picture><img alt="دستگاه کارت‌خوان مایفر و DESFire" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2021/09/12/mifare-card-reader-163h.jpg" title="دستگاه کارت‌خوان مایفر و DESFire" /></picture></a>
+<figcaption class="text-center"><a href="https://www.palizafzar.com/fa/products/virdi-vs-r20d/virdi-vs-r20d-sc/" target="_blank" title="دستگاه کارت‌خوان مایفر و DESFire"><strong>دستگاه کارت‌خوان مایفر و DESFire</strong></a></figcaption>
+</figure>
 </div>
 
 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-<figure><a href="https://www.palizafzar.com/fa/products/mifare-writer-module/" target="_blank" title="ماژول رایتر مایفر M30"><picture> <img alt="ماژول رایتر مایفر M30" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2021/09/12/mifare-writer-module-163h.jpg" title="ماژول رایتر مایفر M30" /> </picture> </a>
-
+<figure><a href="https://www.palizafzar.com/fa/products/mifare-writer-module/" target="_blank" title="ماژول رایتر مایفر M30"><picture><img alt="ماژول رایتر مایفر M30" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2021/09/12/mifare-writer-module-163h.jpg" title="ماژول رایتر مایفر M30" /></picture></a>
 <figcaption class="text-center"><a href="https://www.palizafzar.com/fa/products/mifare-writer-module/" target="_blank" title="ماژول رایتر مایفر M30"><strong>ماژول رایتر مایفر M30</strong></a></figcaption>
-<a href="https://www.palizafzar.com/fa/products/mifare-writer-module/" target="_blank" title="ماژول رایتر مایفر M30"> </a></figure>
-</div>
-
-<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-<figure><a href="https://www.palizafzar.com/fa/products/mifare-writer/" target="_blank" title="دستگاه رایتر مایفر Mifare"><picture> <img alt="دستگاه رایتر مایفر Mifare" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2021/09/12/mifare-reader-or-writer-219w.jpg" title="دستگاه رایتر مایفر Mifare" /> </picture> </a>
-
-<figcaption class="text-center"><a href="https://www.palizafzar.com/fa/products/mifare-writer/" target="_blank" title="دستگاه رایتر مایفر Mifare"><strong>دستگاه رایتر مایفر Mifare</strong></a></figcaption>
-<a href="https://www.palizafzar.com/fa/products/mifare-writer/" target="_blank" title="دستگاه رایتر مایفر Mifare"> </a></figure>
-</div>
-</div>
-
-<h3 class="header-text">کارت های بدون تماس با فرکانس 850-960 مگاهرتز Ultra High Frequency</h3>
-
-<p>UHF از استاندارد EPC global Gen2 پیروی می کند و از باند فرکانس 850-960Mhz برای انتقال داده ها و محدوده های بسیار بیشتری نسبت به کارت های LF یا HF استفاده می کند. برچسب ها و تگ های UHF به طور گسترده در انبارداری و ردیابی کالاها مورد استفاده قرار می گیرند در حالی که کارت های UHF برای برنامه های مکان و ردیابی محبوب تر هستند. میزان اثر پذیری UHF توسط مواد در محیط مانند فلزات و مایعات منفی است و بهترین انتخاب برای برنامه های کاربردی است که نیاز به خواندن طیف طولانی و همزمان تعداد زیادی از برچسب ها را دارند.</p>
-
-<figure class="mar-btm-30"><img alt="محدوده فرکانس UHF برای کارت های بدون تماس" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2017/09/11/ultra_high_frequency_contactless_cards.jpg" title="محدوده فرکانس UHF برای کارت های بدون تماس" />
-<figcaption class="text-center"><em>محدوده فرکانس UHF برای کارت های بدون تماس</em></figcaption>
 </figure>
 </div>
 
+<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+<figure><a href="https://www.palizafzar.com/fa/products/mifare-writer/" target="_blank" title="دستگاه رایتر مایفر Mifare"><picture><img alt="دستگاه رایتر مایفر Mifare" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2021/09/12/mifare-reader-or-writer-219w.jpg" title="دستگاه رایتر مایفر Mifare" /></picture></a>
+<figcaption class="text-center"><a href="https://www.palizafzar.com/fa/products/mifare-writer/" target="_blank" title="دستگاه رایتر مایفر Mifare"><strong>دستگاه رایتر مایفر Mifare</strong></a></figcaption>
+</figure>
+</div>
+</div>
+
+<h3 class="header-text">کارت‌های UHF (فرکانس 850 تا 960 مگاهرتز)</h3>
+
+<p>UHF از استاندارد EPC Global Gen2 پیروی می‌کند و به دلیل استفاده از باند فرکانسی بالاتر، محدوده خواندن بسیار بیشتری نسبت به کارت‌های LF یا HF دارد. برچسب‌های UHF بیشتر در انبارداری و ردیابی کالا کاربرد دارند، در حالی که کارت‌های UHF برای کاربردهای مکان‌یابی و ردیابی محبوب‌تر هستند. این فرکانس بیشتر از فلزات و مایعات محیط تأثیر می‌پذیرد، اما برای خواندن هم‌زمان تعداد زیادی برچسب از فاصله دور، بهترین گزینه است.</p>
+
+<figure class="mar-btm-30"><img alt="محدوده فرکانس UHF برای کارت‌های بدون تماس" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2017/09/11/ultra_high_frequency_contactless_cards.jpg" title="محدوده فرکانس UHF برای کارت‌های بدون تماس" />
+<figcaption class="text-center"><em>محدوده فرکانس UHF برای کارت‌های بدون تماس</em></figcaption>
+</figure>
+
 <div class="row">
 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-<figure><a href="https://www.palizafzar.com/fa/products/uhf-reader/" target="_blank" title="دستگاه کارتخوان با برد بلند UHF"><picture> <img alt="دستگاه کارتخوان با برد بلند UHF" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2021/09/12/uhf-card-reader-300h.jpg" title="دستگاه کارتخوان با برد بلند UHF" /> </picture> </a>
-
-<figcaption class="text-center"><a href="https://www.palizafzar.com/fa/products/uhf-reader/" target="_blank" title="دستگاه کارتخوان با برد بلند UHF"><strong>دستگاه کارتخوان با برد بلند UHF</strong></a></figcaption>
-<a href="https://www.palizafzar.com/fa/products/uhf-reader/" target="_blank" title="دستگاه کارتخوان با برد بلند UHF"> </a></figure>
+<figure><a href="https://www.palizafzar.com/fa/products/uhf-reader/" target="_blank" title="دستگاه کارت‌خوان با برد بلند UHF"><picture><img alt="دستگاه کارت‌خوان با برد بلند UHF" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2021/09/12/uhf-card-reader-300h.jpg" title="دستگاه کارت‌خوان با برد بلند UHF" /></picture></a>
+<figcaption class="text-center"><a href="https://www.palizafzar.com/fa/products/uhf-reader/" target="_blank" title="دستگاه کارت‌خوان با برد بلند UHF"><strong>دستگاه کارت‌خوان با برد بلند UHF</strong></a></figcaption>
+</figure>
 </div>
 
 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-<figure><a href="https://www.palizafzar.com/fa/products/uhf-writer/" target="_blank" title="دستگاه رایتر کارت UHF"><picture> <img alt="دستگاه رایتر کارت UHF" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2021/09/12/uhf-card-writer-300h.jpg" title="دستگاه رایتر کارت UHF" /> </picture> </a>
-
+<figure><a href="https://www.palizafzar.com/fa/products/uhf-writer/" target="_blank" title="دستگاه رایتر کارت UHF"><picture><img alt="دستگاه رایتر کارت UHF" class="img-responsive image-center" src="https://static.palizafzar.com/media/editor_uploads/2021/09/12/uhf-card-writer-300h.jpg" title="دستگاه رایتر کارت UHF" /></picture></a>
 <figcaption class="text-center"><a href="https://www.palizafzar.com/fa/products/uhf-writer/" target="_blank" title="دستگاه رایتر کارت UHF"><strong>دستگاه رایتر کارت UHF</strong></a></figcaption>
-<a href="https://www.palizafzar.com/fa/products/uhf-writer/" target="_blank" title="دستگاه رایتر کارت UHF"> </a></figure>
+</figure>
+</div>
 </div>
 </div>
 </section>
-<section id="Uses" class="mar-top-40">
-<h2>موارد استفاده از کارت های بدون تماس</h2>
 
-<p>از کارت های بدون تماس هوشمند در مواردی نظیر پرداخت الکترونیکی عوارض، پرداخت الکترونیکی در شهربازی و باشگاه، کارت <a href="https://www.palizafzar.com/fa/categories/absence-automation/" target="_blank" title="حضور و غیاب">حضور و غیاب</a> و یا به عنوان بلیط در حوزه حمل و نقل عمومی نظیر اتوبوس و مترو استفاده می گردد.</p>
+<section class="mar-top-40" id="Standards">
+<h2>رایج‌ترین استانداردهای کارت‌های RFID</h2>
+
+<p>علاوه بر دسته‌بندی فرکانسی، کارت‌های بدون تماس بر اساس استاندارد داخلی تراشه نیز تفاوت‌های مهمی با هم دارند که مستقیماً روی امنیت و کاربرد آن‌ها اثر می‌گذارد.</p>
+
+<h3 class="header-text">MIFARE Classic</h3>
+<p><strong>رایج‌ترین گزینه برای حضور و غیاب و کنترل تردد.</strong> Mifare Classic استاندارد کارت‌های HF (۱۳.۵۶ مگاهرتز) با حافظه رمزنگاری‌شده و بخش‌بندی‌شده است که امکان ذخیره اطلاعات اضافی مانند سطح دسترسی را نیز فراهم می‌کند؛ به همین دلیل انتخاب پیش‌فرض بسیاری از سیستم‌های حضور و غیاب و کنترل تردد است.</p>
+
+<h3 class="header-text">MIFARE DESFire</h3>
+<p><strong>مناسب پروژه‌های با نیاز امنیتی بالا.</strong> DESFire نسخه پیشرفته‌تر خانواده Mifare است که از الگوریتم رمزنگاری AES پشتیبانی می‌کند و سطح امنیتی بسیار بالاتری نسبت به Mifare Classic ارائه می‌دهد؛ گزینه مناسب پروژه‌های بانکی، دولتی و سازمان‌هایی با الزامات امنیتی سخت‌گیرانه.</p>
+
+<h3 class="header-text">EM Card</h3>
+<p><strong>اقتصادی و پرکاربرد.</strong> کارت‌های EM (مانند EM4100/EM4102) ساده‌ترین و ارزان‌ترین کارت‌های LF (۱۲۵ کیلوهرتز) هستند که فاقد رمزنگاری‌اند و صرفاً یک شماره سریال ثابت ارسال می‌کنند؛ مناسب پروژه‌هایی که هزینه اولویت اصلی است، نه سطح امنیتی بالا.</p>
+
+<h3 class="header-text">NFC Card</h3>
+<p><strong>مناسب سازمان‌های دیجیتال‌محور.</strong> NFC زیرمجموعه‌ای از استاندارد کارت‌های HF است که علاوه بر کارت فیزیکی، امکان شبیه‌سازی کارت روی گوشی‌های هوشمند را نیز فراهم می‌کند؛ گزینه‌ای مناسب برای سازمان‌هایی که می‌خواهند فرآیند صدور و مدیریت کارت را ساده‌تر و دیجیتال‌تر کنند.</p>
 </section>
-<div class="alert alert-success text-center">
-<h4>مشاوره رایگان و اطلاع از قیمت دستگاه حضور و غیاب</h4>
 
-<p>برای دریافت مشاوره تخصصی، معرفی مدل&zwnj;های مناسب و استعلام قیمت روز، همین حالا با ما تماس بگیرید یا از طریق واتساپ اقدام کنید:</p>
+<section class="mar-top-40" id="Uses">
+<h2>کاربرد کارت‌های بدون تماس</h2>
 
-<p><strong>تلفن تماس: </strong><a href="tel:02189567000">89567000-021</a></p>
+<p>کارت‌های بدون تماس به دلیل سرعت و سهولت استفاده، در طیف گسترده‌ای از حوزه‌ها کاربرد دارند:</p>
 
+<ul>
+<li><strong>حضور و غیاب:</strong> ثبت سریع ورود و خروج پرسنل در سازمان‌ها، کارخانه‌ها و مدارس</li>
+<li><strong>کنترل تردد:</strong> مدیریت دسترسی فیزیکی به درها، اتاق‌های حساس و مناطق محدود</li>
+<li><strong>پارکینگ:</strong> ثبت خودکار ورود و خروج خودرو و محاسبه هزینه پارک</li>
+<li><strong>حمل‌ونقل:</strong> بلیط الکترونیکی در مترو، اتوبوس و سایر سیستم‌های حمل‌ونقل عمومی</li>
+<li><strong>دانشگاه:</strong> کارت دانشجویی برای ورود به کلاس، کتابخانه و خوابگاه</li>
+<li><strong>هتل:</strong> کارت‌کلید اتاق‌های هتل به‌جای کلیدهای فیزیکی سنتی</li>
+<li><strong>باشگاه:</strong> ثبت ورود اعضا و مدیریت اشتراک‌های ورزشی</li>
+</ul>
+</section>
 
-<p> درخواست مشاوره رایگان در واتساپ:</p>
+<section class="mar-top-40" id="Advantages">
+<h2>مزایای کارت‌های بدون تماس</h2>
 
-<p><a class="btn btn-md btn-success" href="https://wa.me/message/HTA4TKAN2XO2I1" target="_blank" title="مشاوره فوری در واتساپ">مشاوره فوری در واتساپ</a></p>
+<ul>
+<li><strong>سرعت:</strong> خواندن اطلاعات کارت معمولاً کمتر از یک ثانیه طول می‌کشد.</li>
+<li><strong>عدم تماس فیزیکی:</strong> نیازی به قرار دادن دقیق کارت داخل دستگاه نیست، فقط کافی است نزدیک آن قرار گیرد.</li>
+<li><strong>دوام بالا:</strong> نبود اتصال مکانیکی باعث می‌شود این کارت‌ها نسبت به کارت‌های مغناطیسی یا تماسی عمر بیشتری داشته باشند.</li>
+<li><strong>امنیت قابل تنظیم:</strong> استانداردهایی مانند Mifare و DESFire امکان رمزنگاری اطلاعات را فراهم می‌کنند.</li>
+<li><strong>عمر بالای دستگاه‌های کارت‌خوان:</strong> نبود سایش فیزیکی، طول عمر خواننده‌ها را نیز افزایش می‌دهد.</li>
+</ul>
+</section>
 
-<p> درخواست مشاوره رایگان در ایتا:</p>
+<section class="mar-top-40" id="Limitations">
+<h2>محدودیت‌های کارت‌های بدون تماس</h2>
 
-<p><a class="btn btn-md btn-success" href="https://eitaa.com/palizafzar" target="_blank" title="مشاوره فوری در ایتا">مشاوره فوری در ایتا</a></p>
+<ul>
+<li><strong>امکان گم شدن کارت:</strong> در صورت فراموشی یا گم شدن کارت، فرد تا صدور کارت جدید قادر به ثبت تردد یا دسترسی نخواهد بود.</li>
+<li><strong>امکان انتقال کارت به دیگران:</strong> بزرگ‌ترین ریسک این فناوری این است که یک نفر می‌تواند کارت خود را به شخص دیگری بدهد تا به‌جای او تردد ثبت کند یا وارد یک منطقه محدود شود.</li>
+<li><strong>امنیت پایین‌تر نسبت به بیومتریک:</strong> کارت‌های ساده و بدون رمزنگاری (مانند EM) در معرض ریسک کپی‌برداری هستند و از نظر هویتی، اثبات نمی‌کنند که استفاده‌کننده واقعاً همان فرد مجاز است.</li>
+</ul>
 
+<p>برای سازمان‌هایی که این محدودیت‌ها اهمیت بالایی دارند، ترکیب کارت با یک روش بیومتریک (مدل چندعاملی) پیشنهاد می‌شود.</p>
+</section>
+
+<section class="mar-top-40" id="VsBiometric">
+<h2>کارت بدون تماس یا فناوری بیومتریک؟</h2>
+
+<p>انتخاب بین کارت بدون تماس و روش‌های بیومتریک به اولویت سازمان شما بستگی دارد: اگر سرعت و هزینه پایین اهمیت بیشتری دارد، کارت گزینه مناسبی است؛ اگر دقت هویتی و جلوگیری از تقلب اولویت اصلی است، <a href="https://www.palizafzar.com/fa/articles/fingerprint-attendance-device/" target="_blank" title="دستگاه حضور و غیاب اثر انگشتی">اثر انگشت</a> یا <a href="https://www.palizafzar.com/fa/articles/facial-recognition-attendance-machin/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره">تشخیص چهره</a> انتخاب بهتری خواهند بود.</p>
+
+<table class="table table-bordered table-hover table-striped">
+<tbody>
+<tr>
+<th>ویژگی</th>
+<th>کارت</th>
+<th>اثر انگشت</th>
+<th>تشخیص چهره</th>
+</tr>
+<tr>
+<th>سرعت</th>
+<td>بسیار بالا</td>
+<td>بالا</td>
+<td>بالا</td>
+</tr>
+<tr>
+<th>هزینه</th>
+<td>اقتصادی</td>
+<td>متوسط</td>
+<td>متوسط تا بالا</td>
+</tr>
+<tr>
+<th>امکان واگذاری به دیگری</th>
+<td>دارد</td>
+<td>ندارد</td>
+<td>ندارد</td>
+</tr>
+<tr>
+<th>تماس فیزیکی</th>
+<td>ندارد (نزدیک سنسور)</td>
+<td>دارد</td>
+<td>ندارد</td>
+</tr>
+<tr>
+<th>دقت هویتی</th>
+<td>متوسط</td>
+<td>بالا</td>
+<td>بالا</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="mar-top-40" id="FAQs">
+<h2>سؤالات متداول درباره کارت‌های بدون تماس</h2>
+
+<h3 class="header-text">۱. آیا کارت RFID همان NFC است؟</h3>
+<p>خیر، NFC زیرمجموعه‌ای از خانواده RFID با برد بسیار کوتاه‌تر است. همه کارت‌های NFC از فناوری RFID استفاده می‌کنند، اما همه کارت‌های RFID لزوماً از پروتکل NFC پشتیبانی نمی‌کنند.</p>
+
+<h3 class="header-text">۲. کارت MIFARE چیست؟</h3>
+<p>Mifare یک استاندارد رایج برای کارت‌های HF (۱۳.۵۶ مگاهرتز) است که به دلیل داشتن حافظه رمزنگاری‌شده، در سیستم‌های حضور و غیاب و کنترل تردد مدرن بسیار پرکاربرد است.</p>
+
+<h3 class="header-text">۳. بهترین کارت برای حضور و غیاب چیست؟</h3>
+<p>برای اکثر سازمان‌ها، کارت‌های Mifare به دلیل تعادل مناسب بین قیمت و امنیت، بهترین انتخاب هستند. در صورت نیاز به امنیت بسیار بالا، DESFire توصیه می‌شود.</p>
+
+<h3 class="header-text">۴. آیا کارت بدون تماس امنیت بالایی دارد؟</h3>
+<p>سطح امنیت به نوع استاندارد کارت بستگی دارد؛ کارت‌های ساده مانند EM فاقد رمزنگاری‌اند، در حالی که Mifare و به‌ویژه DESFire امنیت بسیار بالاتری ارائه می‌دهند.</p>
+
+<h3 class="header-text">۵. چرا فاصله خواندن کارت‌های مختلف متفاوت است؟</h3>
+<p>فاصله خواندن به فرکانس کارت بستگی دارد؛ کارت‌های LF فاصله کوتاه، کارت‌های HF تا حدود یک متر و کارت‌های UHF فاصله بسیار بیشتری را پشتیبانی می‌کنند.</p>
+
+<h3 class="header-text">۶. آیا می‌توان از گوشی موبایل به‌جای کارت فیزیکی استفاده کرد؟</h3>
+<p>بله، در صورتی که دستگاه از فناوری NFC پشتیبانی کند، امکان شبیه‌سازی کارت روی گوشی‌های هوشمند وجود دارد.</p>
+</section>
+
+<section class="mar-top-40" id="Attendance">
+<h2>کارت‌های بدون تماس در دستگاه‌های حضور و غیاب</h2>
+
+<p>امروزه بخش قابل توجهی از دستگاه‌های حضور و غیاب موجود در بازار، مبتنی بر همین کارت‌های بدون تماس (عمدتاً استاندارد Mifare) طراحی شده‌اند. انتخاب فرکانس و استاندارد مناسب کارت مستقیماً روی سرعت، امنیت و هزینه نهایی دستگاه اثر می‌گذارد؛ به همین دلیل شناخت این فناوری، پیش‌نیاز یک انتخاب درست است.</p>
+
+<p>اگر تاکنون تصمیم گرفته‌اید که سیستم حضور و غیاب سازمان شما بر پایه کارت باشد، قدم بعدی آشنایی با مدل‌های موجود، مزایا، محدودیت‌ها و نکات مهم انتخاب دستگاه است تا مطمئن شوید سرمایه‌گذاری شما متناسب با نیاز واقعی سازمان انجام می‌شود.</p>
+
+<p>در <a href="https://www.palizafzar.com/fa/articles/card-attendance-device/" target="_blank" title="دستگاه حضور و غیاب کارتی"><strong>راهنمای جامع دستگاه حضور و غیاب کارتی</strong></a> با انواع دستگاه‌ها، مقایسه با روش‌های بیومتریک، راهنمای خرید و معرفی مدل‌های پالیزافزار آشنا خواهید شد.</p>
+
+<div class="text-center">
+<p><a class="btn btn-md btn-primary" href="https://www.palizafzar.com/fa/articles/card-attendance-device/" target="_blank" title="راهنمای جامع دستگاه حضور و غیاب کارتی">مطالعه راهنمای جامع دستگاه حضور و غیاب کارتی</a></p>
 </div>
+</section>
 
+<section class="mar-top-40" id="Conclusion">
+<h2>جمع‌بندی</h2>
 
+<p>کارت‌های بدون تماس به دلیل سرعت، دوام و هزینه مناسب، همچنان یکی از پرکاربردترین روش‌های شناسایی در سیستم‌های حضور و غیاب و کنترل تردد هستند. انتخاب نوع فرکانس (LF، HF یا UHF) و استاندارد کارت (EM، Mifare یا DESFire) باید متناسب با نیاز امنیتی و بودجه سازمان انجام شود. برای انتخاب دستگاه مناسب، مطالعه <a href="https://www.palizafzar.com/fa/articles/card-attendance-device/" target="_blank" title="دستگاه حضور و غیاب کارتی">راهنمای دستگاه حضور و غیاب کارتی</a> پیشنهاد می‌شود.</p>
+</section>
+
+<div class="row text-center mar-top-30 mar-btm-30">
+<div class="col-md-4 mar-btm-10"><a class="btn btn-md btn-primary full-block" href="https://www.palizafzar.com/fa/product-categories/absence-automation/" target="_blank" title="مشاهده محصولات دستگاه حضور و غیاب کارتی">مشاهده محصولات</a></div>
+<div class="col-md-4 mar-btm-10"><a class="btn btn-md btn-default full-block" href="https://www.palizafzar.com/fa/contact/" target="_blank" title="درخواست مشاوره رایگان">درخواست مشاوره رایگان</a></div>
+<div class="col-md-4 mar-btm-10"><a class="btn btn-md btn-default full-block" href="tel:0218956000">تماس با ما: 8956000-021</a></div>
+</div>
 
 <section>
 <h4>مطالب مرتبط</h4>
+
 <div class="row mar-right-20">
 <article class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+<h5><a href="https://www.palizafzar.com/fa/articles/card-attendance-device/" target="_blank" title="دستگاه حضور و غیاب کارتی">دستگاه حضور و غیاب کارتی</a></h5>
 <h5><a href="https://www.palizafzar.com/fa/articles/rfid-technology/" target="_blank" title="تکنولوژی RFID">تکنولوژی RFID</a></h5>
-
-<h5><a href="https://www.palizafzar.com/fa/articles/connection-with-time-attendance-system/" target="_blank" title="ارتباط با دستگاه حضور و غیاب">ارتباط با دستگاه حضور و غیاب</a></h5>
-
-<h5><a href="https://www.palizafzar.com/fa/articles/time-and-attendance-device-types/" target="_blank" title="انواع دستگاه حضور و غیاب">انواع دستگاه حضور و غیاب</a></h5>
-
+<h5><a href="https://www.palizafzar.com/fa/articles/rfid-s-impact-on-access-control-accuracy/" target="_blank" title="تأثیر RFID بر دقت کنترل تردد">تأثیر RFID بر دقت کنترل تردد</a></h5>
 </article>
+
 <article class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-<h5><a href="https://www.palizafzar.com/fa/articles/best-time-attendance-systems/" target="_blank" title="بهترین دستگاه حضور و غیاب">بهترین دستگاه حضور و غیاب</a></h5>
-
-<h5><a href="https://www.palizafzar.com/fa/news/introducing-timax-plus-attendance-device/" target="_blank" title="کار با دستگاه حضور و غیاب تایمکس پلاس">کار با دستگاه حضور و غیاب تایمکس پلاس</a></h5>
-
-<h5><a href="https://www.palizafzar.com/fa/news/attendance-time-device/" target="_blank" title="آشنایی با دستگاه حضور و غیاب تیارا">آشنایی با دستگاه حضور و غیاب تیارا</a></h5>
-
+<h5><a href="https://www.palizafzar.com/fa/articles/facial-recognition-attendance-machin/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره">دستگاه حضور و غیاب تشخیص چهره</a></h5>
+<h5><a href="https://www.palizafzar.com/fa/articles/fingerprint-attendance-device/" target="_blank" title="دستگاه حضور و غیاب اثر انگشتی">دستگاه حضور و غیاب اثر انگشتی</a></h5>
+<h5><a href="https://www.palizafzar.com/fa/categories/security-control-automation/" target="_blank" title="دستگاه کنترل تردد">دستگاه کنترل تردد</a></h5>
 </article>
 </div>
 </section>
 
 <section>
 <h4>مطالب پربازدید</h4>
+
 <div class="row mar-right-20">
 <article class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-<h5><a href="https://www.palizafzar.com/fa/articles/facial-recognition-attendance-machin/" target="_blank" title="دستگاه حضور و غیاب تشخیص چهره">دستگاه حضور و غیاب تشخیص چهره</a></h5>
-
-<h5><a href="https://www.palizafzar.com/fa/articles/fingerprint-attendance-device/" target="_blank" title="دستگاه حضور و غیاب اثر انگشت">دستگاه حضور و غیاب اثر انگشت</a></h5>
-
-
-</article>
-<article class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 <h5><a href="https://www.palizafzar.com/fa/articles/iris-biometric/" target="_blank" title="تشخیص هویت و شناسایی با عنبیه چشم">تشخیص هویت و شناسایی با عنبیه چشم</a></h5>
-
 <h5><a href="https://www.palizafzar.com/fa/articles/biometric-time-attendance-system/" target="_blank" title="دستگاه حضور و غیاب بیومتریک">دستگاه حضور و غیاب بیومتریک</a></h5>
+</article>
 
-
+<article class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+<h5><a href="https://www.palizafzar.com/fa/articles/time-and-attendance-device-types/" target="_blank" title="انواع دستگاه حضور و غیاب">انواع دستگاه حضور و غیاب</a></h5>
+<h5><a href="https://www.palizafzar.com/fa/articles/best-time-attendance-systems/" target="_blank" title="بهترین دستگاه حضور و غیاب">بهترین دستگاه حضور و غیاب</a></h5>
 </article>
 </div>
 </section>
 
-<script type="application/ld+json">{"@context": "https://schema.org","@type": "Article","name": "کارت های بدون تماس","image": "https://static.palizafzar.com/media/article_images/2a0f98391bf446fea968506fe418067a.jpg","articleSection": "کارت های بدون تماس یا Contacless Cards کارت های هوشمندی هستند که بدون اتصال به دستگاه کارتخوان قادر به ارسال اطلاعات کارت به صورت ID می باشند که این ID می تواند شامل کد پرسنلی، پلاک ماشین یا هر رقم دیگری باشد. برای خوانده شدن اطلاعات کارت نیاز به یک انرژی خارجی است که این انرژی از دستگاه های کارتخوان از طریق فرکانس رادیویی تامین می گردد.","articleBody": "کارت های بدون تماس در ابعاد کارت های اعتباری بانکی هستند که قادر به نگهداری اطلاعات ثبت شده می باشند. اطلاعات کارت از طریق دستگاه های رایتر قابل نوشتن و نگهداری بر روی کارت هستند و در زمانی که کارت در مجاورت دستگاه های کارتخوان قرار می گیرد این اطلاعات از طریق فرکانس رادیویی به دستگاه کارتخوان ارسال می شوند. کارت های هوشمند بدون تماس شامل چندین لایه هستند، این لایه ها عبارتند از: لایه اول و آخر: اطلاعات چاپی روی لایه اول و آخر بنا به درخواست سازمان ها و شرکت ها انجام می شود. لایه میانی: لایه های میانی شامل یک IC و سیم پیچی است که نقش آنتن را ایفا می کند. ارتباط در کارت های بدون تماس همیشه به صورت یک طرفه است که این عمل توسط دستگاه کارتخوان انجام می شود. طریقه خواندن اطلاعات کارت بدین صورت است که انرژی الکتریکی که به صورت فرکانس از دستگاه کارتخوان ارسال می شود، این موج توسط آنتن درون کارت دریافت می گردد و بعد به ولتاژ تبدیل شده سپس اطلاعات ذخیره شده درون IC به دستگاه ارسال می گردد.","url": "https://www.palizafzar.com/fa/articles/contacless-card/"}</script><script type="application/ld+json">{"@context": "https://schema.org","@type": "Organization","name": "حضور و غیاب پالیز افزار","url": "https://www.palizafzar.com/","logo": "https://static.palizafzar.com/static/images/paliz_logo.png","sameAs": ["https://www.facebook.com/PalizafzarCorp/","https://twitter.com/palizafzar","https://www.instagram.com/palizafzarco/","https://www.youtube.com/channel/UCnLtCo1f5fRrNW0wA4PR7yA","https://www.linkedin.com/company/palizafzar","https://www.pinterest.com/palizafzar/","https://telegram.me/palizafzar_co","https://www.aparat.com/palizafzar"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org","@type": "Article","mainEntityOfPage": {"@type": "WebPage","@id": "https://www.palizafzar.com/fa/articles/contactless-cards/"},"headline": "کارت‌های بدون تماس (Contactless Cards) چیست؟ معرفی انواع، فناوری‌ها و کاربردها","description": "کارت بدون تماس با استفاده از تراشه و آنتن داخلی، اطلاعات هویتی را بدون تماس فیزیکی به دستگاه کارت‌خوان ارسال می‌کند. آشنایی با انواع LF/HF/UHF، استانداردهای Mifare، DESFire، EM و NFC، مزایا، محدودیت‌ها و کاربردهای این کارت‌ها.","image": "https://static.palizafzar.com/media/article_images/2a0f98391bf446fea968506fe418067a.jpg","author": {"@type": "Organization","name": "palizafzar","url": "https://www.palizafzar.com/"},"publisher": {"@type": "Organization","name": "palizafzar","logo": {"@type": "ImageObject","url": "https://static.palizafzar.com/static/images/paliz_logo.27831a942350.png"}},"dateModified": "2026-07-26"}</script>
+
+<script type="application/ld+json">{"@context": "https://schema.org","@type": "FAQPage","mainEntity": [
+{"@type": "Question","name": "آیا کارت RFID همان NFC است؟","acceptedAnswer": {"@type": "Answer","text": "خیر، NFC زیرمجموعه‌ای از خانواده RFID با برد بسیار کوتاه‌تر است. همه کارت‌های NFC از فناوری RFID استفاده می‌کنند، اما همه کارت‌های RFID لزوماً از پروتکل NFC پشتیبانی نمی‌کنند."}},
+{"@type": "Question","name": "کارت MIFARE چیست؟","acceptedAnswer": {"@type": "Answer","text": "Mifare یک استاندارد رایج برای کارت‌های HF (۱۳.۵۶ مگاهرتز) است که به دلیل داشتن حافظه رمزنگاری‌شده، در سیستم‌های حضور و غیاب و کنترل تردد مدرن بسیار پرکاربرد است."}},
+{"@type": "Question","name": "بهترین کارت برای حضور و غیاب چیست؟","acceptedAnswer": {"@type": "Answer","text": "برای اکثر سازمان‌ها، کارت‌های Mifare به دلیل تعادل مناسب بین قیمت و امنیت، بهترین انتخاب هستند. در صورت نیاز به امنیت بسیار بالا، DESFire توصیه می‌شود."}},
+{"@type": "Question","name": "آیا کارت بدون تماس امنیت بالایی دارد؟","acceptedAnswer": {"@type": "Answer","text": "سطح امنیت به نوع استاندارد کارت بستگی دارد؛ کارت‌های ساده مانند EM فاقد رمزنگاری‌اند، در حالی که Mifare و به‌ویژه DESFire امنیت بسیار بالاتری ارائه می‌دهند."}},
+{"@type": "Question","name": "چرا فاصله خواندن کارت‌های مختلف متفاوت است؟","acceptedAnswer": {"@type": "Answer","text": "فاصله خواندن به فرکانس کارت بستگی دارد؛ کارت‌های LF فاصله کوتاه، کارت‌های HF تا حدود یک متر و کارت‌های UHF فاصله بسیار بیشتری را پشتیبانی می‌کنند."}},
+{"@type": "Question","name": "آیا می‌توان از گوشی موبایل به‌جای کارت فیزیکی استفاده کرد؟","acceptedAnswer": {"@type": "Answer","text": "بله، در صورتی که دستگاه از فناوری NFC پشتیبانی کند، امکان شبیه‌سازی کارت روی گوشی‌های هوشمند وجود دارد."}}
+]}</script>
 
 
 
